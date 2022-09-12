@@ -1,0 +1,34 @@
+{
+    "sampleQuiz":
+    [
+        {
+            "questionText": "10% of the nation's water flows through which south-eastern state?",
+            "answerChoices": [
+                {"answerText": "Alabama", "isCorrect": true},
+                {"answerText": "Mississippi", "isCorrect": false},
+                {"answerText": "Louisiana", "isCorrect": false},
+                {"answerText": "Georgia", "isCorrect": false}
+            ]
+        },
+        {
+            "questionText": "Which state has the following three river systems: Tenessee, Tombigbee-Black Warrior, Alabama rivers?",
+            "answerChoices": [
+                {"answerText": "Alabama", "isCorrect": true},
+                {"answerText": "Mississippi", "isCorrect": false},
+                {"answerText": "Louisiana", "isCorrect": false},
+                {"answerText": "Georgia", "isCorrect": false}
+
+            ]
+        },
+        {
+            "questionText": "Which year did Tuscaloosa see record high flooding on the Black Warrior river (151.05ft)",
+            "answerChoices": [
+                {"answerText": "1900", "isCorrect": true},
+                {"answerText": "1951", "isCorrect": false},
+                {"answerText": "1982", "isCorrect": false},
+                {"answerText": "2003", "isCorrect": false}
+
+            ]
+        }
+    ]
+}
