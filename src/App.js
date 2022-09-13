@@ -50,6 +50,27 @@ function App() {
     setCurrentQuestion(0);
   }
 
+  const quizEndScreen = ({score}, {numQuestions}) => {
+    if (score/numQuestions < 1) {
+      return <button onClick={restartQuiz}>Restart Quiz</button>
+    } else {
+      // TO DO: make onCLick go to home page
+      return <button onClick={restartQuiz}>Home Menu</button>
+    }
+
+
+    // return {score == 0 ? 
+    // <button onClick={restartQuiz}>Restart Quiz</button>
+    //   : <button onClick={}>Home Menu</button>
+    // }
+    // return (
+    //   {{score} === 0}
+    //   <button onClick={props.onClick}
+    //   type="button">
+    //     {answerChoice.answerText}</button>
+    // );
+  };
+
   const handleAnswerChoice = (isCorrect) => {
     if (isCorrect) {
       setScore(score + 1);
@@ -68,7 +89,7 @@ function App() {
       {showScore ? (
         <div className='display-score'>
           You scored {score} out of {questions.length}
-          <button onClick={restartQuiz}>Restart Quiz</button>
+          {quizEndScreen({score}, (questions.length))}
         </div>
       ) : (
         <>

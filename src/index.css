@@ -75,6 +75,7 @@ button {
   border-radius: 15px;
   display: flex;
   padding: 5px;
+  margin: 2.5px;
   justify-content: flex-start;
   align-items: center;
   border: 5px solid #234668;
