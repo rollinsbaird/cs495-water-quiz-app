@@ -51,24 +51,12 @@ function App() {
   }
 
   const quizEndScreen = ({score}, {numQuestions}) => {
-    if (score/numQuestions < 1) {
+    if (score < 2) {
       return <button onClick={restartQuiz}>Restart Quiz</button>
     } else {
       // TO DO: make onCLick go to home page
       return <button onClick={restartQuiz}>Home Menu</button>
     }
-
-
-    // return {score == 0 ? 
-    // <button onClick={restartQuiz}>Restart Quiz</button>
-    //   : <button onClick={}>Home Menu</button>
-    // }
-    // return (
-    //   {{score} === 0}
-    //   <button onClick={props.onClick}
-    //   type="button">
-    //     {answerChoice.answerText}</button>
-    // );
   };
 
   const handleAnswerChoice = (isCorrect) => {
