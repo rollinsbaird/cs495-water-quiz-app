@@ -1,45 +1,8 @@
 import React, { useState } from 'react';
+import questions from './question_jsons/question.json';
 
 function App() {
-  const questions = [
-    {
-      questionText: 'Water ...?',
-      answerChoices: [
-        {answerText: "a", isCorrect: false},
-        {answerText: "b", isCorrect: false},
-        {answerText: "c", isCorrect: false},
-        {answerText: "d", isCorrect: true},
-      ],
-    },
-    {
-      questionText: 'Is water wet?',
-      answerChoices: [
-        {answerText: "Yes", isCorrect: false},
-        {answerText: "Yes", isCorrect: false},
-        {answerText: "Yes", isCorrect: false},
-        {answerText: "Yes", isCorrect: true},
-      ],
-    },
-    {
-      questionText: 'Rain ...?',
-      answerChoices: [
-        {answerText: "a", isCorrect: false},
-        {answerText: "b", isCorrect: false},
-        {answerText: "Precipitation", isCorrect: false},
-        {answerText: "d", isCorrect: true},
-      ],
-    },
-    {
-      questionText: 'Flood?',
-      answerChoices: [
-        {answerText: "a", isCorrect: false},
-        {answerText: "b", isCorrect: false},
-        {answerText: "Noah's Ark", isCorrect: false},
-        {answerText: "d", isCorrect: true},
-      ],
-    },
-  ];
-
+  
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
