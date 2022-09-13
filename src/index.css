@@ -29,7 +29,6 @@ body {
   background-color: #252d4a;
   width: clamp(20%, 2000px, 95%);
   height: min(50%, 800px);
-  /* height: min-content; */
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
