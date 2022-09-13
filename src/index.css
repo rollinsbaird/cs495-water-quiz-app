@@ -26,15 +26,17 @@ body {
 }
 
 .App {
-  background-color: #282c34;
-  width: 450px;
-  min-height: 200px;
-  height: min-content;
+  background-color: #252d4a;
+  width: clamp(20%, 2000px, 95%);
+  height: min(50%, 800px);
+  /* height: min-content; */
   border-radius: 15px;
-  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, .75);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .display-score {
@@ -42,6 +44,7 @@ body {
 }
 
 .question-section {
+  padding: 1rem;
   width: 100%;
   position: relative;
 }
@@ -69,7 +72,7 @@ button {
   width: 100%;
   font-size: 16px;
   color: #ffffff;
-  background-color: #61dafb;
+  background-color: #252d4a;
   border-radius: 15px;
   display: flex;
   padding: 5px;
