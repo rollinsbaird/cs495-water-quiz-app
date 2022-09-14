@@ -17,15 +17,15 @@ code {
   color: #ffffff;
 }
 
-body {
+/* body {
   background-color: #61dafb;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
+} */
 
-.App {
+.Quiz {
   background-color: #252d4a;
   width: clamp(20%, 2000px, 95%);
   height: min(50%, 800px);
@@ -67,7 +67,7 @@ body {
   justify-content: space-between;
 }
 
-button {
+/* button {
   width: 100%;
   font-size: 16px;
   color: #ffffff;
@@ -100,4 +100,4 @@ button:focus {
 
 button svg {
   margin-right: 5px;
-}
+} */

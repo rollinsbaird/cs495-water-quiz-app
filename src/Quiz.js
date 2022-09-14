@@ -36,7 +36,7 @@ function Quiz() {
   }
 
   return (
-    <div className="App">
+    <div className="Quiz">
       {showScore ? (
         <div className='display-score'>
           You scored {score} out of {questions.length}
