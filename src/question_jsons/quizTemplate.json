@@ -1,0 +1,20 @@
+[
+    {
+        "questionText": "INSERT_QUESTION",
+        "answerChoices": [
+            {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": true},
+            {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false},
+            {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false},
+            {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "INSERT_QUESTION",
+        "answerChoices": [
+            {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": true},
+            {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false},
+            {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false},
+            {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false}
+        ]
+    }
+]

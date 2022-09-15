@@ -1,0 +1,92 @@
+[
+    { 
+        "questionText": "When clouds get too heavy to hold water in the water cycle, what happens?",
+        "answerChoices": [
+            {"answerText": "The Water falls to the Earth", "isCorrect": true},
+            {"answerText": "The water evaporates", "isCorrect": false},
+            {"answerText": "Another cloud forms", "isCorrect": false},
+            {"answerText": "The clouds get very large", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "Studying the water cycle, where is the purest water on Earth?",
+        "answerChoices": [
+            {"answerText": "Glaciers and ice caps", "isCorrect": true},
+            {"answerText": "Rivers and streams", "isCorrect": false},
+            {"answerText": "Sulfur springs", "isCorrect": false},
+            {"answerText": "Lakes and ponds", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "What is tapped into when digging a well looking for water in the water cycle?",
+        "answerChoices": [
+            {"answerText": "An underground aquifer", "isCorrect": true},
+            {"answerText": "An underground river", "isCorrect": false},
+            {"answerText": "A sulfur spring", "isCorrect": false},
+            {"answerText": "An irrigation ditch", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "What turns water on the Earth into vapor in the water cycle?",
+        "answerChoices": [
+            {"answerText": "The sun", "isCorrect": true},
+            {"answerText": "The moon", "isCorrect": false},
+            {"answerText": "Global Warming", "isCorrect": false},
+            {"answerText": "Water treatment centers", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "Which stage is NOT part of the water cycle?",
+        "answerChoices": [
+            {"answerText": "Emancipation", "isCorrect": true},
+            {"answerText": "Collection", "isCorrect": false},
+            {"answerText": "Evaporation", "isCorrect": false},
+            {"answerText": "Precipitation", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "Studying the water cycle, why is the ocean salty?",
+        "answerChoices": [
+            {"answerText": "Groundwater picks up salt and minerals as it makes its way to the ocean", "isCorrect": true},
+            {"answerText": "It is rinsed from the scales and skin of ocean animals", "isCorrect": false},
+            {"answerText": "Salt is carried down in rainwater", "isCorrect": false},
+            {"answerText": "Human pollution made it that way", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "Considering the water cycle how old could the water be in glaciers and ice caps?",
+        "answerChoices": [
+            {"answerText": "Millions of years", "isCorrect": true},
+            {"answerText": "Billions of years", "isCorrect": false},
+            {"answerText": "Thousands of years", "isCorrect": false},
+            {"answerText": "Hundreds of years", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "Water that soaks into the ground is called what in the water cycle?",
+        "answerChoices": [
+            {"answerText": "Groundwater", "isCorrect": true},
+            {"answerText": "Water table", "isCorrect": false},
+            {"answerText": "Rainwater", "isCorrect": false},
+            {"answerText": "Collected", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "In the water cycle what is it called when water goes up through a plant and is turned into a vapor?",
+        "answerChoices": [
+            {"answerText": "Evaporation", "isCorrect": true},
+            {"answerText": "Precipitation", "isCorrect": false},
+            {"answerText": "Collection", "isCorrect": false},
+            {"answerText": "Condensation", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "Condensation is when warm vapor rises, gets cold and does what In the water cycle?",
+        "answerChoices": [
+            {"answerText": "Gathers in clouds", "isCorrect": true},
+            {"answerText": "Falls out of the sky", "isCorrect": false},
+            {"answerText": "Warms up again", "isCorrect": false},
+            {"answerText": "Keeps rising until it turns to ice", "isCorrect": false}
+        ]
+    }
+]

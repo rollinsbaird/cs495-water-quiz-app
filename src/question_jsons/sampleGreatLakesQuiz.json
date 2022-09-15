@@ -1,0 +1,90 @@
+[
+    {
+        "questionText": "Which of the Following is not a Great Lake?",
+        "answerChoices": [
+            {"answerText": "Niagra", "isCorrect": true},
+            {"answerText": "Huron", "isCorrect": false},
+            {"answerText": "Ontarion", "isCorrect": false},
+            {"answerText": "Michigan", "isCorrect": false},
+            {"answerText": "Erie", "isCorrect": false},
+            {"answerText": "Superior", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "Which is the largest of the Great Lakes?",
+        "answerChoices": [
+            {"answerText": "Huron", "isCorrect": false},
+            {"answerText": "Ontarion", "isCorrect": false},
+            {"answerText": "Michigan", "isCorrect": false},
+            {"answerText": "Erie", "isCorrect": false},
+            {"answerText": "Superior", "isCorrect": true}
+        ]
+    },
+    {
+        "questionText": "How many miles of driving does it take to circle the Great Lakes?",
+        "answerChoices": [
+            {"answerText": "1,200 miles", "isCorrect": false},
+            {"answerText": "3,350 miles", "isCorrect": false},
+            {"answerText": "6,500 miles", "isCorrect": true},
+            {"answerText": "8,200", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "How many islands are there in the Great Lakes?",
+        "answerChoices": [
+            {"answerText": "over 35,000 islands", "isCorrect": true},
+            {"answerText": "over 30,000 islands", "isCorrect": false},
+            {"answerText": "over 15,000 islands", "isCorrect": false},
+            {"answerText": "over 5,000 islands", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "What is the largest species of fish found in the Great Lakes?",
+        "answerChoices": [
+            {"answerText": "Lake Sturgeon", "isCorrect": true},
+            {"answerText": "Herring", "isCorrect": false},
+            {"answerText": "Muskie", "isCorrect": false},
+            {"answerText": "Catfish", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "True of False: Waves of 40 feet in height have been recorded on Lake Superior.",
+        "answerChoices": [
+            {"answerText": "True", "isCorrect": true},
+            {"answerText": "False", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "True or False: Lake Ontario, Lake Erie, Lake Huron, and Lake Michigan would all fit inside Lake Superior.",
+        "answerChoices": [
+            {"answerText": "True", "isCorrect": true},
+            {"answerText": "False", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "True or False: It takes about 200 years for the water in Lake Superior to replace itself.",
+        "answerChoices": [
+            {"answerText": "True", "isCorrect": true},
+            {"answerText": "False", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "Which Great Lake is entirely within the borders of the United States?",
+        "answerChoices": [
+            {"answerText": "Huron", "isCorrect": false},
+            {"answerText": "Ontarion", "isCorrect": false},
+            {"answerText": "Michigan", "isCorrect": true},
+            {"answerText": "Erie", "isCorrect": false},
+            {"answerText": "Superior", "isCorrect": false}
+        ]
+    },
+    {
+        "questionText": "About what percentage of the world’s freshwater supply does Lake Superior contain?",
+        "answerChoices": [
+            {"answerText": "Ten percent", "isCorrect": true},
+            {"answerText": "Five percent", "isCorrect": false},
+            {"answerText": "Two percent", "isCorrect": false},
+            {"answerText": "One percent", "isCorrect": false}
+        ]
+    }
+]
