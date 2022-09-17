@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import questions from './question_jsons/question.json';
+import questions from './question_jsons/sampleAlabamaQuiz.json';
 
 function Quiz() {
   
@@ -13,8 +13,8 @@ function Quiz() {
     setCurrentQuestion(0);
   }
 
-  const quizEndScreen = ({score}, {numQuestions}) => {
-    if (score < 2) {
+  const quizEndScreen = ({score, numQuestions}) => {
+    if ((score/numQuestions) < 0.8) {
       return <button onClick={restartQuiz}>Restart Quiz</button>
     } else {
       // TO DO: make onCLick go to home page

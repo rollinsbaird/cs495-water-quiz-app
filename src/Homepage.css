@@ -36,6 +36,7 @@
 }
 
 .Quiz-button {
+    width: -moz-fit-content;
     width: fit-content;
     padding: 1vmin 2vmin;
     border: 0.4vmin solid #61dafb;
@@ -45,12 +46,24 @@
     color: #61dafb;
 }
 
-button:hover {
+.open-button:hover {
     background-color: #61dafb;
     color: #0e0f14;
     font-style: bold;
 }
 
-button:focus {
+.open-button:focus {
     outline: none;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #61dafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
