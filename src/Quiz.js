@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
-import questions from './question_jsons/question.json';
+import quizData from './question_jsons/quizTemplate.json';
+import "./Quiz.css"
 
 function Quiz() {
   
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
+  const [hasAnswered, setHasAnswered] = useState(false);
+  const [feedbackMsg, setFeedbackMsg] = useState("");
 
   const restartQuiz = () => {
     setScore(0);
     setShowScore(false);
     setCurrentQuestion(0);
+    setHasAnswered(false);
   }
 
-  const quizEndScreen = ({score}, {numQuestions}) => {
-    if (score < 2) {
+  const quizEndScreen = (score, numQuestions) => {
+    if ((score/numQuestions) < 0.8) {
       return <button onClick={restartQuiz}>Restart Quiz</button>
     } else {
       // TO DO: make onCLick go to home page
@@ -22,13 +26,36 @@ function Quiz() {
     }
   };
 
-  const handleAnswerChoice = (isCorrect) => {
-    if (isCorrect) {
+  const displayChoicesOrFeedback = () => {
+    if (hasAnswered) {
+      return (
+        <div className='answer-feedback'>
+          <p>{feedbackMsg}</p>
+          <button onClick={() => setHasAnswered(false)}>{"Next Question"}</button>
+        </div>
+      );
+    } else {
+      return (
+        <div className='answer-choices'>
+          {quizData.questions[currentQuestion].answerChoices.map((answerChoice) => (
+            <button onClick={() => advanceQuestion(answerChoice, answerChoice.feedback)}>{answerChoice.answerText}</button>
+            ))}
+        </div>
+      );
+    }
+  };
+
+  const advanceQuestion = (answerChoice, answerChoiceFeedback) => {
+    if (answerChoice.isCorrect) {
       setScore(score + 1);
     }
 
+    setFeedbackMsg(answerChoiceFeedback);
+    setHasAnswered(true);
+    displayChoicesOrFeedback();
+
     const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < questions.length) {
+    if (nextQuestion < quizData.questions.length) {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)
@@ -39,21 +66,19 @@ function Quiz() {
     <div className="Quiz">
       {showScore ? (
         <div className='display-score'>
-          You scored {score} out of {questions.length}
-          {quizEndScreen({score}, (questions.length))}
+          You scored {score} out of {quizData.questions.length}
+          {quizEndScreen({score}, (quizData.questions.length))}
         </div>
       ) : (
         <>
           <div className='question-section'>
             <div className='question-count'>
-              <span>Question {currentQuestion + 1}</span>/{questions.length}
+              <span>Question {currentQuestion + 1}</span>/{quizData.questions.length}
             </div>
-            <div className='question-text'>{questions[currentQuestion].questionText}</div>
+            <div className='question-text'>{quizData.questions[currentQuestion].questionText}</div>
           </div>
           <div className='answer-section'>
-            {questions[currentQuestion].answerChoices.map((answerChoice) => (
-                <button onClick={() => handleAnswerChoice(answerChoice.isCorrect)}>{answerChoice.answerText}</button>
-            ))}
+            {displayChoicesOrFeedback()}
           </div>
         </>
       )}

@@ -1,0 +1,26 @@
+{
+    "description": "QUIZ_DESCRIPTION",
+    "topic": "QUIZ_TOPIC",
+    "id": "quiz-template",
+    "title": "TITLE_TO_DISPLAY",
+    "questions": [
+        {
+            "questionText": "INSERT_QUESTION",
+            "answerChoices": [
+                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": true, "feedback": "CHOICE_FEEDBACK"},
+                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"},
+                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"},
+                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"}
+            ]
+        },
+        {
+            "questionText": "INSERT_QUESTION",
+            "answerChoices": [
+                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": true, "feedback": "CHOICE_FEEDBACK"},
+                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"},
+                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"},
+                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"}
+            ]
+        }
+    ]
+}    
