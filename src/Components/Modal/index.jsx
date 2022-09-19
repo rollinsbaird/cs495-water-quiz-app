@@ -1,3 +1,4 @@
+// Based on https://fireship.io/lessons/framer-motion-modal/
 import { motion } from "framer-motion";
 import Backdrop from "../Backdrop";
 import Quiz from "../../Quiz"
@@ -36,8 +37,8 @@ const Modal = ({ handleClose, text }) => {
             animate="visible"
             exit="exit"
           >
-            <p>{text}</p>
-            <Quiz />
+            {/* <p>{text}</p> */}
+            < Quiz />
             <button onClick={handleClose}>Close</button>
           </motion.div>
       </Backdrop>

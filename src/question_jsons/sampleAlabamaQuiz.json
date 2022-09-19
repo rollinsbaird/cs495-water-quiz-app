@@ -1,84 +1,90 @@
-[
-    {
-        "questionText": "10% of the nation's water flows through which south-eastern state?",
-        "answerChoices": [
-            {"answerText": "Alabama", "isCorrect": true, "feedback": "Great job!"},
-            {"answerText": "Mississippi", "isCorrect": false, "feedback": "Close, but it's actually Alabama"},
-            {"answerText": "Louisiana", "isCorrect": false, "feedback": "Close, but it's actually Alabama"},
-            {"answerText": "Georgia", "isCorrect": false, "feedback": "Close, but it's actually Alabama"}
-        ]
-    },
-    {
-        "questionText": "Which state has the following three river systems: Tenessee, Tombigbee-Black Warrior, Alabama rivers?",
-        "answerChoices": [
-            {"answerText": "Alabama", "isCorrect": true, "feedback": "Yes!"},
-            {"answerText": "Mississippi", "isCorrect": false, "feedback": "Not quite, the answer is Alabama"},
-            {"answerText": "Louisiana", "isCorrect": false, "feedback": "Not quite, the answer is Alabama"},
-            {"answerText": "Georgia", "isCorrect": false, "feedback": "Not quite, the answer is Alabama"}
+{
+    "description": "QUIZ_DESCRIPTION",
+    "topic": "QUIZ_TOPIC",
+    "id": "quiz-template",
+    "title": "Sample Alabama Water Quiz",
+    "questions": [
+        {
+            "questionText": "10% of the nation's water flows through which south-eastern state?",
+            "answerChoices": [
+                {"answerText": "Alabama", "isCorrect": true, "feedback": "Great job!"},
+                {"answerText": "Mississippi", "isCorrect": false, "feedback": "Close, but it's actually Alabama"},
+                {"answerText": "Louisiana", "isCorrect": false, "feedback": "Close, but it's actually Alabama"},
+                {"answerText": "Georgia", "isCorrect": false, "feedback": "Close, but it's actually Alabama"}
+            ]
+        },
+        {
+            "questionText": "Which state has the following three river systems: Tenessee, Tombigbee-Black Warrior, Alabama rivers?",
+            "answerChoices": [
+                {"answerText": "Alabama", "isCorrect": true, "feedback": "Yes!"},
+                {"answerText": "Mississippi", "isCorrect": false, "feedback": "Not quite, the answer is Alabama"},
+                {"answerText": "Louisiana", "isCorrect": false, "feedback": "Not quite, the answer is Alabama"},
+                {"answerText": "Georgia", "isCorrect": false, "feedback": "Not quite, the answer is Alabama"}
 
-        ]
-    },
-    {
-        "questionText": "Which year did Tuscaloosa see record high flooding on the Black Warrior river (151.05ft)",
-        "answerChoices": [
-            {"answerText": "1900", "isCorrect": true, "feedback": ""},
-            {"answerText": "1951", "isCorrect": false, "feedback": "Good guess, but the answer is 1900"},
-            {"answerText": "1982", "isCorrect": false, "feedback": "Almost, but record flooding occured in 1900"},
-            {"answerText": "2003", "isCorrect": false, "feedback": "Actually, it was 1900"}
+            ]
+        },
+        {
+            "questionText": "Which year did Tuscaloosa see record high flooding on the Black Warrior river (151.05ft)",
+            "answerChoices": [
+                {"answerText": "1900", "isCorrect": true, "feedback": ""},
+                {"answerText": "1951", "isCorrect": false, "feedback": "Good guess, but the answer is 1900"},
+                {"answerText": "1982", "isCorrect": false, "feedback": "Almost, but record flooding occured in 1900"},
+                {"answerText": "2003", "isCorrect": false, "feedback": "Actually, it was 1900"}
 
-        ]
-    },
-    {
-        "questionText": "Which year did Tuscaloosa see record high flow rate of the Black Warrior river (272k ft3 per second)",
-        "answerChoices": [
-            {"answerText": "1968", "isCorrect": false, "feedback": ""},
-            {"answerText": "1979", "isCorrect": true, "feedback": ""},
-            {"answerText": "1983", "isCorrect": false, "feedback": ""},
-            {"answerText": "1992", "isCorrect": false, "feedback": ""}
+            ]
+        },
+        {
+            "questionText": "Which year did Tuscaloosa see record high flow rate of the Black Warrior river (272k ft3 per second)",
+            "answerChoices": [
+                {"answerText": "1968", "isCorrect": false, "feedback": ""},
+                {"answerText": "1979", "isCorrect": true, "feedback": ""},
+                {"answerText": "1983", "isCorrect": false, "feedback": ""},
+                {"answerText": "1992", "isCorrect": false, "feedback": ""}
 
-        ]
-    },
-    {
-        "questionText": "How many natural lakes are in the Alabama?",
-        "answerChoices": [
-            {"answerText": "0", "isCorrect": false, "feedback": ""},
-            {"answerText": "1", "isCorrect": true, "feedback": ""},
-            {"answerText": "64", "isCorrect": false, "feedback": ""},
-            {"answerText": "67", "isCorrect": false, "feedback": ""}
+            ]
+        },
+        {
+            "questionText": "How many natural lakes are in the Alabama?",
+            "answerChoices": [
+                {"answerText": "0", "isCorrect": false, "feedback": ""},
+                {"answerText": "1", "isCorrect": true, "feedback": ""},
+                {"answerText": "64", "isCorrect": false, "feedback": ""},
+                {"answerText": "67", "isCorrect": false, "feedback": ""}
 
-        ]
-    },
-    {
-        "questionText": "True or False, the Weather Forecast Office (WFO) disseminates watch and warning information for floods in Alabama.",
-        "answerChoices": [
-            {"answerText": "true", "isCorrect": true, "feedback": ""},
-            {"answerText": "false", "isCorrect": false, "feedback": ""}
+            ]
+        },
+        {
+            "questionText": "True or False, the Weather Forecast Office (WFO) disseminates watch and warning information for floods in Alabama.",
+            "answerChoices": [
+                {"answerText": "true", "isCorrect": true, "feedback": ""},
+                {"answerText": "false", "isCorrect": false, "feedback": ""}
 
-        ]
-    },
-    {
-        "questionText": "Which organization of the National Weather Service forecasts the state if the waterways (streams, rivers, lakes, and ocean) of Alabama?",
-        "answerChoices": [
-            {"answerText": "River Forecast Center (RCF)", "isCorrect": true, "feedback": ""},
-            {"answerText": "Waterway Research Center (WRC)", "isCorrect": false, "feedback": ""},
-            {"answerText": "Alabama Waterway Center (AWC)", "isCorrect": false, "feedback": ""},
-            {"answerText": "Water Highway Organization (WHO)", "isCorrect": false, "feedback": ""}
+            ]
+        },
+        {
+            "questionText": "Which organization of the National Weather Service forecasts the state if the waterways (streams, rivers, lakes, and ocean) of Alabama?",
+            "answerChoices": [
+                {"answerText": "River Forecast Center (RCF)", "isCorrect": true, "feedback": ""},
+                {"answerText": "Waterway Research Center (WRC)", "isCorrect": false, "feedback": ""},
+                {"answerText": "Alabama Waterway Center (AWC)", "isCorrect": false, "feedback": ""},
+                {"answerText": "Water Highway Organization (WHO)", "isCorrect": false, "feedback": ""}
 
-        ]
-    },
-    {
-        "questionText": "Which federal government Agency is responsible for management and modelling of water?",
-        "answerChoices": [
-            {"answerText": "NOAA", "isCorrect": false, "feedback": ""},
-            {"answerText": "USGS", "isCorrect": false, "feedback": ""},
-            {"answerText": "USBR", "isCorrect": false, "feedback": ""},
-            {"answerText": "USDA", "isCorrect": false, "feedback": ""},
-            {"answerText": "USACE", "isCorrect": false, "feedback": ""},
-            {"answerText": "Coast Guard and NOS", "isCorrect": false, "feedback": ""},
-            {"answerText": "FEMA", "isCorrect": false, "feedback": ""},
-            {"answerText": "EPA", "isCorrect": false, "feedback": ""},
-            {"answerText": "All of the above", "isCorrect":true, "feedback": ""}
+            ]
+        },
+        {
+            "questionText": "Which federal government Agency is responsible for management and modelling of water?",
+            "answerChoices": [
+                {"answerText": "NOAA", "isCorrect": false, "feedback": ""},
+                {"answerText": "USGS", "isCorrect": false, "feedback": ""},
+                {"answerText": "USBR", "isCorrect": false, "feedback": ""},
+                {"answerText": "USDA", "isCorrect": false, "feedback": ""},
+                {"answerText": "USACE", "isCorrect": false, "feedback": ""},
+                {"answerText": "Coast Guard and NOS", "isCorrect": false, "feedback": ""},
+                {"answerText": "FEMA", "isCorrect": false, "feedback": ""},
+                {"answerText": "EPA", "isCorrect": false, "feedback": ""},
+                {"answerText": "All of the above", "isCorrect":true, "feedback": ""}
 
-        ]
-    }
-]
+            ]
+        }
+    ]
+}
