@@ -3,45 +3,52 @@
     "topic": "QUIZ_TOPIC",
     "id": "quiz-template",
     "title": "TITLE_TO_DISPLAY",
-    "tags": {
-        "difficulty-tag" : "INSERT_DIFFICULTY",
-        "geo-tag" : "INSERT_LOCATION",
-        "other-tags": ["INSERT_OTHER_TAGS", "INSERT_OTHER_TAGS"]
-    },
+    "difficulty" : 0,
+    "location" : "INSERT_LOCATION",
     "questions": [
         {
             "questionPreivew" : {
                 "isTrue" : false,
-                "previewImage" : {
-                    "isTrue" : false,
-                    "imageTag" : "INSERT_LINK"
-                },
+                "previewTitle" : "INSERT_PREVIEW_TITLE",
+                "previewImage" : "INSERT_LINK",
                 "PreviewText" : "INSERT_PREVIEW_TEXT"
             },
-            "questionText": "INSERT_QUESTION",
+            "questionText" : "INSERT_QUESTION_TEXT",
+            "questionImage" : "INSERT_IMAGE_LINK",
             "answerChoices": [
-                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": true, "feedback": "CHOICE_FEEDBACK"},
-                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"},
-                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"},
-                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"}
-            ]
-        },
-        {
-            "questionPreivew" : {
-                "isTrue" : false,
-                "previewImage" : {
-                    "isTrue" : false,
-                    "imageTag" : "INSERT_LINK"
+                {
+                    "answerText": "INSERT_ANSWER_TEXT", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage" : "INSERT_IMAGE_LINK",
+                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                    }
                 },
-                "PreviewText" : "INSERT_PREVIEW_TEXT"
-            },
-            "questionText": "INSERT_QUESTION",
-            "answerChoices": [
-                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": true, "feedback": "CHOICE_FEEDBACK"},
-                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"},
-                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"},
-                {"answerText": "INSERT_ANSWER_CHOICE", "isCorrect": false, "feedback": "CHOICE_FEEDBACK"}
-            ]
+                {
+                    "answerText": "INSERT_ANSWER_TEXT", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage" : "INSERT_IMAGE_LINK",
+                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                    }
+                },
+                {
+                    "answerText": "INSERT_ANSWER_TEXT", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage" : "INSERT_IMAGE_LINK",
+                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                    }
+                },
+                {
+                    "answerText": "INSERT_ANSWER_TEXT", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage" : "INSERT_IMAGE_LINK",
+                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                    }
+                }
+                ]
         }
     ]
 }    
