@@ -3,6 +3,14 @@
     text-align: center;
 }
 
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .Homepage-logo {
     height: 40vmin;
     pointer-events: none;
@@ -44,12 +52,14 @@
     background-color: #282c34;
     vertical-align: middle;
     color: #61dafb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .open-button:hover {
     background-color: #61dafb;
     color: #0e0f14;
     font-style: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .open-button:focus {
@@ -97,6 +107,7 @@
 
 .question-count span {
     font-size: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .question-text {
@@ -124,7 +135,6 @@
     border: 5px solid #234668;
     cursor: pointer;
   }
-  
   .correct {
     background-color: #2f922f;
   }
