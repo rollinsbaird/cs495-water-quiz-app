@@ -3,14 +3,6 @@
     text-align: center;
 }
 
-h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 .Homepage-logo {
     height: 40vmin;
     pointer-events: none;
@@ -52,14 +44,13 @@ p {
     background-color: #282c34;
     vertical-align: middle;
     color: #61dafb;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .open-button:hover {
     background-color: #61dafb;
     color: #0e0f14;
     font-style: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .open-button:focus {
