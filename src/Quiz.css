@@ -5,15 +5,15 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
-    font-family: "Veranda", cursive, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #ffffff;
 }
 

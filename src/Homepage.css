@@ -50,6 +50,7 @@
     background-color: #61dafb;
     color: #0e0f14;
     font-style: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .open-button:focus {
@@ -97,6 +98,7 @@
 
 .question-count span {
     font-size: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .question-text {
@@ -124,7 +126,6 @@
     border: 5px solid #234668;
     cursor: pointer;
   }
-  
   .correct {
     background-color: #2f922f;
   }
