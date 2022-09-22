@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import quizData from './question_jsons/quizTemplate.json';
+import quizData from './question_jsons/sampleAlabamaQuiz.json';
 import "./Quiz.css"
 
 function Quiz() {

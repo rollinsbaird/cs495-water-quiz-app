@@ -23,16 +23,16 @@ function Homepage() {
         className="open-button"
         onClick={() => (modalOpen ? close() : open())}
         >
-          Quiz 1
+          Sample Alabama Quiz
         </motion.button>
-        <motion.button
+        {/* <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         className="open-button"
         onClick={() => (modalOpen ? close() : open())}
         >
           Quiz 2
-        </motion.button>
+        </motion.button> */}
         <AnimatePresence
           // Disable any initial animations on children that
           // are present when the component is first rendered
