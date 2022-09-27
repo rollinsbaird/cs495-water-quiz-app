@@ -14,7 +14,7 @@
                 "hasPreview": false,
                 "previewTitle": "INSERT_PREVIEW_TITLE",
                 "previewImage": "INSERT_LINK",
-                "PreviewText": "INSERT_PREVIEW_TEXT"
+                "previewText": "INSERT_PREVIEW_TEXT"
             },
             "questionText": "INSERT_QUESTION_TEXT",
             "questionImage": "INSERT_IMAGE_LINK",
