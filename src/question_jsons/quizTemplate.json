@@ -3,24 +3,27 @@
     "topic": "QUIZ_TOPIC",
     "id": "quiz-template",
     "title": "TITLE_TO_DISPLAY",
-    "difficulty" : 0,
-    "location" : "INSERT_LOCATION",
+    "difficulty": 0,
+    "location": "INSERT_LOCATION",
+    "quizTags": [
+        "INSERT_TAG_NAME"
+    ],
     "questions": [
         {
-            "questionPreivew" : {
-                "isTrue" : false,
-                "previewTitle" : "INSERT_PREVIEW_TITLE",
-                "previewImage" : "INSERT_LINK",
-                "PreviewText" : "INSERT_PREVIEW_TEXT"
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "PreviewText": "INSERT_PREVIEW_TEXT"
             },
-            "questionText" : "INSERT_QUESTION_TEXT",
-            "questionImage" : "INSERT_IMAGE_LINK",
+            "questionText": "INSERT_QUESTION_TEXT",
+            "questionImage": "INSERT_IMAGE_LINK",
             "answerChoices": [
                 {
                     "answerText": "INSERT_ANSWER_TEXT", 
                     "isCorrect": false, 
                     "feedback": {
-                        "feedbackImage" : "INSERT_IMAGE_LINK",
+                        "feedbackImage": "INSERT_IMAGE_LINK",
                         "feedbackText" : "INSERT_FEEDBACK_TEXT"
                     }
                 },
@@ -28,24 +31,24 @@
                     "answerText": "INSERT_ANSWER_TEXT", 
                     "isCorrect": false, 
                     "feedback": {
-                        "feedbackImage" : "INSERT_IMAGE_LINK",
-                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                        "feedbackImage": "INSERT_IMAGE_LINK",
+                        "feedbackText": "INSERT_FEEDBACK_TEXT"
                     }
                 },
                 {
                     "answerText": "INSERT_ANSWER_TEXT", 
                     "isCorrect": false, 
                     "feedback": {
-                        "feedbackImage" : "INSERT_IMAGE_LINK",
-                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                        "feedbackImage": "INSERT_IMAGE_LINK",
+                        "feedbackText": "INSERT_FEEDBACK_TEXT"
                     }
                 },
                 {
                     "answerText": "INSERT_ANSWER_TEXT", 
                     "isCorrect": false, 
                     "feedback": {
-                        "feedbackImage" : "INSERT_IMAGE_LINK",
-                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                        "feedbackImage": "INSERT_IMAGE_LINK",
+                        "feedbackText": "INSERT_FEEDBACK_TEXT"
                     }
                 }
                 ]
