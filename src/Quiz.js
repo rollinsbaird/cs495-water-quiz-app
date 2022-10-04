@@ -1,6 +1,25 @@
 import React, { useState } from 'react';
-import quizData from './question_jsons/sampleAlabamaQuiz.json';
-import "./Quiz.css"
+// import quizData from './question_jsons/sampleAlabamaQuiz.json';
+import './Quiz.css';
+
+var faunadb = require("faunadb");
+var q = faunadb.query;
+var client = new faunadb.Client({
+  secret: process.env.REACT_APP_DB_KEY,
+  endpoint: "https://db.fauna.com/",
+});
+
+// https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
+var readDB = client.query(
+  q.Get(q.Ref(q.Collection("Quizes"), "344152786005394002"))
+);
+
+var quizData;
+
+readDB.then(function (response) {
+  quizData = response.data;
+  console.log(quizData);
+});
 
 function Quiz() {
   
