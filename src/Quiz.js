@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import quizData from './question_jsons/sampleAlabamaQuiz.json';
 import './Quiz.css';
+import {EmailShareButton,TwitterShareButton, FacebookShareButton, EmailIcon, TwitterIcon, FacebookIcon} from "react-share";
 
 var faunadb = require("faunadb");
 var q = faunadb.query;
@@ -29,6 +30,13 @@ function Quiz() {
   const [hasAnswered, setHasAnswered] = useState(false);
   const [feedbackMsg, setFeedbackMsg] = useState("");
 
+  const shareUrl = "https://master--peaceful-kulfi-c5ff44.netlify.app"
+  const shareSubject = "Hey friend! I have a wonderful new web-app for you!"
+  const shareBody = "This is HydroLogic, it is great! You should play this game."
+  const shareTitle = "This is HydroLogic, an interactive water quiz game!"
+  const shareHashtags = ["HydroLogic","WaterQuiz"]
+  const shareQuote = "This is HydroLogic, it is great! You should play this game."
+
   const restartQuiz = () => {
     setScore(0);
     setShowScore(false);
@@ -37,12 +45,32 @@ function Quiz() {
   }
 
   const quizEndScreen = (score, numQuestions) => {
-    if ((score/numQuestions) < 0.8) {
-      return <button onClick={restartQuiz}>Restart Quiz</button>
-    } else {
-      // TO DO: make onCLick go to home page
-      return <button onClick={restartQuiz}>Home Menu</button>
-    }
+    return <p>
+      <br></br>
+      <FacebookShareButton
+        quote = {shareQuote + shareUrl}
+        hashtag = {'#' + shareHashtags[0]}
+        url = {shareUrl}
+    >
+    <FacebookIcon size={40} round={true} />
+  </FacebookShareButton>
+      <TwitterShareButton
+        title = {shareTitle}
+        hashtags = {shareHashtags}
+        url = {shareUrl}
+        seperator = {'\n'}
+    >
+    <TwitterIcon size={40} round={true} />
+  </TwitterShareButton>
+    <EmailShareButton
+      subject = {shareSubject}
+      body = {shareBody}
+      url = {shareUrl}
+      seperator = {'\n'}
+      >
+      <EmailIcon size={40} round={true} />
+    </EmailShareButton>
+     </p>
   };
 
   const displayChoicesOrFeedback = () => {
