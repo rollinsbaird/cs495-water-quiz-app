@@ -24,7 +24,7 @@
                     "isCorrect": true, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "You are correct!"
+                        "feedbackText": "You are correct!"
                     }
                 },
                 {
@@ -68,7 +68,7 @@
                     "isCorrect": true, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "You are correct!"
+                        "feedbackText": "You are correct!"
                     }
                 },
                 {
@@ -112,7 +112,7 @@
                     "isCorrect": true, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "You are correct!"
+                        "feedbackText": "You are correct!"
                     }
                 },
                 {
@@ -156,7 +156,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "Unfortunately the actual year is 1979!"
+                        "feedbackText": "Unfortunately the actual year is 1979!"
                     }
                 },
                 {
@@ -200,7 +200,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "Close, but there is actually 1 natural lake in Alabama!"
+                        "feedbackText": "Close, but there is actually 1 natural lake in Alabama!"
                     }
                 },
                 {
@@ -244,7 +244,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "This is correct!"
+                        "feedbackText": "This is correct!"
                     }
                 },
                 {
@@ -272,7 +272,7 @@
                     "isCorrect": true, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "Correct!"
+                        "feedbackText": "Correct!"
                     }
                 },
                 {
@@ -316,7 +316,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "Close, the answer was all of the above!"
+                        "feedbackText": "Close, the answer was all of the above!"
                     }
                 },
                 {
@@ -348,7 +348,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "Close, the answer was all of the above!"
+                        "feedbackText": "Close, the answer was all of the above!"
                     }
                 },
                 {
