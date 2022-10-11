@@ -12,7 +12,7 @@ var client = new faunadb.Client({
 
 // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
 var readDB = client.query(
-  q.Get(q.Ref(q.Collection("Quizes"), "344152786005394002"))
+  q.Get(q.Ref(q.Collection("Quizes"), "344801521082303056"))
 );
 
 var quizData;
@@ -29,6 +29,7 @@ function Quiz() {
   const [score, setScore] = useState(0);
   const [hasAnswered, setHasAnswered] = useState(false);
   const [feedbackMsg, setFeedbackMsg] = useState("");
+  const [displayQuestion, setDisplayQuestion] = useState(true);
 
   const shareUrl = "https://master--peaceful-kulfi-c5ff44.netlify.app"
   const shareSubject = "Hey friend! I have a wonderful new web-app for you!"
@@ -97,18 +98,25 @@ function Quiz() {
     if (answerChoice.isCorrect) {
       setScore(score + 1);
     }
-
     setFeedbackMsg(answerChoiceFeedback);
     setHasAnswered(true);
+    setDisplayQuestion(false);
     displayChoicesOrFeedback();
     
 
+    setTimeout(function(){
+      setDisplayQuestion(true);
+  },2000)
+  
+  if(displayQuestion){
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < quizData.questions.length) {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)
     }
+  }
+  
   }
 
   return (
@@ -120,15 +128,25 @@ function Quiz() {
         </div>
       ) : (
         <>
-          <div className='question-section'>
-            <div className='question-count'>
-              <span>Question {currentQuestion + 1}</span>/{quizData.questions.length}
+          { displayQuestion ? (
+            <>
+            <div className='question-section'>
+              <div className='question-count'>
+                <span>Question {currentQuestion + 1}</span>/{quizData.questions.length}
+              </div>
+              <div className='question-text'>{quizData.questions[currentQuestion].questionText}</div>
             </div>
-            <div className='question-text'>{quizData.questions[currentQuestion].questionText}</div>
-          </div>
-          <div className='answer-section'>
-            {displayChoicesOrFeedback()}
-          </div>
+            <div className='answer-section'>
+              {displayChoicesOrFeedback()}
+            </div>
+            </>
+          ) : (
+          <>
+            <div className='answer-section'>
+              {displayChoicesOrFeedback()}
+            </div>
+          </>)
+          }
         </>
       )}
     </div>
