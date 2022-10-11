@@ -12,7 +12,7 @@ var client = new faunadb.Client({
 
 // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
 var readDB = client.query(
-  q.Get(q.Ref(q.Collection("Quizes"), "344801521082303056"))
+  q.Get(q.Ref(q.Collection("Quizes"), "344152786005394002"))
 );
 
 var quizData;
