@@ -73,23 +73,24 @@ function Quiz() {
      </p>
   };
 
-  const displayFeedback = () => {
-   return (
-      <div className='answer-feedback'>
-        <p>{feedbackMsg}</p>
-        <button onClick={() => setHasAnswered(false)}>{"Next Question"}</button>
-      </div>
-    );
-    };
-
-  const displayChoices = () => {
-    return (
-      <div className='answer-choices'>
-        {quizData.questions[currentQuestion].answerChoices.map((answerChoice) => (
-          <button onClick={() => advanceQuestion(answerChoice, answerChoice.feedback.feedbackText)}>{answerChoice.answerText}</button>
-          ))}
-      </div>
-    );
+  const displayChoicesOrFeedback = () => {
+    if(hasAnswered){
+      return (
+        <div className='answer-feedback'>
+          <p>{feedbackMsg}</p>
+          <button onClick={() => setHasAnswered(false)}>{"Next Question"}</button>
+        </div>
+      );
+    }
+    else{
+      return (
+        <div className='answer-choices'>
+          {quizData.questions[currentQuestion].answerChoices.map((answerChoice) => (
+            <button onClick={() => advanceQuestion(answerChoice, answerChoice.feedback.feedbackText)}>{answerChoice.answerText}</button>
+            ))}
+        </div>
+      );
+    }
   };
 
   const advanceQuestion = (answerChoice, answerChoiceFeedback) => {
@@ -99,8 +100,7 @@ function Quiz() {
 
     setFeedbackMsg(answerChoiceFeedback);
     setHasAnswered(true);
-    if(hasAnswered){displayFeedback();}
-    else{displayChoices();}
+    displayChoicesOrFeedback();
     
 
     const nextQuestion = currentQuestion + 1;
@@ -127,7 +127,7 @@ function Quiz() {
             <div className='question-text'>{quizData.questions[currentQuestion].questionText}</div>
           </div>
           <div className='answer-section'>
-            {displayChoices()}
+            {displayChoicesOrFeedback()}
           </div>
         </>
       )}
