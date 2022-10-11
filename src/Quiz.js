@@ -12,7 +12,7 @@ var client = new faunadb.Client({
 
 // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
 var readDB = client.query(
-  q.Get(q.Ref(q.Collection("Quizes"), "344152786005394002"))
+  q.Get(q.Ref(q.Collection("Quizes"), "344801521082303056"))
 );
 
 var quizData;
@@ -32,10 +32,10 @@ function Quiz() {
 
   const shareUrl = "https://master--peaceful-kulfi-c5ff44.netlify.app"
   const shareSubject = "Hey friend! I have a wonderful new web-app for you!"
-  const shareBody = "This is HydroLogic, it is great! You should play this game."
-  const shareTitle = "This is HydroLogic, an interactive water quiz game!"
-  const shareHashtags = ["HydroLogic","WaterQuiz"]
-  const shareQuote = "This is HydroLogic, it is great! You should play this game."
+  const shareBody = "This is HydroKids, it is great! You should play this game."
+  const shareTitle = "This is HydroKids, an interactive water quiz game!"
+  const shareHashtags = ["HydroKids","WaterQuiz"]
+  const shareQuote = "This is HydroKids, it is great! You should play this game."
 
   const restartQuiz = () => {
     setScore(0);
@@ -74,18 +74,19 @@ function Quiz() {
   };
 
   const displayChoicesOrFeedback = () => {
-    if (hasAnswered) {
+    if(hasAnswered){
       return (
         <div className='answer-feedback'>
           <p>{feedbackMsg}</p>
           <button onClick={() => setHasAnswered(false)}>{"Next Question"}</button>
         </div>
       );
-    } else {
+    }
+    else{
       return (
         <div className='answer-choices'>
           {quizData.questions[currentQuestion].answerChoices.map((answerChoice) => (
-            <button onClick={() => advanceQuestion(answerChoice, answerChoice.feedback)}>{answerChoice.answerText}</button>
+            <button onClick={() => advanceQuestion(answerChoice, answerChoice.feedback.feedbackText)}>{answerChoice.answerText}</button>
             ))}
         </div>
       );
@@ -100,6 +101,7 @@ function Quiz() {
     setFeedbackMsg(answerChoiceFeedback);
     setHasAnswered(true);
     displayChoicesOrFeedback();
+    
 
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < quizData.questions.length) {
