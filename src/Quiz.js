@@ -79,7 +79,7 @@ function Quiz() {
       return (
         <div className='answer-feedback'>
           <p>{feedbackMsg}</p>
-          <button onClick={() => setHasAnswered(false)}>{"Next Question"}</button>
+          <button onClick={() => setHasAnswered(false) & setDisplayQuestion(true)}>{"Next Question"}</button>
         </div>
       );
     }
@@ -103,16 +103,12 @@ function Quiz() {
     setDisplayQuestion(false);
     displayChoicesOrFeedback();
     
-
-    setTimeout(function(){
-      setDisplayQuestion(true);
-  },2000)
-  
   if(displayQuestion){
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < quizData.questions.length) {
       setCurrentQuestion(nextQuestion)
-    } else {
+    } 
+    else {
       setShowScore(true)
     }
   }
