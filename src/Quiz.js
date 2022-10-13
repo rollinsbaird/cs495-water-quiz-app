@@ -38,6 +38,7 @@ function Quiz() {
   const [displayQuestion, setDisplayQuestion] = useState(true);
   const [isLastQuestionFeedback, setIsLastQuestionFeedback] = useState(false);
   const [viewedPreview, setViewedPreview] = useState(false);
+  const [feedbackImage, setFeedbackImg] = useState("");
 
   const shareUrl = "https://master--peaceful-kulfi-c5ff44.netlify.app";
   const shareSubject = "Hey friend! I have a wonderful new web-app for you!";
@@ -148,6 +149,7 @@ function Quiz() {
     if (isLastQuestionFeedback) {
       return (
         <div className="answer-feedback">
+          {hasImg(feedbackImage)}
           <p>{feedbackMsg}</p>
           <button className="after-feedback" onClick={() => setShowScore(true)}>
             {"Complete Quiz"}
@@ -158,6 +160,7 @@ function Quiz() {
     if (hasAnswered) {
       return (
         <div className="answer-feedback">
+          {hasImg(feedbackImage)}
           <p>{feedbackMsg}</p>
           <button
             className="after-feedback"
@@ -175,7 +178,8 @@ function Quiz() {
                 onClick={() =>
                   advanceQuestion(
                     answerChoice,
-                    answerChoice.feedback.feedbackText
+                    answerChoice.feedback.feedbackText,
+                    answerChoice.feedback.feedbackImage
                   )
                 }>
                 {answerChoice.answerText}
@@ -187,11 +191,12 @@ function Quiz() {
     }
   };
 
-  const advanceQuestion = (answerChoice, answerChoiceFeedback) => {
+  const advanceQuestion = (answerChoice, answerChoiceFeedback, answerChoiceFeedbackImage) => {
     if (answerChoice.isCorrect) {
       setScore(score + 1);
     }
     setFeedbackMsg(answerChoiceFeedback);
+    setFeedbackImg(answerChoiceFeedbackImage);
     setHasAnswered(true);
     setDisplayQuestion(false);
     displayChoicesOrFeedback();
@@ -223,16 +228,7 @@ function Quiz() {
             )
           ) : (
             <>
-              <div className="question-section">
-                <div className="question-count">
-                  <span>Question {currentQuestion}</span>/
-                  {quizData.questions.length}
-                </div>
-                <div className="question-text">
-                  {quizData.questions[currentQuestion - 1].questionText}
-                </div>
-              </div>
-              <div className="answer-section">{displayChoicesOrFeedback()}</div>
+              {displayChoicesOrFeedback()}
             </>
           )}
         </>
