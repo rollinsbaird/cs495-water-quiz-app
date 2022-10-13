@@ -58,29 +58,38 @@ function Quiz() {
 
   const quizEndScreen = (score, numQuestions) => {
     return (
+      // TODO: fix manual print of score for buttons
       <p>
         <br></br>
         <FacebookShareButton
-          quote={shareQuote + shareUrl}
-          hashtag={"#" + shareHashtags[0]}
-          url={shareUrl}>
+          quote = {shareQuote + shareUrl + "\nI just scored a "+ score["score"] + 
+          " out of " + quizData.questions.length + "on the " + quizData}
+          hashtag = {'#' + shareHashtags[0]}
+          url = {shareUrl}
+        >
           <FacebookIcon size={40} round={true} />
         </FacebookShareButton>
         <TwitterShareButton
-          title={shareTitle}
-          hashtags={shareHashtags}
-          url={shareUrl}
-          seperator={"\n"}>
+          title = {"\nI just scored a " + score["score"] + " out of " + 
+          quizData.questions.length + " on the " + quizData.title + "!\n" + shareTitle + "\n"}
+          hashtag = {'#' + shareHashtags[0]}
+          hashtags = {shareHashtags}
+          url = {shareUrl}
+          seperator = {'\n'}
+        >
           <TwitterIcon size={40} round={true} />
         </TwitterShareButton>
         <EmailShareButton
-          subject={shareSubject}
-          body={shareBody}
-          url={shareUrl}
-          seperator={"\n"}>
+          subject = {shareSubject}
+          body = {shareBody  + "\nI just scored a "+ score["score"] + 
+          " out of " + quizData.questions.length + " on the " + quizData.title+ "!\n"}
+          hashtag = {'#' + shareHashtags[0]}
+          url = {shareUrl}
+          seperator = {'\n'}
+        >
           <EmailIcon size={40} round={true} />
         </EmailShareButton>
-      </p>
+     </p>
     );
   };
 
