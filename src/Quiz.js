@@ -87,13 +87,39 @@ function Quiz() {
     return(url.match(/\.(jpeg|jpg|gif|png|svg)$/) != null);
   }
 
-  const questionImg = (url) => {
+  const hasImg = (url) => {
     if (checkURL(url)) {
       return (
         <img className="question-image" src={url} alt="associated with question"></img>
       );
     }
     return;
+  }
+
+  const displayQuestionOrPreview = (hasPreview) => {
+    if (!hasPreview) {
+      return (
+        <>
+          <div className="question-section">
+            <div className="question-count">
+              <span>Question {currentQuestion + 1}</span>/
+              {quizData.questions.length}
+            </div>
+            <div className="question-text">
+              {quizData.questions[currentQuestion].questionText}
+            </div>
+          </div>
+          <div className="answer-section">{displayChoicesOrFeedback()}</div>
+        </>
+      )
+    }
+    return (
+      <div className="preview-section">
+        <div className="preview-title">{quizData.questions[currentQuestion].questionPreview.previewTitle}</div>
+        {hasImg(quizData.questions[currentQuestion].questionPreview.previewImage)}
+        <div className="preview-text">{quizData.questions[currentQuestion].questionPreview.previewText}</div>
+      </div>
+    )
   }
 
   const displayChoicesOrFeedback = () => {
@@ -169,19 +195,8 @@ function Quiz() {
       ) : (
         <>
           {displayQuestion ? (
-            <>
-              <div className="question-section">
-                <div className="question-count">
-                  <span>Question {currentQuestion + 1}</span>/
-                  {quizData.questions.length}
-                </div>
-                <div className="question-text">
-                  {quizData.questions[currentQuestion].questionText}
-                </div>
-                {questionImg(quizData.questions[currentQuestion].questionImage)}
-              </div>
-              <div className="answer-section">{displayChoicesOrFeedback()}</div>
-            </>
+            displayQuestionOrPreview(true)
+            // displayQuestionOrPreview(quizData.questions[currentQuestion].questionPreview.hasPreview)
           ) : (
             <>
             <div className="question-section">
