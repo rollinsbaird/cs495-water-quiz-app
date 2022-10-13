@@ -32,6 +32,15 @@ code {
   
 .display-score {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.display-score p {
+  width: -webkit-fill-available;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .question-section, .preview-section {
@@ -64,7 +73,7 @@ code {
   justify-content: space-between;
 }
 
-.answer-section button, .answer-feedback button {
+.answer-section button, .answer-feedback button, .display-score button {
   /* width: 100%; */
   font-size: 16px;
   color: #ffffff;

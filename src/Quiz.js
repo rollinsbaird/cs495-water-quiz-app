@@ -26,7 +26,6 @@ var quizData;
 
 readDB.then(function (response) {
   quizData = response.data;
-  console.log(quizData);
 });
 
 function Quiz() {
@@ -39,29 +38,31 @@ function Quiz() {
   const [isLastQuestionFeedback, setIsLastQuestionFeedback] = useState(false);
   const [viewedPreview, setViewedPreview] = useState(false);
   const [feedbackImage, setFeedbackImg] = useState("");
-
-  const shareUrl = "https://master--peaceful-kulfi-c5ff44.netlify.app";
-  const shareSubject = "Hey friend! I have a wonderful new web-app for you!";
-  const shareBody =
-    "This is HydroKids, it is great! You should play this game.";
-  const shareTitle = "This is HydroKids, an interactive water quiz game!";
-  const shareHashtags = ["HydroKids", "WaterQuiz"];
-  const shareQuote =
-    "This is HydroKids, it is great! You should play this game.";
-
+  
   const restartQuiz = () => {
     setScore(0);
     setShowScore(false);
     setCurrentQuestion(0);
     setHasAnswered(false);
     setIsLastQuestionFeedback(false);
+    setDisplayQuestion(true);
+    setViewedPreview(false);
   };
 
+  const shareUrl = "https://master--peaceful-kulfi-c5ff44.netlify.app";
+  const shareSubject = "Hey friend! I have a wonderful new web-app for you!";
+  const shareBody =
+    "This is HydroKids, it is great! You should play this game.";
+  const shareTitle = "This is HydroKids, an interactive water quiz game!";  
+  const shareHashtags = ["HydroKids", "WaterQuiz"];
+  const shareQuote =
+    "This is HydroKids, it is great! You should play this game.";
+  
   const quizEndScreen = (score, numQuestions) => {
     return (
       // TODO: fix manual print of score for buttons
+      <>
       <p>
-        <br></br>
         <FacebookShareButton
           quote = {shareQuote + shareUrl + "\nI just scored a "+ score["score"] + 
           " out of " + quizData.questions.length + "on the " + quizData}
@@ -91,6 +92,10 @@ function Quiz() {
           <EmailIcon size={40} round={true} />
         </EmailShareButton>
      </p>
+     <button onClick={() => restartQuiz()}>
+     {"Restart Quiz"}
+      </button>
+      </>
     );
   };
 
@@ -116,9 +121,10 @@ function Quiz() {
         <>
           <div className="question-section">
             <div className="question-count">
-              <span>Question {currentQuestion + 1}</span>/
+              Question {currentQuestion + 1}/
               {quizData.questions.length}
             </div>
+            {hasImg(quizData.questions[currentQuestion].questionImage)}
             <div className="question-text">
               {quizData.questions[currentQuestion].questionText}
             </div>
@@ -199,10 +205,10 @@ function Quiz() {
     setFeedbackImg(answerChoiceFeedbackImage);
     setHasAnswered(true);
     setDisplayQuestion(false);
-    displayChoicesOrFeedback();
+    // displayChoicesOrFeedback();
 
     if (displayQuestion) {
-      const nextQuestion = currentQuestion + 1;
+      const nextQuestion = currentQuestion + 7;
       if (nextQuestion < quizData.questions.length) {
         setCurrentQuestion(nextQuestion);
         setViewedPreview(false);
