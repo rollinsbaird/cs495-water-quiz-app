@@ -37,6 +37,7 @@ function Quiz() {
   const [feedbackMsg, setFeedbackMsg] = useState("");
   const [displayQuestion, setDisplayQuestion] = useState(true);
   const [isLastQuestionFeedback, setIsLastQuestionFeedback] = useState(false);
+  const [viewedPreview, setViewedPreview] = useState(false);
 
   const shareUrl = "https://master--peaceful-kulfi-c5ff44.netlify.app";
   const shareSubject = "Hey friend! I have a wonderful new web-app for you!";
@@ -84,25 +85,62 @@ function Quiz() {
   };
 
   function checkURL(url) {
-    return(url.match(/\.(jpeg|jpg|gif|png|svg)$/) != null);
+    return url.match(/\.(jpeg|jpg|gif|png|svg)$/) != null;
   }
 
-  const questionImg = (url) => {
+  const hasImg = (url) => {
     if (checkURL(url)) {
       return (
-        <img className="question-image" src={url} alt="associated with question"></img>
+        <img
+          className="question-image"
+          src={url}
+          alt="associated with question"></img>
       );
     }
     return;
-  }
+  };
+
+  const displayQuestionOrPreview = (hasPreview) => {
+    if (!hasPreview || viewedPreview) {
+      return (
+        <>
+          <div className="question-section">
+            <div className="question-count">
+              <span>Question {currentQuestion + 1}</span>/
+              {quizData.questions.length}
+            </div>
+            <div className="question-text">
+              {quizData.questions[currentQuestion].questionText}
+            </div>
+          </div>
+          <div className="answer-section">{displayChoicesOrFeedback()}</div>
+        </>
+      );
+    }
+    return (
+      <div className="preview-section">
+        <div className="preview-title">
+          {quizData.questions[currentQuestion].questionPreview.previewTitle}
+        </div>
+        {hasImg(
+          quizData.questions[currentQuestion].questionPreview.previewImage
+        )}
+        <div className="preview-text">
+          {quizData.questions[currentQuestion].questionPreview.previewText}
+        </div>
+        <button onClick={() => setViewedPreview(true)}>
+          {"Start Question"}
+        </button>
+      </div>
+    );
+  };
 
   const displayChoicesOrFeedback = () => {
     if (isLastQuestionFeedback) {
       return (
         <div className="answer-feedback">
           <p>{feedbackMsg}</p>
-          <button
-            onClick={() => setShowScore(true)}>
+          <button className="after-feedback" onClick={() => setShowScore(true)}>
             {"Complete Quiz"}
           </button>
         </div>
@@ -113,6 +151,7 @@ function Quiz() {
         <div className="answer-feedback">
           <p>{feedbackMsg}</p>
           <button
+            className="after-feedback"
             onClick={() => setHasAnswered(false) & setDisplayQuestion(true)}>
             {"Next Question"}
           </button>
@@ -152,6 +191,7 @@ function Quiz() {
       const nextQuestion = currentQuestion + 1;
       if (nextQuestion < quizData.questions.length) {
         setCurrentQuestion(nextQuestion);
+        setViewedPreview(false);
       } else {
         setCurrentQuestion(nextQuestion);
         setIsLastQuestionFeedback(true);
@@ -169,28 +209,18 @@ function Quiz() {
       ) : (
         <>
           {displayQuestion ? (
-            <>
-              <div className="question-section">
-                <div className="question-count">
-                  <span>Question {currentQuestion + 1}</span>/
-                  {quizData.questions.length}
-                </div>
-                <div className="question-text">
-                  {quizData.questions[currentQuestion].questionText}
-                </div>
-                {questionImg(quizData.questions[currentQuestion].questionImage)}
-              </div>
-              <div className="answer-section">{displayChoicesOrFeedback()}</div>
-            </>
+            displayQuestionOrPreview(
+              quizData.questions[currentQuestion].questionPreview.hasPreview
+            )
           ) : (
             <>
-            <div className="question-section">
+              <div className="question-section">
                 <div className="question-count">
                   <span>Question {currentQuestion}</span>/
                   {quizData.questions.length}
                 </div>
                 <div className="question-text">
-                  {quizData.questions[currentQuestion-1].questionText}
+                  {quizData.questions[currentQuestion - 1].questionText}
                 </div>
               </div>
               <div className="answer-section">{displayChoicesOrFeedback()}</div>
