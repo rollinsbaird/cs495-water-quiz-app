@@ -64,7 +64,7 @@ code {
   justify-content: space-between;
 }
 
-.answer-section button {
+.answer-section button, .answer-feedback button {
   /* width: 100%; */
   font-size: 16px;
   color: #ffffff;
@@ -83,12 +83,6 @@ code {
   justify-content: flex-start;
   align-items: center;
 }
-  
-/* .answer-feedback button {
-  display: inline-flexbox;
-  justify-content: center;
-  align-items: center;
-} */
 
 button.after-feedback {
   justify-content: center;
