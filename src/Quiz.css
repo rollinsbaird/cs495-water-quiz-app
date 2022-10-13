@@ -51,6 +51,11 @@ code {
   .question-text {
     margin-bottom: 12px;
   }
+
+  .question-image {
+    width: clamp(150px, 50%, 400px);
+    height: auto;
+  }
   
   .answer-section {
     width: 100%;
