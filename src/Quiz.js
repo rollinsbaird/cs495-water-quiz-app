@@ -83,6 +83,19 @@ function Quiz() {
     );
   };
 
+  function checkURL(url) {
+    return(url.match(/\.(jpeg|jpg|gif|png|svg)$/) != null);
+  }
+
+  const questionImg = (url) => {
+    if (checkURL(url)) {
+      return (
+        <img className="question-image" src={url} alt="associated with question"></img>
+      );
+    }
+    return;
+  }
+
   const displayChoicesOrFeedback = () => {
     if (isLastQuestionFeedback) {
       return (
@@ -165,6 +178,7 @@ function Quiz() {
                 <div className="question-text">
                   {quizData.questions[currentQuestion].questionText}
                 </div>
+                {questionImg(quizData.questions[currentQuestion].questionImage)}
               </div>
               <div className="answer-section">{displayChoicesOrFeedback()}</div>
             </>
