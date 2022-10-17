@@ -38,7 +38,7 @@ function Quiz() {
   const [isLastQuestionFeedback, setIsLastQuestionFeedback] = useState(false);
   const [viewedPreview, setViewedPreview] = useState(false);
   const [feedbackImage, setFeedbackImg] = useState("");
-  
+
   const restartQuiz = () => {
     setScore(0);
     setShowScore(false);
@@ -53,48 +53,68 @@ function Quiz() {
   const shareSubject = "Hey friend! I have a wonderful new web-app for you!";
   const shareBody =
     "This is HydroKids, it is great! You should play this game.";
-  const shareTitle = "This is HydroKids, an interactive water quiz game!";  
+  const shareTitle = "This is HydroKids, an interactive water quiz game!";
   const shareHashtags = ["HydroKids", "WaterQuiz"];
   const shareQuote =
     "This is HydroKids, it is great! You should play this game.";
-  
+
   const quizEndScreen = (score, numQuestions) => {
     return (
       // TODO: fix manual print of score for buttons
       <>
-      <p>
-        <FacebookShareButton
-          quote = {shareQuote + shareUrl + "\nI just scored a "+ score["score"] + 
-          " out of " + quizData.questions.length + "on the " + quizData}
-          hashtag = {'#' + shareHashtags[0]}
-          url = {shareUrl}
-        >
-          <FacebookIcon size={40} round={true} />
-        </FacebookShareButton>
-        <TwitterShareButton
-          title = {"\nI just scored a " + score["score"] + " out of " + 
-          quizData.questions.length + " on the " + quizData.title + "!\n" + shareTitle + "\n"}
-          hashtag = {'#' + shareHashtags[0]}
-          hashtags = {shareHashtags}
-          url = {shareUrl}
-          seperator = {'\n'}
-        >
-          <TwitterIcon size={40} round={true} />
-        </TwitterShareButton>
-        <EmailShareButton
-          subject = {shareSubject}
-          body = {shareBody  + "\nI just scored a "+ score["score"] + 
-          " out of " + quizData.questions.length + " on the " + quizData.title+ "!\n"}
-          hashtag = {'#' + shareHashtags[0]}
-          url = {shareUrl}
-          seperator = {'\n'}
-        >
-          <EmailIcon size={40} round={true} />
-        </EmailShareButton>
-     </p>
-     <button onClick={() => restartQuiz()}>
-     {"Restart Quiz"}
-      </button>
+        <p>
+          <FacebookShareButton
+            quote={
+              shareQuote +
+              shareUrl +
+              "\nI just scored a " +
+              score["score"] +
+              " out of " +
+              quizData.questions.length +
+              "on the " +
+              quizData
+            }
+            hashtag={"#" + shareHashtags[0]}
+            url={shareUrl}>
+            <FacebookIcon size={40} round={true} />
+          </FacebookShareButton>
+          <TwitterShareButton
+            title={
+              "\nI just scored a " +
+              score["score"] +
+              " out of " +
+              quizData.questions.length +
+              " on the " +
+              quizData.title +
+              "!\n" +
+              shareTitle +
+              "\n"
+            }
+            hashtag={"#" + shareHashtags[0]}
+            hashtags={shareHashtags}
+            url={shareUrl}
+            seperator={"\n"}>
+            <TwitterIcon size={40} round={true} />
+          </TwitterShareButton>
+          <EmailShareButton
+            subject={shareSubject}
+            body={
+              shareBody +
+              "\nI just scored a " +
+              score["score"] +
+              " out of " +
+              quizData.questions.length +
+              " on the " +
+              quizData.title +
+              "!\n"
+            }
+            hashtag={"#" + shareHashtags[0]}
+            url={shareUrl}
+            seperator={"\n"}>
+            <EmailIcon size={40} round={true} />
+          </EmailShareButton>
+        </p>
+        <button onClick={() => restartQuiz()}>{"Restart Quiz"}</button>
       </>
     );
   };
@@ -119,17 +139,18 @@ function Quiz() {
     if (!hasPreview || viewedPreview) {
       return (
         <>
-          <div className="question-section">
-            <div className="question-count">
-              Question {currentQuestion + 1}/
-              {quizData.questions.length}
+          <div className="quiz-section">
+            <div className="question-section">
+              <div className="question-count">
+                Question {currentQuestion + 1}/{quizData.questions.length}
+              </div>
+              {hasImg(quizData.questions[currentQuestion].questionImage)}
+              <div className="question-text">
+                {quizData.questions[currentQuestion].questionText}
+              </div>
             </div>
-            {hasImg(quizData.questions[currentQuestion].questionImage)}
-            <div className="question-text">
-              {quizData.questions[currentQuestion].questionText}
-            </div>
+            <div className="answer-section">{displayChoicesOrFeedback()}</div>
           </div>
-          <div className="answer-section">{displayChoicesOrFeedback()}</div>
         </>
       );
     }
@@ -197,7 +218,11 @@ function Quiz() {
     }
   };
 
-  const advanceQuestion = (answerChoice, answerChoiceFeedback, answerChoiceFeedbackImage) => {
+  const advanceQuestion = (
+    answerChoice,
+    answerChoiceFeedback,
+    answerChoiceFeedbackImage
+  ) => {
     if (answerChoice.isCorrect) {
       setScore(score + 1);
     }
@@ -208,7 +233,7 @@ function Quiz() {
     // displayChoicesOrFeedback();
 
     if (displayQuestion) {
-      const nextQuestion = currentQuestion + 7;
+      const nextQuestion = currentQuestion + 1;
       if (nextQuestion < quizData.questions.length) {
         setCurrentQuestion(nextQuestion);
         setViewedPreview(false);
@@ -233,9 +258,7 @@ function Quiz() {
               quizData.questions[currentQuestion].questionPreview.hasPreview
             )
           ) : (
-            <>
-              {displayChoicesOrFeedback()}
-            </>
+            <>{displayChoicesOrFeedback()}</>
           )}
         </>
       )}
