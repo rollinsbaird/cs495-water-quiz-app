@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -24,12 +24,10 @@ code {
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem;
-  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, .75);
-  /* display: inline-flexbox;
-  justify-content: center; */
+  /* padding: 1rem; */
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
 }
-  
+
 .display-score {
   display: flex;
   flex-wrap: wrap;
@@ -43,8 +41,14 @@ code {
   display: flex;
 }
 
-.question-section, .preview-section {
+.quiz-section,
+.preview-section {
+  width: 100%;
+}
+
+.question-section {
   padding: 1rem;
+  overflow: auto;
   width: 100%;
   position: relative;
 }
@@ -53,11 +57,13 @@ code {
   margin-bottom: 20px;
 }
 
-.question-count span, .preview-title {
+.question-count span,
+.preview-title {
   font-size: 28px;
 }
 
-.question-text, .preview-text {
+.question-text,
+.preview-text {
   margin-bottom: 12px;
 }
 
@@ -73,7 +79,9 @@ code {
   justify-content: space-between;
 }
 
-.answer-section button, .answer-feedback button, .display-score button {
+.answer-section button,
+.answer-feedback button,
+.display-score button {
   /* width: 100%; */
   font-size: 16px;
   color: #ffffff;
@@ -82,7 +90,7 @@ code {
   display: flex;
   padding: 5px;
   margin: 2.5px;
-  
+
   border: 5px solid #234668;
   cursor: pointer;
 }
@@ -98,7 +106,7 @@ button.after-feedback {
   align-items: center;
   display: inline;
 }
-  
+
 .correct {
   background-color: #2f922f;
 }
@@ -106,11 +114,11 @@ button.after-feedback {
 .incorrect {
   background-color: #ff3333;
 }
-  
+
 button:hover {
   background-color: #555e7d;
-} 
-  
+}
+
 button:focus {
   outline: none;
 }
