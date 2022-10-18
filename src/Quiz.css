@@ -19,12 +19,11 @@ code {
 
 .Quiz {
   background-color: #252d4a;
-  width: clamp(20%, 2000px, 95%);
-  height: min(50%, 800px);
+  height: min(50%, 800px, 90%);
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* padding: 1rem; */
+  padding: 1.5rem;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -41,15 +40,9 @@ code {
   display: flex;
 }
 
-.quiz-section,
-.preview-section {
-  width: 100%;
-}
-
 .question-section {
   padding: 1rem;
   overflow: auto;
-  width: 100%;
   position: relative;
 }
 
@@ -73,7 +66,6 @@ code {
 }
 
 .answer-section {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,7 +74,6 @@ code {
 .answer-section button,
 .answer-feedback button,
 .display-score button {
-  /* width: 100%; */
   font-size: 16px;
   color: #ffffff;
   background-color: #252d4a;
