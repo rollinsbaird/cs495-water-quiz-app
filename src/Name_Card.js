@@ -12,11 +12,21 @@ const Item = styled(Card)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+const showDifficulty = (difficulty) => {
+    switch (difficulty) {
+        case 1: return "Easy ✅";
+        case 2: return "Medium 😄";
+        case 3: return "Difficult 💪";
+        case 4: return "Impossible 🔥";
+        default: return "Easy ✅";
+    }
+}
+
 const NameCard = (props) => {
     return(
         <Item>
             <CardContent>
-                <Typography sx={{fontSize: 14}} color="text.secondary">{props.difficulty}</Typography>
+                <Typography sx={{fontSize: 14}} color="text.secondary">{showDifficulty(props.difficulty)}</Typography>
                 <Typography sx={{fontSize: 36, fontWeight: "bold" }} color="text.primary">{props.title}</Typography>
                 <Typography sx={{fontSize: 14}} color="text.secondary">{props.description}</Typography>
                 <Typography sx={{fontSize: 14}} color="text.secondary">{props.tags}</Typography>

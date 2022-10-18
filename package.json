@@ -6,7 +6,7 @@
     "@emotion/babel-plugin": "^11.10.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@mui/material": "^5.10.8",
+    "@mui/material": "^5.10.10",
     "@pronestor/react-zoom-pan-pinch": "^2.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -54,14 +54,26 @@
           "importMap": {
             "@mui/system": {
               "styled": {
-                "canonicalImport": ["@emotion/styled", "default"],
-                "styledBaseImport": ["@mui/system", "styled"]
+                "canonicalImport": [
+                  "@emotion/styled",
+                  "default"
+                ],
+                "styledBaseImport": [
+                  "@mui/system",
+                  "styled"
+                ]
               }
             },
             "@mui/material/styles": {
               "styled": {
-                "canonicalImport": ["@emotion/styled", "default"],
-                "styledBaseImport": ["@mui/material/styles", "styled"]
+                "canonicalImport": [
+                  "@emotion/styled",
+                  "default"
+                ],
+                "styledBaseImport": [
+                  "@mui/material/styles",
+                  "styled"
+                ]
               }
             }
           }
