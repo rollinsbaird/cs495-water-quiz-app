@@ -19,7 +19,7 @@ var client = new faunadb.Client({
 
 // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
 var readDB = client.query(
-  q.Get(q.Ref(q.Collection("Quizes"), "344801521082303056"))
+  q.Get(q.Ref(q.Collection("Quizes"), "345511172699587151"))
 );
 
 var quizData;
@@ -52,11 +52,11 @@ function Quiz() {
   const shareUrl = "https://master--peaceful-kulfi-c5ff44.netlify.app";
   const shareSubject = "Hey friend! I have a wonderful new web-app for you!";
   const shareBody =
-    "This is HydroKids, it is great! You should play this game.";
-  const shareTitle = "This is HydroKids, an interactive water quiz game!";
-  const shareHashtags = ["HydroKids", "WaterQuiz"];
+    "This is HydroGenius, it is great! You should play this game.";
+  const shareTitle = "This is HydroGenius, an interactive water quiz game!";
+  const shareHashtags = ["HydroGenius", "WaterQuiz"];
   const shareQuote =
-    "This is HydroKids, it is great! You should play this game.";
+    "This is HydroGenius, it is great! You should play this game.";
 
   const quizEndScreen = (score, numQuestions) => {
     return (
