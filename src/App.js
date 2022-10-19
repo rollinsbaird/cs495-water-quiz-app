@@ -1,11 +1,11 @@
 import * as React from 'react';
 import './App.css';
-import Homepage2 from './Homepage2';
+import SelectQuiz from './SelectQuiz';
 
 function App() {
   return (
     <div>
-      <Homepage2 />
+      <SelectQuiz />
     </div>
   );
 }

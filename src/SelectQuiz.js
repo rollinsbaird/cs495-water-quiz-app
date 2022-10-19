@@ -44,7 +44,7 @@ const GridStyles = {
     marginRight: "auto",
 }
 
-const Homepage2 = () => {
+const SelectQuiz = () => {
     var quizzes;
     // var quizQuery = 
     // client.query(
@@ -103,4 +103,4 @@ const Homepage2 = () => {
     );
 }
 
-export default Homepage2;
+export default SelectQuiz;

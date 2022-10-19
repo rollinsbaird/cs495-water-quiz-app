@@ -85,7 +85,7 @@ code {
     align-items: center;
 }
   
-  .correct {
+  /* .correct {
     background-color: #2f922f;
   }
   
@@ -96,7 +96,7 @@ code {
 button:hover {
     background-color: #52a721;
 } 
-  
+   */
   button:focus {
     outline: none;
   }
