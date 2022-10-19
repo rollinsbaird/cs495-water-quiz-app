@@ -106,7 +106,7 @@ button.after-feedback {
   background-color: #ff3333;
 }
 
-button:hover {
+.Quiz button:hover {
   background-color: #555e7d;
 }
 
