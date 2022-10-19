@@ -1,0 +1,437 @@
+{
+    "description": "Great Lakes Quiz",
+    "topic": "Demo",
+    "id": "quiz-great-lakes",
+    "title": "Great Lakes Quiz",
+    "difficulty": 1,
+    "location": "Great Lakes",
+    "quizTags": [
+        "lakes"
+    ],
+    "questions": [
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Which of the Following is NOT a Great Lake?",
+            "questionImage": "https://cdn.hswstatic.com/gif/great-lakes-great.jpg",
+            "answerChoices": [
+                {
+                    "answerText": "Niagara", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://cdn.britannica.com/41/129941-050-7A7D1027/Niagara-Falls-cities-River-Ontario-New-York.jpg",
+                        "feedbackText" : "Niagara is not a Great Lake but a river flowing between Erie and Ontario."
+                    }
+                },
+                {
+                    "answerText": "Huron", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, Huron is one of the great lakes, but Niagara is not!"
+                    }
+                },
+                {
+                    "answerText": "Ontario", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, Ontario is one of the great lakes, but Niagara is not!"
+                    }
+                },
+                {
+                    "answerText": "Michigan", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, Michigan is one of the great lakes, but Niagara is not!"
+                    }
+                },
+                {
+                    "answerText": "Erie", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, Erie is one of the great lakes, but Niagara is not!"
+                    }
+                },
+                {
+                    "answerText": "Superior", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, Superior is one of the great lakes, but Niagara is not!"
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Which is the largest of the Great Lakes?",
+            "questionImage": "https://cdn.hswstatic.com/gif/great-lakes-great.jpg",
+            "answerChoices": [
+                {
+                    "answerText": "Huron", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, Superior is the largest Great Lake!"
+                    }
+                },
+                {
+                    "answerText": "Ontario", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, Superior is the largest Great Lake!"
+                    }
+                },
+                {
+                    "answerText": "Michigan", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, Superior is the largest Great Lake!"
+                    }
+                },
+                {
+                    "answerText": "Erie", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, Superior is the largest Great Lake!"
+                    }
+                },
+                {
+                    "answerText": "Superior", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Correct, Superior is the largest Great Lake!"
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "How many miles of driving does it take to circle the Great Lakes?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "1,200 miles", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, it takes 6,500 miles to circle all 5 Great Lakes."
+                    }
+                },
+                {
+                    "answerText": "3,350 miles", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, it takes 6,500 miles to circle all 5 Great Lakes."
+                    }
+                },
+                {
+                    "answerText": "6,500 miles", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Correct! It would take 4 and a half straight days of driving to circle them!"
+                    }
+                },
+                {
+                    "answerText": "8,200 miles", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, it takes 6,500 miles to circle all 5 Great Lakes."
+                    }
+                }
+            ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "How many islands are there in the Great Lakes?",
+            "questionImage": "https://www.greatlakescruises.com/uploads/1/0/6/4/106440933/1000-islands-4.jpg",
+            "answerChoices": [
+                {
+                    "answerText": "over 35,000 islands", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Correct, that's a lot of islands!"
+                    }
+                },
+                {
+                    "answerText": "over 25,000 islands", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, there are actually over 35,000 islands in the great lakes!"
+                    }
+                },
+                {
+                    "answerText": "over 15,000 islands", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, there are actually over 35,000 islands in the great lakes!"
+                    }
+                },
+                {
+                    "answerText": "over 5,000 islands", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, there are actually over 35,000 islands in the great lakes!"
+                    }
+                }
+            ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "What is the largest species of fish found in the Great Lakes?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "Lake Sturgeon", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBIVEhgSFRYYGBgYGBgRGBgYGBgYGBgaGBgZGRoYGRgcIS4lHB4rIRgZJzgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHzcrJCs0NDQ0NDExNDQ0NDQ2NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDE0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj/xABCEAACAQIDBQcBBAgFAgcAAAABAgADEQQSIQUxQVFhBhMicYGRoTKCsdHwBxQjQlJicsEzkqLh8RayFSRDRFPC0v/EABkBAAMBAQEAAAAAAAAAAAAAAAABAwIEBf/EACYRAAICAgICAQQDAQAAAAAAAAABAhEDEiExQVEEExRhcSIykYH/2gAMAwEAAhEDEQA/APUqRkxBIFIydSMrIymGCxbRZ0kaGOl4CrTkqNcaRpgVNZLSDVEtMQkgVUMvFmJFfUEjPJtRJGdZaLJSQAmBcw7CBcSiJsA0EwhmEGwmkZYFoNjCuIJhNmRpMGxj2gmhQrELRjNFMG00kKxC0YXitGGaoLOLRpacY0x0FiMYwmOMaRCh2MJiRxEJQwrPciwUb2bRR5nn0GsTaStjXIIGTKODJylzkDEADe7XNhlXl1Nh5xpxFOnogzv/ABsN39C8PM3PlF2ejvXRnJJzd5bffL49Sd+6c2TM3agrryWjiXGwfHO6B0pWRFbIzFhmdl3jm1r8LAX5mPxOwRTpd5VYtmUaaWDNfQWbUjrbdJnaymqrh0At4HJ04s9yfO95U43aFSrbORYXOVQFW5Ny2UaXJJN5GGF5Upt99lZZVBuKX6IqWAAGgGgHICHQwCiHSd9HGPyzo+06AHqFNpMpNIKGSabzy5I70WCmLAJUhla8i0aFnTrxpYRAR6wlbXWWFUyDVMtAxIgVBIrrJ1QSM4l0SkQ3EEwkl1gHWURNkdhBESQ6wTLNIywDiDYQzCMIm0ZI7LBsskkQbLGJojMsYwkhlgXE0ICwjCIVowiaRkGRGkR5EaRNBYwiclNmIVQSToABcmOtCYTENTqJUXejBh1tw9d0TuuDSa8iOKdMXch2/gU+Ef1MPq8l95GrV6lT6jlUaBQALDoo0ELXVC7uq2DMzKCb5QSSFHlujCJzrFKfOR/8RZ5Ix4j/AKNRAN0nbJa1ZD/XxtvRuMhgSXstL1U8yfZSZvJFRxtL0zOOTlNX7RoO2FHNSpVB+4WU6cGy6k8gQB9oTJWno2JwoqUGpk+J0yi+4aZgT9pV9p59VpMrFGFmUlSDwI3iR+FPaGvov8qOstvYICFSNAhUWdbOSwtokflizNhZ6GrQqPI149XnA0dqZOSpDJVlcrwoeTcTWxYNVg2eRWqRC8SgOw7VJGqRC8GzzSiYbBPI7iSGgXEojDIriDZYZhImOxtKiuaq6oOFzqfIbz6Sl0uTHYrjidBvlLjtu4am2RnubX8AzDXUajS5lZt3thhXovSQOxcBc2igDMCd9yb2taw0JmExe0WYkjQkkk7yb9TITztOolI4rVs9Co9psK5sWZP61091Jt6y0FiAQQQdQRqD5GeP1KlQKGLGx9/WJh9q1kPgqOvHRiB7CEfkvyglgro9gIg2lN2S2u+JpNn+tCFLWtmDC4J66GXTCdsZKStHPJOLpgngGEO4jCs0jDAEQZEOVjSs1YqAFY0rJBSJljsVEfLOyw+WNKx2KgJWJaGyRMsLAEFllsKmO/W+nhf/ALGkQJLDZCWqA8gx+Lf3kc8qxv8ATLYU3NftGyoEZFJ3EW/CZjtVgTm78btKb8wRfKx8xYfZHOaTDqTTHlcQ+LwytSBIzKyhWXn+FiN/QTycGRwkmenngpx1PMwsl4PA1Kh8CM3UDT3OkuxgKYdilIuA1lDElQF8JJ53YN8SwoIyIM7kuw1A0RBwAHSduT5qX9UckfiPyyl/8HbiyA8Rmvb2E6XYyDTJe3HXWdOb7yf4LfaRJ1514wmdedJz2FDR4eABi3iodhy8TPB3nXhQbDy0aTGkxpMdCbOLRrvOMGY6EMM8k7YPVOMqZ76NlTkE/dt6W9562ZW7W2JQxI/aL4hoHU2cDlfiPOZyRclwajLVnjvcE08/8+S3WwNvmGr4Cya2v0mx2x2UNCn3lEl0WzsrnxAg/UAFsQB675QYhri50J4TjmnF0ztxVKLZWLhw668pVPgn7wU1UsxIVQOJO6XeESxP8pt6HWPxuHV1IImU6ZqUdo35NLgquF2bhglWorVGOd1TxMWI3ADcoAAubD3g8H23wjsFYOlzYMwUrruvlJI9rTF0a7U1yLbU3Y2HsBI9ZiWzWF+JAH9p1xzSpVwjiljV89nsLpBFJ5m/aHFsAprPa1tCF03fugRtHbOLTVa7+TNnHs95f7heiTwP2emlIhSYrC9tK6/WiOOl0b31HxL/AAXazBuPGzUm5ODb0dbj3tNxzRl5MPFJeCzKRpSEw2Jo1b93UR7b8jBiPMDdCtTlVKzDiRSkaUknu53dx2KiNlnBJJ7uOFOFhRHVJZ7KpeM6XJGUDqT+feCSiTuHT3j6ePo0K4pVXVGKhjm0AVjpmbcoPUzl+TL+Diu2XwJKabNdSHgCi2inyjMLjCKZXib5eY/3hMAyOL5lKnUMrqQ1+AN/P4gcQgFQhenppPKTrk9PhuiO9TKAu4ABQB03eQkVAzkty9vOLjalKn4qjWvoqjUnyHGUuMx71fCBkT+Ab2/rP9h8ymPHLI6QpzjjVsJW2xRDEWqvY2zohKnyPLh6RJHCzp2fZR9nN96/Rq2jY9o2UOcQR8aBHAQA4zopiEQBjYhj4wwEI0GYQiMImgGGNjzGGMVigzC7b7F1Wrg4YDI1tGfRDrca6leVr75uRAbQ2nTw1MVKjhRcKt95Y7gBx3XPQGSyQjJclITcXweUVcN3FRqbHNdmCuAMrhGKsQL3Gqnfyi1XW2kXtRmXFFDZQBoAdGzO7FxppnZma2ts2+Ls+nRAFRmBe11XMuh6i+8Tzp2lZ3Rn4KzaOEyFd92GYjlr+faQaWUnfccbb/YwuMqvZyxuxOQ+YPDpIGDsG8RIUgoxG8A8R5GxlotqKsi6bErEX04G0PTe46wCJvXnx8oOjUIMLCidaNIiCop3RHflHYCpUKuGUkEHQgkEeRGompo9uXSmqNSDsBlzs5F7cWGU69bzHhraxjtc3jjOUemZlBS7PU9j9paFVP2rpSfirNZTfcVZt/lGp2ooNiUopYowYmsT4RlVmJyWva621tztuv5k5tc9I/D1CuoJBABBBsQehlH8iVUYWGNnsLVnW5NMgWDasBvANjfcdbW1kOjt6kVYkZSoLEEmwA3km1gJ57hO0VdXDs5qWGW1RiwtpuudDpvkvaPaCnUw1RFTK7lQx4AAi4Xpod/PymJZsiXDK4sGNy5XHLfPrwaDtFtg/qqMGAapkrBVa/7MMCiObeFz9Z/pA1tGYanjcfSzLSsaipTaozC7Kp8La7gTmseh6TOdmcMcSy4ZhenTbvme5uEugKW/m3DkWPAT07H4hsPRZ0IDOMtgLZRa1hbgBumfrSToFghL+TX6Mrs3CHBMS7ftEawYHRNLHKQTpqfeScV2+fu+7CrUqsciONGGY2AuNxmT2vj0dCe8fvC5V03IECjKb7ySSfaS+weFRq5YhiyKWXw+Ff3fE3A66DoZqGLdq/Ip5VC0l0bWmh3sSz2F2Y5m8rnhJCLFKQqLPSSUVSPPcnJ22LlnQuWdFYGkYRhEKwgzOdFxBHCJOjAcYk6dEAhES0cSOJA8zOYgKXJAVdSxIsPM8IWgpjMsaRKSp2wwgYKC7C5VnCDILG17k3I0JvaQanbvDhiFp1GF7AjKLjnYm8X1I+zWkvRpysaVmfodsaDj/DqjzCffmtJdHtNhW3sy/wBQB/7C0anH2LSXotQs8y/SJtCocUMOWOREWoicMzZszHmdANf4Z6VhsdQqWyVEa+6zC54aCeN9qKxq161Yb0rMoH8oYqPbJ8mYySTjwahFp8kTbFfOuHqXuVQ4Zj1puWW/2XA+zI2TiPMwC4tTTdDpqjr/AFKSpA8w1/szqWJ575zWiwfE2KKBprf4kJkym8klriONiCD5QYwKILXvACmLsSL8bf3jyMpsfT8Z2bW8yBqez+xcNjaTUz+yq07MrIB4kbgyn6srX10OolftzsrisMpewemN7qdV/qXf62nbDx/6vWSuPpDZHA/gbQ/j5gT1wAMLixBF+YII+ROuMIzj+SEpyjL8HgNUxt/wnseO7HYGqbmkEJ40yU9co8N/SVb/AKOcMWuKtUDfbwH5yybwSRpZos8ye84VCPUWnqFL9HmFBualZvtIB8JJ+H7E4BSD3Rcj+NmYf5b2+ILBLyDzRPHmqLxGsfTVvpCkhgD9J3cD5T3nD7OpIAEREA3ZUQD7p5hicQ+JxdSoD9b5QdbBF0X/AEre3WEsOq5ZvHlt2g/YfBuoZ/ErMbAA2uqnTzF76HlNTtmoXQZ7AgcIzZ+HAQAn6Rbl63kTtA7GmVQanceXORapFYu2YHEYRi5dbE3vY7iOAmq7E/rYqGklIlbZ3UMu4CwIYnQ3O6+tvUQcDhwNN5AB+N8tMBtKrhmLUmK3tmFrhrc7+ZjjtHldhOMZcM2NF8wuVdDxzKQBzu1rW9ZLwuHLi6DMOYItKXAdre8Ip1UKA2F0Ba/TLv8Aa81K1fCFQZF8rMfPl98vDPkk6o554McVbZFyTpK7udOnY5qLd1gykmsgjCk51Is0RO7nd3JHdmL3c1sKiMVi5ZI7qKEhsFGV7S7GNUiplz5RYra5HG4HHylDgMMKRJpMyNe/gYjXqNx9RPScsrquxaTFiRYsQQV0IsoFuXCRmm+UWxzUVUjAtsvM1ixIY5joNdekM+xKbMWF78husPSaDH9mqmhRgwUlrfS2vC+4/EgUS1vGCGByNmUrqOOo49JJOS7RWWslcWZ7amxwB4STbcD15SkxGDqJoyEcbnT5m9NMBs15S9oMZTt3fkzNwXlrz6TWyYtWZnAYZGNRSbaoyknQsoOYW4GxW58uUC6PqG1tpzFuWsm7VrU0NNUAenoxXMRmJ0N2Ugj3lrhVwrC6o6k62Y94otwF7H3JmWNJtcGNxGzKZGgdW4G4K+qka+8gvs6oNwzDmv4b56LU2dSqDwHKbfSfw/AypxOznQ2OnUco6E+6ZhDUO735ybSq3Xrx/GaLEYMMMpUEb+vvIFTYqE+AlB18Q89TEBVVbMOo3SObjfJtTY9YXK2YDkdSOdjIbd4N4NuoiAmYaoCjDoJ6l2Cxhq4NVbfSPdX5qACvsDb7M8fVgDfVT8e03n6Odv06VRsNUsFqsCj30D2tlbodNefnpbDOpUyOSNxPScs7LJndRDSnZsc2pEyxQkjY7bWEo/XVQH+FTnb2W9vWZfa/a+owy4ZCinTvHALeapqB63mZZEuzSg5dGg25tGlQptnezurKijViSCLgDWw5zDbH2coyWB625RtHDVHqGozl2I1Zzdv+JocNTKKBOeU9v0dEI6h9wAAtwkaooLEEcN/nOrYggX4nSR6T1K7imijOTzsABxPSRcuaLRXFlbURKbHh/wASXhdh16uVmBpIzBczjxG97EJvtewubbxvmw2R2bp0j3lSz1N97eFD/KDx/mPxLDaotRdwCSi96AN5KftAB5lbS0YX2Tnlrhf6UGG2PToVKQQXN3ZnbVyAlrbwMviOgG+3KX6LFFFS3eCxJWwbmp1EOiStpdHO7k7YzLOh8k6Z2HRaWihY6060mUoQLEMeBGlYANMSOyxMsZkaZ0dadaAqBkSNjMDTqCzjXgw0IkwidaHDGrRhe0Gya9OmWVXdB9Rp3DheJyjW46azMYjC06mHZ6Th7DMRxsCCT5iewgSpxPZnBvUNQ08rn6ijMma+/MFNieu+Rlj9Fo5eKZ4Rk8LLxvoful5hdq0KaLmV81rEIVNrCwPitcGL2j2fSoYuph0JK03Ci+8B0V8vW2YC8p8RStvOm/8A5k9nFlYq0a7ZOJSr41RhqRdjy6CWikMLfUOgJlZ2ao02pIyup8NjY7m4j54yfRpVER78B7+U1HJfY5Y/RDxuEzXyI9xpuVRpyzEH2kNtnNYaXvbdr7y4wGKFrHz8rQgrKxOWym+vLlc9fwm+Hyibi12Zuph7C1uYMD3GjDSzb+M11SlTG+2vSBq7OQ629oUzNmObZyC4yLruNt3rOp4IIN2h36DfNW2yRa1+EEmy23X9YK0DaKBcViiTetWI5Z3/ABjGLuTmd3XkzsR8maFdltuuI0bGN94tHtL2ZpFDhsLvsAAdwllgtnXGvDyMtDg6YBUWvYylxOKek1rknkNfgQ/ZovEp2EFVrZRfraVFHaOKOgp36t4YyhWqO2V2BDHLZbnXf9Wv3xSkkjcYNkrH4ssAii3MjhNr2T2AcPTNR/8AEcf5F/h8zvPpKHYdLDo4quruUPgpojOARudiNCeQ9ZpK23a5/wAPCVG6uyJ95JmYLnZhlkq1j0XJWJlmPxb7XqE2alRU7gpJZfM2N4J9h4yp/jYxyOKoCP8A7AfErtL0c+q9mlxe08NSOV6iIeROvsN0qsT2wwqWy5nHMAAfOvvaRKHZLDLqc7neSzkX9rSzobIw6Wy009RmPubw5GtSB/1oOFE24XcfhOl33Kfwj/KJ0WsvY7j6NJacBHERIAdEtFnRgJadaOtOtFYDbTrR2WLlhYUDyzssJli5YWKgdo7LHhYoEVjo8P8A0o4Sph8e9bKTTrhHVhuDqio6X5+ENb+YTE4zHEqLXJIO8AAC9r6E3O+fS+19n4bEUmoYhVdH1ysbG43MpvcEX3jnMPU7C7Fuo71hkbLbvh4rP4kOl95I013SbjzZaM1VMw36P9hYrEYrvULJQQ3rPa6tb/01X95z0+kHyB1G19t4ehX7h2sCLoxK6i9tbE5d371pfbc7SU8LTIw1Nno01UXpKgpJqSUILAtpqSqmwIvqZ4jtrHGrVZlrVHVmLkVBk1OpsisRb0HlE4oam7bPVqD0z40ym/EAa+okRcAA5Je6tv35h7TyrC4yrSN0cr0BNvUbjNDhe2+JUWZKb/1A/iZhxa6KrIn2brFUHurITuF9Lg890m0i4TXgPWZfZvbbDPpVV6TaAZQzqxPAW1vfpxl9icSKdbuHzLVCCrksS2U38Qtodx4x7TQmovgDhsWwc3U+ehvf5knaOJdFFha978/SR02lTOoZB1NgY18fTfQsreu7yh9V0DxRskDGk0yQpJA14W94zD49itghNuo0HneJ+sKqgj6ToCAxB4HXjJeEwFZx4EIXmRkH+rUw+pJ9CcILsosS9QOQOfK8kUaanxstjxGuvW0uK+wcVbwtTBPNyT8JCYLs5UCk1awzHWwUsB6ki/tFrOQ/qQS4KWr9O6w5c5WnaxoAiiiBidajDOfsqRlXzsZebR7LYljdKyMBqFKsn/6vM9jNg41DrSLDmhVvu1+JpQkvAKcZcWj0vY+MNTDU6hYMSi5mAsC1rNpw1vDs/wCbzD9jsXVpsaLo6q2oDIwCtbfu0vb7przU6+06Yu0ck1UqHs3URoPWDNa3+5g2qc2+ZswSA4jlf86yIKi8NfmL3x6fAioCZmnSJ3h5ToUBsiIlpVJtDFt/7YIP56q/IAi1WxrCy9yh53diNeVrH4kiha2nWmaqbIxb/XjGtyRCnG+8OPuk2nsohbGvVO69mUXsOJsT8wAuDYb5WYrb2Fplld7FLXFiSb20W31HX74JdiYfNmYO7b7vUqNr0Gaw9IUbOof/ABofNQ33wHZEftdg1NiXve2Xu3Dbr/SReR/+sA1+7wuKffb9mVBt11tLxEVfpUDyAEUvFQWZk7e2o58GBVBwNR9fa4nLV224t/5ZNN+pb2AYTRlhEzCFCszOI2JtGobvj2S4AIpqVGl9wBHM+canYsMzNUxVdyxu1iq5jzbQ3M1BboYmY3/JhQWUidjsHcFldyP4qjnj0I5mS02HhEWy4dGykuqkBvEeRa9joJYF7bzKHtP2kXCpouZmBseAuGy388p9jCTpWOEdpUYH9Iz92hw6Zu8JBdVtZEN2YCw0DEU/COCCeYlZtcXWL1WqMbliGJuDqQCdR93CDpbCGKqrTQWdt7DQADezcwJFT5o6ZYuLRjGUicLzUbb7FY7DgsUFRALl6RzgC/7y7x7EdZlidJRohfo2f6LdiDEY0VWF6eHtVN9xfXu19wW+xL/9L9xiKDqwBei9NudldW1twJb4M0/YTY/6pgkRl/aP+2qXvozAWX7KgDzvzmc/SbgXevh65UNTCtRb+VmJZbjkefTymnGomYu5Hl7LrcgX5i39o+kdbc/aWmKwNPgLept7SFh8OwqICL+IajcQNT8Aydoq4tHtXYBWp4BASAGd3Uclvb7wx9ZfviRzvM32ZZUwlPXeGbfa13bSTXxXIfI/vOiK4RCXMmWLYn8/8QD4vkCfiV7Yjnb4P9oNq3In4mzNMnmsx5D1v/eN70DjIDOeJ/1CDNUcx7/7RWGpYNih+f8AeNNcHifQj8ZXHEgcvn8In63+fF+MLHRZBl6+sRqqDh8GVhxH5s34xprHp7QsepPfE8gPURFqN0H2ZA79untHrVbpCw1J+ZufwfxnSJnPP4nRio9FLxpYwXeHoIhZjx9pKjQQmNzjnBlY0so4/wB4CCd4InewRqef3RhxPK33woCQHPCNbqfm0hviev3/ANoJq35tHQE41FHL74hxHn90rTWPDT1t90aX9Y6AsGxP5vBNiSeXzIZqEblEG1Rjv08oUImmsevwJhP0jYYFUxFzpalbUi9yQb8NC01uZep9ZB23QSrh3psCQVLWX6rr4hYnjpMzVxaN45ayTPLO8AAsb6a9DrcS/wCwu08mLNNrZaiZBfgy+Ia9dR7TKUr5QbaG4B4Ei1/vHvDUapR1qLvRg48wbzki9ZWd01tBo9sNf83mex3ZvB1KyYg00R0dal0OUMQbjMo0Ovr1lgKhIDaWIBGvODZ+i+87eDz6JrVieZ8t0pu02DbEYc00IVwy1EudCym+UngDqPWHet5RgYcgINro0lR5hjEZWKkWIJUjkRoRI6aG95oe1mFC1i4+l7Pfkw0P4+szbHLpOV8OjrTtWeg9k8UpwoG8qzA+uo+/75bPiupmE7K47JVNO9g4AH9Q3feRNgRbfLRl/E55Rphmxfr6RjYljuHxBtVEE9Y8BHsLUKzueMTXifiAzvFs/GGwUGzKN5PsI4YhRu/tIxuI01iNwHtByFRJbEX4RoqmRzWY8BGE84lIepM78cTO7+nzMhgpFFVRuj2DUmd8nIzpF/WB+ROj3DU9NFccBEaqZ06MmDJJgmY8WPppFnQGAesB+bwJxHIe/wCEWdABoqOd2kTuzxN506AhCg4mCaqg5n4izoMYLvxytOFS86dAQ16hjARxnTohnle2MJ3WIqUh9IYld25rEfFoBEvp6RZ04pdnfD+pvNlbSpVqRyP/AISqKmZWBWyk33EG4RtxPpJfdHnOnTpg7RzTSTGsLboJwTxnTpswQdq4UPSZTvAzDoRMFiV1+Ik6Qn2Xx9MWmSNRvGo8wZu9lY01qQc/UPAfMcfXQzp0IhLomZBFMSdNkxC7RhZuc6dCwBljGmoZ06ZtjSBl2nZCZ06MAncCKKKzp00LyOyLEnToip//2Q==",
+                        "feedbackText" : "Correct, the Lake Sturgeon is the largest fish found in the Great Lakes."
+                    }
+                },
+                {
+                    "answerText": "Herring", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, the Lake Sturgeon is the largest fish found in the Great Lakes."
+                    }
+                },
+                {
+                    "answerText": "Muskie", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, the Lake Sturgeon is the largest fish found in the Great Lakes."
+                    }
+                },
+                {
+                    "answerText": "Catfish", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, the Lake Sturgeon is the largest fish found in the Great Lakes."
+                    }
+                }
+            ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "True of False: Waves of 40 feet in height have been recorded on Lake Superior.",
+            "questionImage": "https://i.pinimg.com/originals/74/cc/c1/74ccc1284cf62b41c2937134cd3361c8.jpg",
+            "answerChoices": [
+                {
+                    "answerText": "True", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://www.lakesuperior.com/downloads/10650/download/ATCTW111921Over1240.jpg?cb=5bba544441b5d28f564fab7f6d7ba745&w=1240",
+                        "feedbackText" : "Correct! That's 3 stories tall!"
+                    }
+                },
+                {
+                    "answerText": "False", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, waves of 40 feet in height have been recorded on Lake Superior!"
+                    }
+                }
+            ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "True or False: Lake Ontario, Lake Erie, Lake Huron, and Lake Michigan would all fit inside Lake Superior.",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "True", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://www.lakesuperiorstreams.org/communities/regional/images/GreatLakesProfile.jpg",
+                        "feedbackText" : "Correct! And there would still be room to spare!"
+                    }
+                },
+                {
+                    "answerText": "False", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, all the other Great Lakes can fit inside Lake Superior!"
+                    }
+                }
+            ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "True or False: It takes about 100 years for the water in Lake Superior to replace itself.",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "True", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, it actually takes roughly 200 years for the water in Lake Superior to replace itself!"
+                    }
+                },
+                {
+                    "answerText": "False", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Correct, it actually takes roughly 200 years for the water in Lake Superior to replace itself!"
+                    }
+                }
+            ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Which Great Lake is entirely within the borders of the United States?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "Huron", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, the only Great Lake that is enclosed in the US is Lake Michigan."
+                    }
+                },
+                {
+                    "answerText": "Ontario", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, the only Great Lake that is enclosed in the US is Lake Michigan."
+                    }
+                },
+                {
+                    "answerText": "Michigan", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://www.canr.msu.edu/contentAsset/image/3170ffcd-23ec-4784-997f-00a0f6ad1b8e/fileAsset/filter/Resize,Crop,Jpeg/resize_w/600/crop_w/600/crop_h/400/crop_x/0/crop_y/0/jpeg_q/70",
+                        "feedbackText" : "Correct, the only Great Lake that is enclosed in the US is Lake Michigan!"
+                    }
+                },
+                {
+                    "answerText": "Erie", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, the only Great Lake that is enclosed in the US is Lake Michigan."
+                    }
+                },
+                {
+                    "answerText": "Superior", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, the only Great Lake that is enclosed in the US is Lake Michigan."
+                    }
+                }
+            ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "About what percentage of the world's freshwater supply does Lake Superior contain?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "Ten percent", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://ensia.com/wp-content/uploads/2018/08/Feature_GreatLakesCompact_Inline4.png",
+                        "feedbackText" : "Correct! That's quite a lot of water!"
+                    }
+                },
+                {
+                    "answerText": "Five percent", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, ten percent of the world's freshwater is contained in Lake Superior."
+                    }
+                },
+                {
+                    "answerText": "Two percent", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, ten percent of the world's freshwater is contained in Lake Superior."
+                    }
+                },
+                {
+                    "answerText": "One percent", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, ten percent of the world's freshwater is contained in Lake Superior."
+                    }
+                }
+            ]
+        }
+    ]
+}    

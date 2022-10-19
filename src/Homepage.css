@@ -1,49 +1,47 @@
 .Homepage {
-    background-color: #282c34;
-    text-align: center;
+  background-color: #282c34;
+  text-align: center;
 }
 
 .Homepage-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+  height: 40vmin;
+  pointer-events: none;
 }
 
 .Homepage-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+.open-button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1vmin 2vmin;
+  border: 0.4vmin solid #61dafb;
+  border-radius: 5vmin;
+  background-color: #282c34;
+  vertical-align: middle;
+  color: #61dafb;
 }
 
-.Quiz-button {
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 1vmin 2vmin;
-    border: 0.4vmin solid #61dafb;
-    border-radius: 5vmin;
-    background-color: #282c34;
-    vertical-align: middle;
-    color: #61dafb;
+.close-button {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1vmin;
+  padding: 1vmin 2vmin;
+  border: 5px solid #252d4a;
+  border-radius: 5vmin;
+  background-color: #252d4a;
+  vertical-align: middle;
+  color: #61dafb;
 }
 
 .quiz-tile-button {
@@ -56,101 +54,25 @@
 }
 
 .open-button:hover {
-    background-color: #61dafb;
-    color: #0e0f14;
-    font-style: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #61dafb;
+  color: #0e0f14;
+  font-style: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .open-button:focus {
-    outline: none;
+  outline: none;
 }
 
 /* modal backdrop properties */
 .backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #61dafb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #61dafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* quiz properties */
-.Quiz {
-    background-color: #252d4a;
-    width: clamp(20%, 2000px, 95%);
-    height: min(50%, 800px);
-    border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem;
-    box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, .75);
-}
-
-.display-score {
-    display: flex;
-}
-
-.question-section {
-    padding: 1rem;
-    width: 100%;
-    position: relative;
-}
-
-.question-count {
-    margin-bottom: 20px;
-}
-
-.question-count span {
-    font-size: 28px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.question-text {
-    margin-bottom: 12px;
-}
-
-.answer-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-  
-  /* button {
-    width: 100%;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #252d4a;
-    border-radius: 15px;
-    display: flex;
-    padding: 5px;
-    margin: 2.5px;
-    justify-content: flex-start;
-    align-items: center;
-    border: 5px solid #234668;
-    cursor: pointer;
-  }
-  .correct {
-    background-color: #2f922f;
-  }
-  
-  .incorrect {
-    background-color: #ff3333;
-  }
-  
-  button:hover {
-    background-color: #555e7d;
-  }
-  
-  button:focus {
-    outline: none;
-  }
-  
-  button svg {
-    margin-right: 5px;
-  } */

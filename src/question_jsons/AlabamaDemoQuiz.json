@@ -1,0 +1,389 @@
+{
+    "description": "Alabama Quiz for Demo",
+    "topic": "Demo",
+    "id": "quiz-demo",
+    "title": "Alabama Water Demo",
+    "difficulty": 1,
+    "location": "Alabama",
+    "quizTags": [
+        "rivers", "states"
+    ],
+    "questions": [
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "10% of the nation's water flows through which south-eastern state?",
+            "questionImage": "https://www.freeworldmaps.net/united-states/southeast/southeastern-us.jpg",
+            "answerChoices": [
+                {
+                    "answerText": "Alabama", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "You are correct! Roughly 10% of the water in the US flows through the state of Alabama."
+                    }
+                },
+                {
+                    "answerText": "Mississippi", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Not quite, 10% of the water in the US flows through Alabama."
+                    }
+                },
+                {
+                    "answerText": "Lousiana", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Not quite, 10% of the water in the US flows through Alabama."
+                    }
+                },
+                {
+                    "answerText": "Georgia", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Not quite, 10% of the water in the US flows through Alabama."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": true,
+                "previewTitle": "A Diagram of a River System",
+                "previewImage": "https://i.pinimg.com/originals/df/eb/fb/dfebfbf9d55380260b003a56da1377de.gif",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Which state has the following three river systems: Tenessee, Tombigbee-Black Warrior, Alabama rivers?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "Alabama", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "You are correct! The Tenessee, Tombigbee-Black Warrior and Alabama rivers all flow through Alabama!"
+                    }
+                },
+                {
+                    "answerText": "Mississippi", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Not quite, the Tenessee, Tombigbee-Black Warrior and Alabama rivers actually flow through Alabama."
+                    }
+                },
+                {
+                    "answerText": "Tenessee", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, but the Tenessee, Tombigbee-Black Warrior and Alabama rivers actually flow through Alabama."
+                    }
+                },
+                {
+                    "answerText": "Georgia", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Not quite, the Tenessee, Tombigbee-Black Warrior and Alabama rivers actually flow through Alabama."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Which year did Tuscaloosa see record high flooding on the Black Warrior river (151.05ft)",
+            "questionImage": "https://www.gannett-cdn.com/authoring/2013/01/15/NTTN/ghows-DA-a06614fb-f49e-4630-87f2-d52d144a6044-23771cea.jpeg?width=660&height=495&fit=crop&format=pjpg&auto=webp",
+            "answerChoices": [
+                {
+                    "answerText": "1900", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://rentpath-res.cloudinary.com/$img_current/t_3x2_jpg_xl/t_unpaid/48be34f8bbf6a8f7f9791a5b923ba916",
+                        "feedbackText": "You are correct! It flooded the height of a 12 story building!"
+                    }
+                },
+                {
+                    "answerText": "1951", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Earlier than that! The record high fooding on the Black Warrior river occured in 1900!"
+                    }
+                },
+                {
+                    "answerText": "1982", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Earlier than that! The record high fooding on the Black Warrior river occured in 1900!"
+                    }
+                },
+                {
+                    "answerText": "2003", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect. The record high fooding on the Black Warrior river occured in 1900!"
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Which year did Tuscaloosa see record high flow rate of the Black Warrior river (272k ft3 per second)",
+            "questionImage": "https://northjeffersonpost.com/wp-content/uploads/2022/06/3902_Screen-Shot-2013-04-17-at-9.11.09-AMo-900x596-1.png",
+            "answerChoices": [
+                {
+                    "answerText": "1968", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, the record high flow rate for the Black Warrior River actually occured in the year is 1979."
+                    }
+                },
+                {
+                    "answerText": "1979", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://townsquare.media/site/531/files/2022/08/attachment-Alabama-Stadium-Photo.jpeg?w=980&q=75",
+                        "feedbackText": "This is correct! The flow rate is so fast it could fill Bryant Denny Stadium in 30 minutes!"
+                    }
+                },
+                {
+                    "answerText": "1983", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, the record high flow rate for the Black Warrior River actually occured in the year is 1979."
+                    }
+                },
+                {
+                    "answerText": "1992", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, the record high flow rate for the Black Warrior River actually occured in the year is 1979."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "How many natural lakes are in the Alabama?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "0", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, but there is actually 1 natural lake in Alabama!"
+                    }
+                },
+                {
+                    "answerText": "1", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://s3.amazonaws.com/gs-geo-images/b977dfa7-2654-4744-b07c-f24c5b40df01_l.jpg",
+                        "feedbackText": "Correct! The only natural lake in Alabama is Lake Jackson."
+                    }
+                },
+                {
+                    "answerText": "64", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "False, there is actually only one natural lake in alabama."
+                    }
+                },
+                {
+                    "answerText": "67", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "False, there is actually only one natural lake in alabama."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "True or False, the Weather Forecast Office (WFO) disseminates watch and warning information for floods in Alabama.",
+            "questionImage": "https://www.cityofmarina.org/ImageRepository/Document?documentID=7224",
+            "answerChoices": [
+                {
+                    "answerText": "true", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Correct! The WFO is in charge of giving flood watch and warning information in Alabama."
+                    }
+                },
+                {
+                    "answerText": "false", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, the WFO does decide when to give flood watch and warning information in Alabama."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Which organization of the National Weather Service forecasts the state of the waterways (streams, rivers, lakes, and ocean) of Alabama?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "River Forecast Center (RCF)", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Correct! The River Forecast Center forecasts the state of waterways in Alabama."
+                    }
+                },
+                {
+                    "answerText": "Waterway Research Center (WRC)", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, the RCF forecasts the state of waterways."
+                    }
+                },
+                {
+                    "answerText": "Alabama Waterway Center (AWC)", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, the RCF forecasts the state of waterways."
+                    }
+                },
+                {
+                    "answerText": "Water Highway Organization (WHO)", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, the RCF forecasts the state of waterways."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Which federal government Agency is responsible for management and modelling of water?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "NOAA", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, the answer was all of the above!"
+                    }
+                },
+                {
+                    "answerText": "USGS", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, the answer was all of the above!"
+                    }
+                },
+                {
+                    "answerText": "USBR", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, the answer was all of the above!"
+                    }
+                },
+                {
+                    "answerText": "USDA", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, the answer was all of the above!"
+                    }
+                },
+                {
+                    "answerText": "USACE", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, the answer was all of the above!"
+                    }
+                },
+                {
+                    "answerText": "Coast Guard and NOS", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, the answer was all of the above!"
+                    }
+                },
+                {
+                    "answerText": "FEMA", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, the answer was all of the above!"
+                    }
+                },
+                {
+                    "answerText": "EPA", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, the answer was all of the above!"
+                    }
+                },
+                {
+                    "answerText": "All of the above", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Correct! All of those agencies are responsible for managing and modeling water."
+                    }
+                }
+                ]
+        }
+    ]
+}    

@@ -19,22 +19,30 @@ code {
 
 .Quiz {
   background-color: #252d4a;
-  width: clamp(20%, 2000px, 95%);
-  height: min(50%, 800px);
+  height: min(50%, 800px, 90%);
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
 }
 
 .display-score {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.display-score p {
+  width: -webkit-fill-available;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .question-section {
   padding: 1rem;
-  width: 100%;
+  overflow: auto;
   position: relative;
 }
 
@@ -42,23 +50,30 @@ code {
   margin-bottom: 20px;
 }
 
-.question-count span {
+.question-count span,
+.preview-title {
   font-size: 28px;
 }
 
-.question-text {
+.question-text,
+.preview-text {
   margin-bottom: 12px;
 }
 
+.question-image {
+  width: clamp(150px, 50%, 400px);
+  height: auto;
+}
+
 .answer-section {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.answer-section button {
-  /* width: 100%; */
+.answer-section button,
+.answer-feedback button,
+.display-score button {
   font-size: 16px;
   color: #ffffff;
   background-color: #252d4a;
@@ -77,11 +92,24 @@ code {
   align-items: center;
 }
 
-.answer-feedback button {
-  display: inline-flexbox;
+button.after-feedback {
   justify-content: center;
   align-items: center;
+  display: inline;
 }
+
+.correct {
+  background-color: #2f922f;
+}
+
+.incorrect {
+  background-color: #ff3333;
+}
+
+button:hover {
+  background-color: #555e7d;
+}
+
 button:focus {
   outline: none;
 }
