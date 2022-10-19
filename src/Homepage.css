@@ -44,6 +44,15 @@
   color: #61dafb;
 }
 
+.quiz-tile-button {
+    width: -moz-fit-content;
+    width: fit-content;
+    border: none;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+    color: #61dafb;
+}
+
 .open-button:hover {
   background-color: #61dafb;
   color: #0e0f14;
