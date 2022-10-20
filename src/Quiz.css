@@ -94,11 +94,9 @@ code {
   align-items: center;
 }
 
-button.answer-feedback,
 button.after-feedback {
-  justify-content: center;
-  align-items: center;
-  display: inline;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .answer-feedback p {
