@@ -30,7 +30,7 @@ const {
 
 const GridStyles = {
     width:"100%",
-    backgroundColor: "lightblue",
+    backgroundColor: "#61dafb",
     paddingRight: {
         xs: 10,
         sm: 10,

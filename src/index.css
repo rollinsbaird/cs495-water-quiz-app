@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+html {
+  background-color: #61dafb;
+}
+
 * {
   font-family: "Veranda", cursive, sans-serif;
   color: #ffffff;
