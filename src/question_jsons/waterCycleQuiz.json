@@ -104,7 +104,7 @@
                 "previewImage": "INSERT_LINK",
                 "previewText": "INSERT_PREVIEW_TEXT"
             },
-            "questionText": "What is tapped into when digging a well looking for water in the water cycle?",
+            "questionText": "When digging a well, what source of water is tapped into?",
             "questionImage": "https://i0.wp.com/theconstructor.org/wp-content/uploads/2020/08/well.jpg?fit=388%2C251&ssl=1",
             "answerChoices": [
                 {
@@ -237,14 +237,14 @@
                 "previewText": "INSERT_PREVIEW_TEXT"
             },
             "questionText": "Studying the water cycle, why is the ocean salty?",
-            "questionImage": "",
+            "questionImage": "https://www.iweathernet.com/wxnetcms/wp-content/uploads/2015/06/water-cycle.png",
             "answerChoices": [
                 {
                     "answerText": "Groundwater picks up salt and minerals as it makes its way to the ocean", 
                     "isCorrect": true, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                        "feedbackText" : "Correct, the ocean is salty because it picks up salt and minerals from the ground water that feeds into the ocean."
                     }
                 },
                 {
@@ -252,7 +252,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Incorrect, the ocean is salty because it picks up salt and minerals from the ground water that feeds into the ocean."
                     }
                 },
                 {
@@ -260,7 +260,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Incorrect, the ocean is salty because it picks up salt and minerals from the ground water that feeds into the ocean."
                     }
                 },
                 {
@@ -268,7 +268,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Incorrect, the ocean is salty because it picks up salt and minerals from the ground water that feeds into the ocean."
                     }
                 }
                 ]
@@ -281,14 +281,14 @@
                 "previewText": "INSERT_PREVIEW_TEXT"
             },
             "questionText": "Considering the water cycle how old could the water be in glaciers and ice caps?",
-            "questionImage": "",
+            "questionImage": "https://cdn.vox-cdn.com/thumbor/3scyYzK6AHBybe2rItQP4XV-nDo=/0x0:4738x3154/1400x1050/filters:focal(1929x1006:2687x1764):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/65959225/GettyImages_1185355197.0.jpg",
             "answerChoices": [
                 {
                     "answerText": "Billions of years", 
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                        "feedbackText" : "Incorrect, glaciers and ice caps could be millions of years old."
                     }
                 },
                 {
@@ -296,7 +296,7 @@
                     "isCorrect": true, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Correct, glaciers and ice caps could be millions of years old!"
                     }
                 },
                 {
@@ -304,7 +304,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Although technically true, this is incorrect. Glaciers and ice caps could actually be millions of years old."
                     }
                 },
                 {
@@ -312,7 +312,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Although technically true, this is incorrect. Glaciers and ice caps could actually be millions of years old."
                     }
                 }
                 ]
@@ -332,7 +332,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                        "feedbackText" : "Incorrect, water that soaks into the ground is called ground water."
                     }
                 },
                 {
@@ -340,7 +340,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Incorrect, water that soaks into the ground is called ground water."
                     }
                 },
                 {
@@ -348,7 +348,7 @@
                     "isCorrect": true, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Correct, water that soaks into the ground is called ground water!"
                     }
                 },
                 {
@@ -356,7 +356,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Incorrect, water that soaks into the ground is called ground water."
                     }
                 }
                 ]
@@ -372,11 +372,11 @@
             "questionImage": "",
             "answerChoices": [
                 {
-                    "answerText": "Evaporation", 
+                    "answerText": "Transpiration or evaporation", 
                     "isCorrect": true, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                        "feedbackText" : "Correct, when water goes through a plant and is turned to vapor it is called transpiration or evaporation!"
                     }
                 },
                 {
@@ -384,7 +384,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Incorrect, when water goes through a plant and is turned to vapor it is called transpiration or evaporation."
                     }
                 },
                 {
@@ -392,7 +392,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Incorrect, when water goes through a plant and is turned to vapor it is called transpiration or evaporation."
                     }
                 },
                 {
@@ -400,7 +400,7 @@
                     "isCorrect": false, 
                     "feedback": {
                         "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackText": "Incorrect, when water goes through a plant and is turned to vapor it is called transpiration or evaporation."
                     }
                 }
                 ]
@@ -419,32 +419,32 @@
                     "answerText": "Falls out of the sky", 
                     "isCorrect": false, 
                     "feedback": {
-                        "feedbackImage": "",
-                        "feedbackText" : "INSERT_FEEDBACK_TEXT"
+                        "feedbackImage": "https://static.boredpanda.com/blog/wp-content/uploads/2015/11/massive-cloud-tsunami-sydney-australia-7.jpg",
+                        "feedbackText" : "Incorrect, condensation is when warm vapor rises, cools, then gathers in clouds."
                     }
                 },
                 {
                     "answerText": "Gathrers in clouds", 
                     "isCorrect": true, 
                     "feedback": {
-                        "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackImage": "https://static.boredpanda.com/blog/wp-content/uploads/2015/11/massive-cloud-tsunami-sydney-australia-7.jpg",
+                        "feedbackText": "Correct, condensation is when warm vapor rises, cools, then gathers in clouds!"
                     }
                 },
                 {
                     "answerText": "Warms up again", 
                     "isCorrect": false, 
                     "feedback": {
-                        "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackImage": "https://static.boredpanda.com/blog/wp-content/uploads/2015/11/massive-cloud-tsunami-sydney-australia-7.jpg",
+                        "feedbackText": "Incorrect, condensation is when warm vapor rises, cools, then gathers in clouds."
                     }
                 },
                 {
                     "answerText": "Keeps rising until it turns to ice", 
                     "isCorrect": false, 
                     "feedback": {
-                        "feedbackImage": "",
-                        "feedbackText": "INSERT_FEEDBACK_TEXT"
+                        "feedbackImage": "https://static.boredpanda.com/blog/wp-content/uploads/2015/11/massive-cloud-tsunami-sydney-australia-7.jpg",
+                        "feedbackText": "Incorrect, condensation is when warm vapor rises, cools, then gathers in clouds."
                     }
                 }
                 ]
