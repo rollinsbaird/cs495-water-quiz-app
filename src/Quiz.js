@@ -39,7 +39,7 @@ function Quiz(props) {
         .then((res) => {
           setQuizData(res.data);
           console.log(quizData);
-          // setLoading(false);
+          setLoading(false);
         });
     } catch (e) {
       console.error(e);
@@ -241,7 +241,6 @@ function Quiz(props) {
     setFeedbackImg(answerChoiceFeedbackImage);
     setHasAnswered(true);
     setDisplayQuestion(false);
-    // displayChoicesOrFeedback();
 
     if (displayQuestion) {
       const nextQuestion = currentQuestion + 1;
