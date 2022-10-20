@@ -39,18 +39,24 @@
   padding: 1vmin 2vmin;
   border: 5px solid #252d4a;
   border-radius: 5vmin;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #252d4a;
-  vertical-align: middle;
   color: #61dafb;
+  display: flex;
+}
+
+button.close-button:hover {
+  background-color: #555e7d;
 }
 
 .quiz-tile-button {
-    width: -moz-fit-content;
-    width: fit-content;
-    border: none;
-    background-color: #FFFFFF;
-    vertical-align: middle;
-    color: #61dafb;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  background-color: #ffffff;
+  vertical-align: middle;
+  color: #61dafb;
 }
 
 .open-button:hover {
