@@ -100,6 +100,7 @@ button.after-feedback {
 }
 
 .answer-feedback p {
+  text-align: center;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
