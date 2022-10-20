@@ -19,7 +19,7 @@ var client = new faunadb.Client({
 });
 
 function Quiz(props) {
-  var [quizData, setQuizData] = useState(null);
+  const [quizData, setQuizData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -38,7 +38,6 @@ function Quiz(props) {
         .query(q.Get(q.Ref(q.Collection("Quizes"), props.quizId)))
         .then((res) => {
           setQuizData(res.data);
-          console.log(quizData);
           setLoading(false);
         });
     } catch (e) {
