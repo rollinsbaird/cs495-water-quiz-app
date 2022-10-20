@@ -62,7 +62,7 @@ const SelectQuiz = () => {
     quizzes = [
         ["Water Cycle Quiz", "Intro to Water Cycle Quiz", 1, "Water Cycle", "346051916186255951"],
         ["Alabama Water Demo", "Alabama Quiz for Demo (update)", 2, "rivers", "345437197101433425"],
-        ["Great Lakes Quiz", "How much do you know about America's best lakes?", 3, "states", "344801521082303056"],
+        ["Great Lakes Quiz", "How much do you know about America's best lakes?", 3, "states", "345511172699587151"],
         ["Alabama Water Demo", "Alabama Quiz for Demo", 1, "states", "344801521082303056"],
         ["Properties of Water Quiz", "Molecular madness", 3, "chemistry", "344801521082303056"],
         ["TITLE TO DISPLAY", "QUIZ_DESCRIPTION", 4, "INSERT_TAG_NAME", "344152786005394002"],
