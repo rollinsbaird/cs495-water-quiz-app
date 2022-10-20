@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-// import quizData from './question_jsons/sampleAlabamaQuiz.json';
+import React, { useState, useEffect } from "react";
+// import quizData from "./question_jsons/quizTemplate.json";
+import { Skeleton } from "@mui/material";
 import "./Quiz.css";
 import {
   EmailShareButton,
@@ -17,18 +18,9 @@ var client = new faunadb.Client({
   endpoint: "https://db.fauna.com/",
 });
 
-// https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
-var readDB = client.query(
-  q.Get(q.Ref(q.Collection("Quizes"), "344801521082303056"))
-);
-
-var quizData;
-
-readDB.then(function (response) {
-  quizData = response.data;
-});
-
-function Quiz() {
+function Quiz(props) {
+  var [quizData, setQuizData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
@@ -38,6 +30,25 @@ function Quiz() {
   const [isLastQuestionFeedback, setIsLastQuestionFeedback] = useState(false);
   const [viewedPreview, setViewedPreview] = useState(false);
   const [feedbackImage, setFeedbackImg] = useState("");
+
+  const getData = async () => {
+    try {
+      // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
+      const data = await client
+        .query(q.Get(q.Ref(q.Collection("Quizes"), props.quizId)))
+        .then((res) => {
+          setQuizData(res.data);
+          console.log(quizData);
+          // setLoading(false);
+        });
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   const restartQuiz = () => {
     setScore(0);
@@ -244,25 +255,90 @@ function Quiz() {
     }
   };
 
-  return (
-    <div className="Quiz">
-      {showScore ? (
-        <div className="display-score">
-          You scored {score} out of {quizData.questions.length}
-          {quizEndScreen({ score }, quizData.questions.length)}
+  const loadingScreen = () => {
+    return (
+      <>
+        <div className="quiz-section">
+          <div className="question-section">
+            <Skeleton
+              classname="question-count-sk"
+              variant="rounded"
+              margin={20}
+              width={334}
+              height={26}
+            />
+            <div className="question-br"></div>
+            <div classname="question-image-sk">
+              <Skeleton
+                variant="rectangular"
+                width={167}
+                height={119}
+                margin-top={20}
+              />
+            </div>
+            <div className="img-br"></div>
+            <Skeleton
+              classname="question-text-sk"
+              variant="rounded"
+              width={334}
+              height={52}
+            />
+          </div>
+          <div className="answer-section">
+            <Skeleton
+              className="answer-choices-sk"
+              variant="rounded"
+              width={366}
+              height={39}
+            />
+            <div className="choices-br"></div>
+            <Skeleton
+              className="answer-choices-sk"
+              variant="rounded"
+              width={366}
+              height={39}
+            />
+            <div className="choices-br"></div>
+            <Skeleton
+              className="answer-choices-sk"
+              variant="rounded"
+              width={366}
+              height={39}
+            />
+            <div className="choices-br"></div>
+            <Skeleton
+              className="answer-choices-sk"
+              variant="rounded"
+              width={366}
+              height={39}
+            />
+          </div>
         </div>
-      ) : (
-        <>
-          {displayQuestion ? (
-            displayQuestionOrPreview(
-              quizData.questions[currentQuestion].questionPreview.hasPreview
-            )
-          ) : (
-            <>{displayChoicesOrFeedback()}</>
-          )}
-        </>
-      )}
-    </div>
+      </>
+    );
+  };
+
+  const displayQuiz = () => {
+    return showScore ? (
+      <div className="display-score">
+        You scored {score} out of {quizData.questions.length}
+        {quizEndScreen({ score }, quizData.questions.length)}
+      </div>
+    ) : (
+      <>
+        {displayQuestion ? (
+          displayQuestionOrPreview(
+            quizData.questions[currentQuestion].questionPreview.hasPreview
+          )
+        ) : (
+          <>{displayChoicesOrFeedback()}</>
+        )}
+      </>
+    );
+  };
+
+  return (
+    <div className="Quiz">{loading ? loadingScreen() : displayQuiz()}</div>
   );
 }
 

@@ -71,7 +71,7 @@ function NameCard(props) {
           exitBeforeEnter={true}
           // Fires when all exiting nodes have completed animating out
           onExitComplete={() => null}>
-          {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+          {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} quizId={props.quizId} />}
         </AnimatePresence>
       </CardContent>
     </Item>

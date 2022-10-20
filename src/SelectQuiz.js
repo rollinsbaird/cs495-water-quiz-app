@@ -60,13 +60,13 @@ const SelectQuiz = () => {
     // });
 
     quizzes = [
-        ["Alabama Water Demo", "Alabama Quiz for Demo", 1, "rivers"],
-        ["Alabama Water Demo", "Alabama Quiz for Demo", 1, "states"],
-        ["Alabama Water Demo", "Alabama Quiz for Demo (update)", 1, "rivers"],
-        ["Alabama Water Demo", "Alabama Quiz for Demo (update)", 1, "states"],
-        ["Great Lakes Quiz", "Great Lakes Quiz", 1, "lakes"],
-        ["Sample Quiz 2", "QUIZ_DESCRIPTION", 0, "INSERT_TAG_NAME"],
-        ["TITLE_TO_DISPLAY", "QUIZ_DESCRIPTION", 0, "INSERT_TAG_NAME"]
+        ["Alabama Water Demo", "Alabama Quiz for Demo", 1, "rivers", "344801521082303056"],
+        ["Alabama Water Demo", "Alabama Quiz for Demo", 1, "states", "344801521082303056"],
+        ["Alabama Water Demo", "Alabama Quiz for Demo (update)", 1, "rivers", "344801521082303056"],
+        ["Alabama Water Demo", "Alabama Quiz for Demo (update)", 1, "states", "344801521082303056"],
+        ["Great Lakes Quiz", "Great Lakes Quiz", 1, "lakes", "344801521082303056"],
+        ["Sample Quiz 2", "QUIZ_DESCRIPTION", 0, "INSERT_TAG_NAME", "344801521082303056"],
+        ["TITLE_TO_DISPLAY", "QUIZ_DESCRIPTION", 0, "INSERT_TAG_NAME", "344801521082303056"]
     ];
 
     return(
@@ -87,7 +87,8 @@ const SelectQuiz = () => {
                         title={quiz[0]}
                         description={quiz[1]}
                         difficulty={quiz[2]}
-                        tags={quiz[3]} />
+                        tags={quiz[3]}
+                        quizId={quiz[4]} />
                     </Grid>
                 ))}
                 {/* {Array.from(Array(6)).map((quiz, index) => (

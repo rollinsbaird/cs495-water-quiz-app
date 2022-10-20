@@ -24,7 +24,7 @@ const dropIn = {
   },
 };
 
-const Modal = ({ handleClose, text }) => {
+const Modal = ({ handleClose, quizId }) => {
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
@@ -35,7 +35,7 @@ const Modal = ({ handleClose, text }) => {
         animate="visible"
         exit="exit">
         {/* <p>{text}</p> */}
-        <Quiz />
+        <Quiz quizId={quizId}/>
         <button className="close-button" onClick={handleClose}>
           Close
         </button>

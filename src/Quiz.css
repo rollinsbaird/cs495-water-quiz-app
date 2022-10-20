@@ -108,6 +108,18 @@ button.after-feedback {
   font-size: calc(10px + 2vmin);
 }
 
+.question-br {
+  margin-top: 20px;
+}
+
+.img-br {
+  margin-top: 12px;
+}
+
+.choices-br {
+  margin-top: 3px;
+}
+
 .correct {
   background-color: #2f922f;
 }
