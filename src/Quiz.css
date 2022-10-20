@@ -73,6 +73,7 @@ code {
   justify-content: space-between;
 }
 
+button.close-preview,
 .answer-section button,
 .answer-feedback button,
 .display-score button {
@@ -86,6 +87,11 @@ code {
 
   border: 5px solid #234668;
   cursor: pointer;
+}
+
+button.close-preview {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .answer-choices button {

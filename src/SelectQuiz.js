@@ -60,13 +60,12 @@ const SelectQuiz = () => {
     // });
 
     quizzes = [
-        ["Alabama Water Demo", "Alabama Quiz for Demo", 1, "rivers", "344801521082303056"],
+        ["Water Cycle Quiz", "Intro to Water Cycle Quiz", 1, "Water Cycle", "346051916186255951"],
+        ["Alabama Water Demo", "Alabama Quiz for Demo (update)", 2, "rivers", "345437197101433425"],
+        ["Great Lakes Quiz", "How much do you know about America's best lakes?", 3, "states", "344801521082303056"],
         ["Alabama Water Demo", "Alabama Quiz for Demo", 1, "states", "344801521082303056"],
-        ["Alabama Water Demo", "Alabama Quiz for Demo (update)", 1, "rivers", "344801521082303056"],
-        ["Alabama Water Demo", "Alabama Quiz for Demo (update)", 1, "states", "344801521082303056"],
-        ["Great Lakes Quiz", "Great Lakes Quiz", 1, "lakes", "344801521082303056"],
-        ["Sample Quiz 2", "QUIZ_DESCRIPTION", 0, "INSERT_TAG_NAME", "344801521082303056"],
-        ["TITLE_TO_DISPLAY", "QUIZ_DESCRIPTION", 0, "INSERT_TAG_NAME", "344801521082303056"]
+        ["Properties of Water Quiz", "Molecular madness", 3, "chemistry", "344801521082303056"],
+        ["TITLE TO DISPLAY", "QUIZ_DESCRIPTION", 4, "INSERT_TAG_NAME", "344152786005394002"],
     ];
 
     return(

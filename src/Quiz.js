@@ -175,7 +175,7 @@ function Quiz(props) {
         <div className="preview-text">
           {quizData.questions[currentQuestion].questionPreview.previewText}
         </div>
-        <button onClick={() => setViewedPreview(true)}>
+        <button className="close-preview" onClick={() => setViewedPreview(true)}>
           {"Start Question"}
         </button>
       </div>
