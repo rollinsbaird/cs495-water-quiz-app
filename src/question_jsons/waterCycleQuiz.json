@@ -1,0 +1,453 @@
+{
+    "description": "Intro to Water Cycle Quiz",
+    "topic": "Water Cycle",
+    "id": "quiz-water-cycle",
+    "title": "Water Cycle Quiz",
+    "difficulty": 1,
+    "location": "",
+    "quizTags": [
+        "Educational", "Water Cycle"
+    ],
+    "questions": [
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "When clouds get too heavy to hold water in the water cycle, what happens?",
+            "questionImage": "https://cdn.disneyanimation.com/uploads/technology/cloud-readme.jpg",
+            "answerChoices": [
+                {
+                    "answerText": "The water falls to the Earth", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://www.chemwatch.net/wp-content/uploads/2021/05/image-4.jpeg",
+                        "feedbackText" : "Correct, when a cloud gets to heavy it falls to Earth in the form of rain!"
+                    }
+                },
+                {
+                    "answerText": "The water evaporates", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://www.chemwatch.net/wp-content/uploads/2021/05/image-4.jpeg",
+                        "feedbackText": "Incorrect, when a cloud gets to heavy it falls to Earth in the form of rain!"
+                    }
+                },
+                {
+                    "answerText": "Another cloud forms", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://www.chemwatch.net/wp-content/uploads/2021/05/image-4.jpeg",
+                        "feedbackText": "Incorrect, when a cloud gets to heavy it falls to Earth in the form of rain!"
+                    }
+                },
+                {
+                    "answerText": "Lakes and ponds", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://www.chemwatch.net/wp-content/uploads/2021/05/image-4.jpeg",
+                        "feedbackText": "Incorrect, when a cloud gets to heavy it falls to Earth in the form of rain!"
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": true,
+                "previewTitle": "Different Water Sources on Earth",
+                "previewImage": "https://www.australianenvironmentaleducation.com.au/wp-content/uploads/2020/07/Earths-Water.jpg",
+                "previewText": ""
+            },
+            "questionText": "Having studied the water sources, where is the purest water on Earth?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "Glaciers and ice caps", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Correct, glaciers and ice caps contain the purest water on Earth."
+                    }
+                },
+                {
+                    "answerText": "Rivers and streams", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Close, but incorect. Glaciers and ice caps contain the purest water on Earth."
+                    }
+                },
+                {
+                    "answerText": "Oceans", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, glaciers and ice caps contain the purest water on Earth."
+                    }
+                },
+                {
+                    "answerText": "Ground moisture", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, glaciers and ice caps contain the purest water on Earth."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "When digging a well, what source of water is tapped into?",
+            "questionImage": "https://i0.wp.com/theconstructor.org/wp-content/uploads/2020/08/well.jpg?fit=388%2C251&ssl=1",
+            "answerChoices": [
+                {
+                    "answerText": "An underground river", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://www.waterfrontpropertylaw.com/media/1605/ellen-bronstayn-shutterstock_private-well-regulation-in-va-2.jpg?width=745&height=745",
+                        "feedbackText" : "Incorrect, wells tap into underground aquifers."
+                    }
+                },
+                {
+                    "answerText": "An underground aquifer", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://www.waterfrontpropertylaw.com/media/1605/ellen-bronstayn-shutterstock_private-well-regulation-in-va-2.jpg?width=745&height=745",
+                        "feedbackText": "Correct, wells tap into underground aquifers!"
+                    }
+                },
+                {
+                    "answerText": "A sulfur spring", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://www.waterfrontpropertylaw.com/media/1605/ellen-bronstayn-shutterstock_private-well-regulation-in-va-2.jpg?width=745&height=745",
+                        "feedbackText": "Incorrect, wells tap into underground aquifers."
+                    }
+                },
+                {
+                    "answerText": "An irrigation ditch", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://www.waterfrontpropertylaw.com/media/1605/ellen-bronstayn-shutterstock_private-well-regulation-in-va-2.jpg?width=745&height=745",
+                        "feedbackText": "Incorrect, wells tap into underground aquifers."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "What turns water on the Earth into vapor in the water cycle?",
+            "questionImage": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2002/02/water_vapour_real/9160518-5-eng-GB/Water_vapour_real_pillars.jpg",
+            "answerChoices": [
+                {
+                    "answerText": "The sun", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://userscontent2.emaze.com/images/43dc8018-7057-4326-b265-b9256988b14e/85defc376c6ba68e5c3a83b0103d7567.jpg",
+                        "feedbackText" : "Correct, the sun evaporates water into vapor!"
+                    }
+                },
+                {
+                    "answerText": "The moon", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://userscontent2.emaze.com/images/43dc8018-7057-4326-b265-b9256988b14e/85defc376c6ba68e5c3a83b0103d7567.jpg",
+                        "feedbackText": "Inorrect, the sun evaporates water into vapor in the water cycle."
+                    }
+                },
+                {
+                    "answerText": "Global Warming", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://userscontent2.emaze.com/images/43dc8018-7057-4326-b265-b9256988b14e/85defc376c6ba68e5c3a83b0103d7567.jpg",
+                        "feedbackText": "Inorrect, the sun evaporates water into vapor in the water cycle."
+                    }
+                },
+                {
+                    "answerText": "Water treatment centers", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://userscontent2.emaze.com/images/43dc8018-7057-4326-b265-b9256988b14e/85defc376c6ba68e5c3a83b0103d7567.jpg",
+                        "feedbackText": "Inorrect, the sun evaporates water into vapor in the water cycle."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Which stage is NOT part of the water cycle?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "Condensation", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://gpm.nasa.gov/education/sites/default/files/article_images/Water-Cycle-Art2A.png",
+                        "feedbackText" : "Incorrect, emancipation is not a stage of the water cycle."
+                    }
+                },
+                {
+                    "answerText": "Evaporation", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://gpm.nasa.gov/education/sites/default/files/article_images/Water-Cycle-Art2A.png",
+                        "feedbackText" : "Incorrect, emancipation is not a stage of the water cycle."
+                    }
+                },
+                {
+                    "answerText": "Precipitation", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://gpm.nasa.gov/education/sites/default/files/article_images/Water-Cycle-Art2A.png",
+                        "feedbackText" : "Incorrect, emancipation is not a stage of the water cycle."
+                    }
+                },
+                {
+                    "answerText": "Emancipation", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://gpm.nasa.gov/education/sites/default/files/article_images/Water-Cycle-Art2A.png",
+                        "feedbackText" : "Correct, emancipation is not a stage of the water cycle!"
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Studying the water cycle, why is the ocean salty?",
+            "questionImage": "https://www.iweathernet.com/wxnetcms/wp-content/uploads/2015/06/water-cycle.png",
+            "answerChoices": [
+                {
+                    "answerText": "Groundwater picks up salt and minerals as it makes its way to the ocean", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Correct, the ocean is salty because it picks up salt and minerals from the ground water that feeds into the ocean."
+                    }
+                },
+                {
+                    "answerText": "It is rinsed from the scalses and skin of ocean animals", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, the ocean is salty because it picks up salt and minerals from the ground water that feeds into the ocean."
+                    }
+                },
+                {
+                    "answerText": "Salt is carried down in the rainwater", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, the ocean is salty because it picks up salt and minerals from the ground water that feeds into the ocean."
+                    }
+                },
+                {
+                    "answerText": "Human pollution made it that way", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, the ocean is salty because it picks up salt and minerals from the ground water that feeds into the ocean."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Considering the water cycle how old could the water be in glaciers and ice caps?",
+            "questionImage": "https://cdn.vox-cdn.com/thumbor/3scyYzK6AHBybe2rItQP4XV-nDo=/0x0:4738x3154/1400x1050/filters:focal(1929x1006:2687x1764):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/65959225/GettyImages_1185355197.0.jpg",
+            "answerChoices": [
+                {
+                    "answerText": "Billions of years", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, glaciers and ice caps could be millions of years old."
+                    }
+                },
+                {
+                    "answerText": "Millions of years", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Correct, glaciers and ice caps could be millions of years old!"
+                    }
+                },
+                {
+                    "answerText": "Thousands of years", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Although technically true, this is incorrect. Glaciers and ice caps could actually be millions of years old."
+                    }
+                },
+                {
+                    "answerText": "Hundereds of years", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Although technically true, this is incorrect. Glaciers and ice caps could actually be millions of years old."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Water that soaks into the ground is called what in the water cycle?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "Water table", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Incorrect, water that soaks into the ground is called ground water."
+                    }
+                },
+                {
+                    "answerText": "Rain water", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, water that soaks into the ground is called ground water."
+                    }
+                },
+                {
+                    "answerText": "Ground water", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Correct, water that soaks into the ground is called ground water!"
+                    }
+                },
+                {
+                    "answerText": "Collected water", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, water that soaks into the ground is called ground water."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "In the water cycle what is it called when water goes up through a plant and is turned into a vapor?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "Transpiration or evaporation", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText" : "Correct, when water goes through a plant and is turned to vapor it is called transpiration or evaporation!"
+                    }
+                },
+                {
+                    "answerText": "Precipitation", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, when water goes through a plant and is turned to vapor it is called transpiration or evaporation."
+                    }
+                },
+                {
+                    "answerText": "Collection", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, when water goes through a plant and is turned to vapor it is called transpiration or evaporation."
+                    }
+                },
+                {
+                    "answerText": "Condensation", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "",
+                        "feedbackText": "Incorrect, when water goes through a plant and is turned to vapor it is called transpiration or evaporation."
+                    }
+                }
+                ]
+        },
+        {
+            "questionPreview": {
+                "hasPreview": false,
+                "previewTitle": "INSERT_PREVIEW_TITLE",
+                "previewImage": "INSERT_LINK",
+                "previewText": "INSERT_PREVIEW_TEXT"
+            },
+            "questionText": "Condensation is when warm vapor rises, gets cold and does what In the water cycle?",
+            "questionImage": "",
+            "answerChoices": [
+                {
+                    "answerText": "Falls out of the sky", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://static.boredpanda.com/blog/wp-content/uploads/2015/11/massive-cloud-tsunami-sydney-australia-7.jpg",
+                        "feedbackText" : "Incorrect, condensation is when warm vapor rises, cools, then gathers in clouds."
+                    }
+                },
+                {
+                    "answerText": "Gathrers in clouds", 
+                    "isCorrect": true, 
+                    "feedback": {
+                        "feedbackImage": "https://static.boredpanda.com/blog/wp-content/uploads/2015/11/massive-cloud-tsunami-sydney-australia-7.jpg",
+                        "feedbackText": "Correct, condensation is when warm vapor rises, cools, then gathers in clouds!"
+                    }
+                },
+                {
+                    "answerText": "Warms up again", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://static.boredpanda.com/blog/wp-content/uploads/2015/11/massive-cloud-tsunami-sydney-australia-7.jpg",
+                        "feedbackText": "Incorrect, condensation is when warm vapor rises, cools, then gathers in clouds."
+                    }
+                },
+                {
+                    "answerText": "Keeps rising until it turns to ice", 
+                    "isCorrect": false, 
+                    "feedback": {
+                        "feedbackImage": "https://static.boredpanda.com/blog/wp-content/uploads/2015/11/massive-cloud-tsunami-sydney-australia-7.jpg",
+                        "feedbackText": "Incorrect, condensation is when warm vapor rises, cools, then gathers in clouds."
+                    }
+                }
+                ]
+        }
+    ]
+}    
