@@ -253,6 +253,7 @@ function Quiz(props) {
     }
   };
 
+  // https://mui.com/material-ui/react-skeleton/
   const loadingScreen = () => {
     return (
       <>
