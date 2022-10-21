@@ -16,7 +16,7 @@ function Homepage() {
     return (<div className="Homepage">
           <header className="Homepage-header">
             <img src={logo} className="Homepage-logo" alt="logo" />
-            <h1>Water Quiz App</h1>
+            <h1>HydroGenius</h1>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

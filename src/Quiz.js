@@ -62,11 +62,11 @@ function Quiz(props) {
   const shareUrl = "https://master--peaceful-kulfi-c5ff44.netlify.app";
   const shareSubject = "Hey friend! I have a wonderful new web-app for you!";
   const shareBody =
-    "This is HydroKids, it is great! You should play this game.";
-  const shareTitle = "This is HydroKids, an interactive water quiz game!";
-  const shareHashtags = ["HydroKids", "WaterQuiz"];
+    "This is HydroGenius, it is great! You should play this game.";
+  const shareTitle = "This is HydroGenius, an interactive water quiz game!";
+  const shareHashtags = ["HydroGenius", "WaterQuiz"];
   const shareQuote =
-    "This is HydroKids, it is great! You should play this game.";
+    "This is HydroGenius, it is great! You should play this game.";
 
   const quizEndScreen = (score, numQuestions) => {
     return (
