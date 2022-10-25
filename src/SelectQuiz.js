@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Grid, Box } from '@mui/material';
 import NameCard from './Name_Card';
 
@@ -50,7 +50,34 @@ const GridStyles = {
 }
 
 const SelectQuiz = () => {
-  const [quizzes, setQuizzes] = useState(data);
+  const [quizzes, setQuizzes] = useState([]);
+
+  const getData = async () => {
+    try {
+      // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
+      const data = await client.query(
+        q.Paginate(
+          q.Match(
+            q.Index("all_quizzes")
+          )
+        )
+      )
+      .then(
+        function (response) {
+          setQuizzes(response.data);
+        },
+        function () {
+          console.log("Query failed!");
+        }
+      );
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <Box sx={{
@@ -61,7 +88,18 @@ const SelectQuiz = () => {
         columns={{ xs: 2, md: 3, xl: 4 }}
         spacing={10}
         sx={GridStyles}>
-        {Array.from(quizzes).map((quiz, index) => (
+        {(quizzes == null) 
+        ? <Grid item
+            key={0}
+            xs={2}
+            sm={1}>
+            <NameCard
+              title={""}
+              description={"No Quizzes"}
+              difficulty={""}
+              tags={""} />
+          </Grid>
+        : Array.from(quizzes).map((quiz, index) => (
           <Grid item
             key={index}
             xs={2}
