@@ -5,27 +5,22 @@ import NameCard from './Name_Card';
 
 const faunadb = require('faunadb');
 const client = new faunadb.Client({
-  secret: process.env.REACT_APP_DB_KEY,
-  endpoint: "https://db.fauna.com/",
-});
+    secret: process.env.REACT_APP_DB_KEY,
+    endpoint: "https://db.fauna.com/",
+})
 
-var q = faunadb.query;
-var data;
-client.query(
-  q.Paginate(
-    q.Match(
-      q.Index("all_quizzes")
-    )
-  )
-)
-.then(
-  function (response) {
-    data = response.data;
-  },
-  function () {
-    console.log("Query failed!");
-  }
-);
+const {
+    // Ref,
+    Paginate,
+    // Get,
+    Match,
+    Index,
+    // Create,
+    // Collection,
+    // Join,
+    // Call,
+    // Function: Fn,
+} = faunadb.query;
 
 // xs, extra-small: 0px
 // sm, small: 600px
@@ -34,19 +29,19 @@ client.query(
 // xl, extra-large: 1536px
 
 const GridStyles = {
-  width: "100%",
-  backgroundColor: "lightblue",
-  paddingRight: {
-    xs: 10,
-    sm: 10,
-    md: 10,
-    lg: 10,
-    xl: 10,
-  },
-  paddingBottom: 10,
-  marginTop: 2,
-  marginLeft: "auto",
-  marginRight: "auto",
+    width:"100%",
+    backgroundColor: "#61dafb",
+    paddingRight: {
+        xs: 10,
+        sm: 10,
+        md: 10,
+        lg: 10,
+        xl: 10,
+    },
+    paddingBottom: 10,
+    marginTop: 2,
+    marginLeft: "auto",
+    marginRight: "auto",
 }
 
 const SelectQuiz = () => {
@@ -108,7 +103,8 @@ const SelectQuiz = () => {
               title={quiz[0]}
               description={quiz[1]}
               difficulty={quiz[2]}
-              tags={quiz[3]} />
+              tags={quiz[3]}
+              quizId={quiz[4]} />
           </Grid>
         ))}
       </Grid>

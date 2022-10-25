@@ -44,6 +44,8 @@ code {
   padding: 1rem;
   overflow: auto;
   position: relative;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
 }
 
 .question-count {
@@ -71,6 +73,7 @@ code {
   justify-content: space-between;
 }
 
+button.close-preview,
 .answer-section button,
 .answer-feedback button,
 .display-score button {
@@ -86,6 +89,11 @@ code {
   cursor: pointer;
 }
 
+button.close-preview {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .answer-choices button {
   width: 100%;
   justify-content: flex-start;
@@ -93,9 +101,29 @@ code {
 }
 
 button.after-feedback {
-  justify-content: center;
-  align-items: center;
-  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.answer-feedback p {
+  text-align: center;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: calc(10px + 2vmin);
+}
+
+.question-br {
+  margin-top: 20px;
+}
+
+.img-br {
+  margin-top: 12px;
+}
+
+.choices-br {
+  margin-top: 3px;
 }
 
 .correct {
@@ -106,7 +134,7 @@ button.after-feedback {
   background-color: #ff3333;
 }
 
-button:hover {
+.Quiz button:hover {
   background-color: #555e7d;
 }
 
