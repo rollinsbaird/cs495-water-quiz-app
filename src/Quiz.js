@@ -34,8 +34,8 @@ function Quiz(props) {
   const getData = async () => {
     try {
       // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
-      const data = await client
-        .query(q.Get(q.Ref(q.Collection("Quizes"), props.quizId)))
+      client
+        .query(q.Get(q.Ref(props.quizId)))
         .then((res) => {
           setQuizData(res.data);
           setLoading(false);
