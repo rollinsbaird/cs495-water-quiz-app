@@ -7,20 +7,8 @@ const faunadb = require('faunadb');
 const client = new faunadb.Client({
     secret: process.env.REACT_APP_DB_KEY,
     endpoint: "https://db.fauna.com/",
-})
-
-const {
-    // Ref,
-    Paginate,
-    // Get,
-    Match,
-    Index,
-    // Create,
-    // Collection,
-    // Join,
-    // Call,
-    // Function: Fn,
-} = faunadb.query;
+});
+var q = faunadb.query;
 
 // xs, extra-small: 0px
 // sm, small: 600px
@@ -29,7 +17,7 @@ const {
 // xl, extra-large: 1536px
 
 const GridStyles = {
-    width:"100%",
+    width: "100%",
     backgroundColor: "#61dafb",
     paddingRight: {
         xs: 10,
