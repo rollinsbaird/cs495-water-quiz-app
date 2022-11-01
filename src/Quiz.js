@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 // import quizData from "./question_jsons/quizTemplate.json";
 import { Skeleton } from "@mui/material";
 import "./Quiz.css";
-// import {
-//   EmailShareButton,
-//   TwitterShareButton,
-//   FacebookShareButton,
-//   EmailIcon,
-//   TwitterIcon,
-//   FacebookIcon,
-// } from "react-share";
+import {
+  EmailShareButton,
+  TwitterShareButton,
+  FacebookShareButton,
+  EmailIcon,
+  TwitterIcon,
+  FacebookIcon,
+} from "react-share";
 
 var faunadb = require("faunadb");
 var q = faunadb.query;
@@ -73,7 +73,7 @@ function Quiz(props) {
       // TODO: fix manual print of score for buttons
       <>
         <p>
-          {/* <FacebookShareButton
+          <FacebookShareButton
             quote={
               shareQuote +
               shareUrl +
@@ -122,7 +122,7 @@ function Quiz(props) {
             url={shareUrl}
             seperator={"\n"}>
             <EmailIcon size={40} round={true} />
-          </EmailShareButton> */}
+          </EmailShareButton>
         </p>
         <button onClick={() => restartQuiz()}>{"Restart Quiz"}</button>
       </>
