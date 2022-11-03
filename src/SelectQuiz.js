@@ -38,7 +38,7 @@ const SelectQuiz = () => {
   const getData = async () => {
     try {
       // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
-      const data = await client.query(
+      await client.query(
         q.Paginate(
           q.Match(
             q.Index("all_quizzes")

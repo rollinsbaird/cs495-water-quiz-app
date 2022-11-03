@@ -47,7 +47,7 @@ function Quiz(props) {
 
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   const restartQuiz = () => {
     setScore(0);

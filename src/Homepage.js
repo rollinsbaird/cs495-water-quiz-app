@@ -10,7 +10,7 @@ function Homepage() {
   const [chooseQuiz, setChooseQuiz] = useState(false);
 
   const close = () => setModalOpen(false);
-  const open = () => setModalOpen(true);
+  // const open = () => setModalOpen(true);
 
   const displayHomepage = () => {
     return (<div className="Homepage">
