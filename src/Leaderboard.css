@@ -29,6 +29,24 @@
     color: white;
 }
 
+.leaderboard-table-row{
+    /* background-color: hover; */
+    border: 0;
+}
+
+.leaderboard-table-cell-head{
+    background-color: hsl(191, 44%, 26%);
+    color: white;
+    font-size: calc(16px + 2vmin);
+    font-weight: bold;
+}
+
+.leaderboard-table-cell{
+    background-color: hsl(191, 45%, 40%);
+    color: white;
+    font-size: calc(8px + 2vmin);
+}
+
 .leaderboard-button{
     width: -moz-fit-content;
     width: fit-content;

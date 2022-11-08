@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./Components/Modal";
 import "./Homepage.css";
 import SelectQuiz from "./SelectQuiz";
+import Leaderboard from "./Leaderboard";
 
 function Homepage() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -51,7 +52,7 @@ function Homepage() {
   }
 
   const displayOptions = () => {
-    return (chooseQuiz) ? <SelectQuiz/> : displayHomepage();
+    return (chooseQuiz) ? <Leaderboard/> : displayHomepage();
   }
 
   return (
