@@ -71,9 +71,9 @@ function NameCard(props) {
           <Typography sx={{ fontSize: 14 }} color="text.secondary">
             {props.description}
           </Typography>
-          <Typography sx={{ fontSize: 14 }} color="text.secondary">
+          {/* <Typography sx={{ fontSize: 14 }} color="text.secondary">
             #{props.tags}
-          </Typography>
+          </Typography> */}
         </motion.button>
         <AnimatePresence
           // Disable any initial animations on children that
