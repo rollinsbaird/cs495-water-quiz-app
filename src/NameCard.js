@@ -12,8 +12,22 @@ import "./Homepage.css";
 function NameCard(props) {
   const [modalOpen, setModalOpen] = useState(false);
 
-  const close = () => setModalOpen(false);
-  const open = () => setModalOpen(true);
+  const close = () => {
+    setModalOpen(false);
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = "";
+    body.style.top = "";
+    window.scrollTo(0, parseInt(scrollY || "0") * -1);
+  };
+  const open = () => {
+    setModalOpen(true);
+    const scrollY = document.documentElement.style.getPropertyValue("--scroll-y");
+    const body = document.body;
+    body.style.position = "fixed";
+    body.style.top = "0%";
+    body.style.top = `-${scrollY}`;
+  };
 
   const Item = styled(Card)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -71,7 +85,13 @@ function NameCard(props) {
           exitBeforeEnter={true}
           // Fires when all exiting nodes have completed animating out
           onExitComplete={() => null}>
-          {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} quizId={props.quizId} />}
+          {modalOpen && (
+            <Modal
+              modalOpen={modalOpen}
+              handleClose={close}
+              quizId={props.quizId}
+            />
+          )}
         </AnimatePresence>
       </CardContent>
     </Item>

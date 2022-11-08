@@ -34,7 +34,6 @@ const Modal = ({ handleClose, quizId }) => {
         initial="hidden"
         animate="visible"
         exit="exit">
-        {/* <p>{text}</p> */}
         <Quiz quizId={quizId}/>
         <button className="close-button" onClick={handleClose}>
           Close
