@@ -71,12 +71,12 @@ button.close-button:hover {
   outline: none;
 }
 
-/* modal backdrop properties */
+/* modal  properties */
 .backdrop {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background: #61dafb;
   display: flex;
