@@ -41,7 +41,7 @@ const SelectQuiz = () => {
       const data = await client.query(
         q.Paginate(
           q.Match(
-            q.Index("all_quizzes")
+            q.Index("all_quizzes2")
           )
         )
       )
@@ -91,8 +91,8 @@ const SelectQuiz = () => {
               title={quiz[0]}
               description={quiz[1]}
               difficulty={quiz[2]}
-              tags={quiz[3]}
-              quizId={quiz[4]} />
+              // tags={quiz[3]}
+              quizId={quiz[3]} />
           </Grid>
         ))}
       </Grid>
