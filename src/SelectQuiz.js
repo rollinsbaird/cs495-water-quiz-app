@@ -38,7 +38,7 @@ const SelectQuiz = () => {
   const getData = async () => {
     try {
       // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
-      await client.query(q.Paginate(q.Match(q.Index("all_quizzes")))).then(
+      await client.query(q.Paginate(q.Match(q.Index("all_quizzes2")))).then(
         function (response) {
           setQuizzes(response.data);
         },
@@ -82,8 +82,8 @@ const SelectQuiz = () => {
                 title={quiz[0]}
                 description={quiz[1]}
                 difficulty={quiz[2]}
-                tags={quiz[3]}
-                quizId={quiz[4]}
+                // tags={quiz[3]}
+                quizId={quiz[3]}
               />
             </Grid>
           ))
