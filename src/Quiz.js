@@ -103,7 +103,9 @@ function Quiz(props) {
     return (
       // TODO: fix manual print of score for buttons
       <>
-        <button onClick={() => saveScore("Water Boy", score)}>{"Save Score"}</button>
+        <button onClick={() => saveScore("Water Boy", score)}>
+          {"Save Score"}
+        </button>
         <button onClick={() => restartQuiz()}>{"Restart Quiz"}</button>
         <p>
           <FacebookShareButton
@@ -393,15 +395,11 @@ function Quiz(props) {
     render() {
       return (
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input
-              type="text"
-              value={this.state.value}
-              onChange={this.handleChange}
-            />
-          </label>
-          <input type="submit" value="Submit" />
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
         </form>
       );
     }
