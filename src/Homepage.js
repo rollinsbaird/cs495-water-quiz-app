@@ -52,7 +52,7 @@ function Homepage() {
   }
 
   const displayOptions = () => {
-    return (chooseQuiz) ? <Leaderboard/> : displayHomepage();
+    return (chooseQuiz) ? <SelectQuiz/> : displayHomepage();
   }
 
   return (

@@ -35,19 +35,31 @@
 }
 
 .leaderboard-table-cell-head{
-    background-color: hsl(191, 44%, 26%);
-    color: white;
-    font-size: calc(16px + 2vmin);
-    font-weight: bold;
+    background-color: hsl(189, 45%, 17%);
+    color: white !important;
+    font-size: calc(10px + 2vmin) !important;
+    font-weight: 750 !important;
 }
 
 .leaderboard-table-cell{
     background-color: hsl(191, 45%, 40%);
-    color: white;
-    font-size: calc(8px + 2vmin);
+    color: white !important;
+    font-size: calc(8px + 2vmin) !important;
 }
 
 .leaderboard-button{
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1vmin 2vmin;
+    margin: 0vmin 3vmin;
+    border: 0.4vmin solid #61dafb;
+    border-radius: 5vmin;
+    background-color: #282c34;
+    vertical-align: middle;
+    color: #61dafb;
+}
+
+.home-button{
     width: -moz-fit-content;
     width: fit-content;
     padding: 1vmin 2vmin;
@@ -67,4 +79,10 @@
   
   .leaderboard-button:focus {
     outline: none;
+  }
+
+  .trophy{
+    color: gold;
+    fill: gold !important;
+    font-size: 6.5rem !important;
   }

@@ -1,29 +1,30 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Modal from "./Components/Modal";
 import "./Leaderboard.css";
 import SelectQuiz from "./SelectQuiz";
 
-import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+import Box from '@mui/material/Box';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 class Player {
   constructor(name, score, timestamp) {
     this.name = name;
     this.score = score;
-    this.timestamp = timestamp;
+    this.ts = timestamp;
   }
 }
 
 function Leaderboard() {
-  const player1 = new Player("Thom", .6, 1667505479);
+  const [period, setPeriod] = useState(0);
+  const [chooseQuiz, setChooseQuiz] = useState(false);
+
+  const player1 = new Player("Thom", .6, 1668111318145);
   const player2 = new Player("Rollins", .8, 1667504479);
   const player3 = new Player("Sam", .7, 1668504479);
 
@@ -34,101 +35,74 @@ function Leaderboard() {
   }
   
   const handleClick = (e) => {
-    console.log(e.target)
+    setPeriod(e.target.dataset.id)
   }
 
-  const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white,
-    },
-    [`&.${tableCellClasses.body}`]: {
-      fontSize: 14,
-    },
-  }));
-  
-  const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.action.hover,
-    },
-    // hide last border
-    '&:last-child td, &:last-child th': {
-      border: 0,
-    },
-  }));
+  const players = between(sortedPlayers, period)
 
   const displayLeaderboard = () => {
     return (
       <div className="leaderboard">
         <header className="leaderboard-header">
+        <EmojiEventsIcon className="trophy"></EmojiEventsIcon>
           <h1>Leaderboard</h1>
-          <div classname="duration">
-            <button onClick={handleClick} data-id='1' className="leaderboard-button">1 Hour</button>
+          <Box>
+            <button onClick={handleClick} data-id='3600000' className="leaderboard-button">1 Hour</button>
             <button onClick={handleClick} data-id='0' className="leaderboard-button">All Time</button>
-          </div>
+          </Box>
           <br></br>
-             
+          
           <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="customized table">
+          <Table sx={{ minWidth: 100}} aria-label="customized table">
             <TableHead>
               <TableRow className="leaderboard-table-row">
-                <TableCell className="leaderboard-table-cell-head">Name</TableCell>
-                <TableCell className="leaderboard-table-cell-head" align="right">Score</TableCell>
+                <TableCell className="leaderboard-table-cell-head" align="center">Name</TableCell>
+                <TableCell className="leaderboard-table-cell-head" align="center">Score</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {sortedPlayers.map((player) => (
+              {players.map((player) => (
                 <TableRow
                   key={player.name}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell className="leaderboard-table-cell">
+                  <TableCell className="leaderboard-table-cell" align="center">
                     {player.name}
                   </TableCell>
-                  <TableCell className="leaderboard-table-cell" align="right">{player.scorePercent}</TableCell>
+                  <TableCell className="leaderboard-table-cell" align="center">{player.scorePercent}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </TableContainer>
+        <br></br>     
+      <button onClick={() => setChooseQuiz(true)} className="home-button">Home</button>
+      <br></br>
       </header>
     </div>
-
-      // <div className="leaderboard">
-      //     <header className="leaderboard-header">
-      //       <h1>Leaderboard</h1>
-      //       <div classname="duration">
-      //         <button onClick={handleClick} data-id='1' className="leaderboard-button">1 Hour</button>
-      //         <button onClick={handleClick} data-id='0' className="leaderboard-button">All Time</button>
-      //       </div>
-      //       <br></br>
-      //       <table className="leaderboard-table">
-      //         <tr>
-      //           <th>Name</th>
-      //           <th>Score</th>
-      //         </tr>
-      //         <tr>
-      //           <td> {sortedData[0]["name"]} </td>
-      //           <td> {sortedData[0]["scorePercent"]} </td>
-      //         </tr>
-      //         <tr> 
-      //           <td> {sortedData[1]["name"]} </td>
-      //           <td> {sortedData[1]["scorePercent"]} </td>
-      //         </tr>
-      //         <tr> 
-      //           <td> {sortedData[2]["name"]} </td>
-      //           <td> {sortedData[2]["scorePercent"]} </td>
-      //         </tr>
-      //       </table>
-            
-           
-      //     </header>
-      //   </div>
         );
   }
 
+  function between(data, between){
+    const currTime = new Date();
+    const previous = new Date(currTime);
+    console.log("prev " + previous.getTime() + " " + between)
+    previous.setTime(previous.getTime() - (between + 1));
+
+    let filter = data.filter(val=>{
+      let userTime = new Date(val.ts);
+      if (between == 0) return val;
+      return previous <= userTime && currTime >= userTime;
+    })
+    return filter;
+  }
+
+  const displayOptions = () => {
+    return (chooseQuiz) ? <SelectQuiz/> : displayLeaderboard();
+  }
+
   return (
-    <>{displayLeaderboard()}</>
+    <>{displayOptions()}</>
   );
 }
 export default Leaderboard;
