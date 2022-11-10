@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import quizData from "./question_jsons/quizTemplate.json";
 import { Skeleton } from "@mui/material";
+import styled from "styled-components";
 import "./Quiz.css";
 import {
   EmailShareButton,
@@ -30,15 +30,31 @@ function Quiz(props) {
   const [isLastQuestionFeedback, setIsLastQuestionFeedback] = useState(false);
   const [viewedPreview, setViewedPreview] = useState(false);
   const [feedbackImage, setFeedbackImg] = useState("");
+  const [username, setUsername] = useState("");
 
   const getData = async () => {
     try {
       // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
+      client.query(q.Get(q.Ref(props.quizId))).then((res) => {
+        setQuizData(res.data);
+        setLoading(false);
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const saveScore = async (username, score) => {
+    try {
+      // https://docs.fauna.com/fauna/current/learn/cookbook/fql/basics/documents/create?lang=javascript
       client
-        .query(q.Get(q.Ref(props.quizId)))
+        .query(
+          q.Create(q.Collection("Highscores"), {
+            data: { username: username, score: score },
+          })
+        )
         .then((res) => {
-          setQuizData(res.data);
-          setLoading(false);
+          console.log(res);
         });
     } catch (e) {
       console.error(e);
@@ -68,10 +84,27 @@ function Quiz(props) {
   const shareQuote =
     "This is HydroGenius, it is great! You should play this game.";
 
-  const quizEndScreen = (score, numQuestions) => {
+  const StyledInput = styled.input`
+    display: block;
+    margin: 20px 0px;
+    border: 1px solid lightblue;
+  `;
+  function useInput() {
+    function onChange(e) {
+      setUsername(e.target.value);
+    }
+    return {
+      username,
+      onChange,
+    };
+  }
+
+  const QuizEndScreen = (score, numQuestions) => {
     return (
       // TODO: fix manual print of score for buttons
       <>
+        <button onClick={() => saveScore("Water Boy", score)}>{"Save Score"}</button>
+        <button onClick={() => restartQuiz()}>{"Restart Quiz"}</button>
         <p>
           <FacebookShareButton
             quote={
@@ -124,7 +157,6 @@ function Quiz(props) {
             <EmailIcon size={40} round={true} />
           </EmailShareButton>
         </p>
-        <button onClick={() => restartQuiz()}>{"Restart Quiz"}</button>
       </>
     );
   };
@@ -175,7 +207,9 @@ function Quiz(props) {
         <div className="preview-text">
           {quizData.questions[currentQuestion].questionPreview.previewText}
         </div>
-        <button className="close-preview" onClick={() => setViewedPreview(true)}>
+        <button
+          className="close-preview"
+          onClick={() => setViewedPreview(true)}>
           {"Start Question"}
         </button>
       </div>
@@ -317,11 +351,13 @@ function Quiz(props) {
     );
   };
 
-  const displayQuiz = () => {
+  const DisplayQuiz = () => {
     return showScore ? (
       <div className="display-score">
         You scored {score} out of {quizData.questions.length}
-        {quizEndScreen({ score }, quizData.questions.length)}
+        <NameForm />
+        {/* <StyledInput {...inputProps} placeholder="Type a username" /> */}
+        {QuizEndScreen({ score }, quizData.questions.length)}
       </div>
     ) : (
       <>
@@ -336,8 +372,43 @@ function Quiz(props) {
     );
   };
 
+  class NameForm extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { value: "" };
+
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+      this.setState({ value: event.target.value });
+    }
+
+    handleSubmit(event) {
+      alert("A name was submitted: " + this.state.value);
+      event.preventDefault();
+    }
+
+    render() {
+      return (
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Name:
+            <input
+              type="text"
+              value={this.state.value}
+              onChange={this.handleChange}
+            />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+      );
+    }
+  }
+
   return (
-    <div className="Quiz">{loading ? loadingScreen() : displayQuiz()}</div>
+    <div className="Quiz">{loading ? loadingScreen() : DisplayQuiz()}</div>
   );
 }
 
