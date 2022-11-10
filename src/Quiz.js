@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Skeleton } from "@mui/material";
-import styled from "styled-components";
+// import styled from "styled-components";
 import "./Quiz.css";
 import {
   EmailShareButton,
@@ -30,7 +30,7 @@ function Quiz(props) {
   const [isLastQuestionFeedback, setIsLastQuestionFeedback] = useState(false);
   const [viewedPreview, setViewedPreview] = useState(false);
   const [feedbackImage, setFeedbackImg] = useState("");
-  const [username, setUsername] = useState("");
+  // const [username, setUsername] = useState("");
 
   const getData = async () => {
     try {
@@ -84,20 +84,20 @@ function Quiz(props) {
   const shareQuote =
     "This is HydroGenius, it is great! You should play this game.";
 
-  const StyledInput = styled.input`
-    display: block;
-    margin: 20px 0px;
-    border: 1px solid lightblue;
-  `;
-  function useInput() {
-    function onChange(e) {
-      setUsername(e.target.value);
-    }
-    return {
-      username,
-      onChange,
-    };
-  }
+  // const StyledInput = styled.input`
+  //   display: block;
+  //   margin: 20px 0px;
+  //   border: 1px solid lightblue;
+  // `;
+  // function useInput() {
+  //   function onChange(e) {
+  //     setUsername(e.target.value);
+  //   }
+  //   return {
+  //     username,
+  //     onChange,
+  //   };
+  // }
 
   const QuizEndScreen = (score, numQuestions) => {
     return (
