@@ -58,6 +58,7 @@ const SelectQuiz = () => {
   return (
     <Box
       sx={{
+        minWidth: "400px",
         width: "100%",
         overflow: "auto",
       }}>
