@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {RiveAnimation} from "rive-js";
 import logo from "./logo.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./Components/Modal";
@@ -11,6 +12,12 @@ function Homepage() {
 
   const close = () => setModalOpen(false);
   // const open = () => setModalOpen(true);
+
+  animation = new RiveAnimation({
+    src: '/droplet.riv',
+    canvas: canvas.current,
+    autoplay: true,
+  });
 
   const displayHomepage = () => {
     return (<div className="Homepage">
