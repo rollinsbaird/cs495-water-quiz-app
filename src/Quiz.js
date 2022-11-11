@@ -44,22 +44,22 @@ function Quiz(props) {
     }
   };
 
-  const saveScore = async (username, score) => {
-    try {
-      // https://docs.fauna.com/fauna/current/learn/cookbook/fql/basics/documents/create?lang=javascript
-      client
-        .query(
-          q.Create(q.Collection("Highscores"), {
-            data: { username: username, score: score },
-          })
-        )
-        .then((res) => {
-          console.log(res);
-        });
-    } catch (e) {
-      console.error(e);
-    }
-  };
+  // const saveScore = async (username, score) => {
+  //   try {
+  //     // https://docs.fauna.com/fauna/current/learn/cookbook/fql/basics/documents/create?lang=javascript
+  //     client
+  //       .query(
+  //         q.Create(q.Collection("Highscores"), {
+  //           data: { username: username, score: score },
+  //         })
+  //       )
+  //       .then((res) => {
+  //         console.log(res);
+  //       });
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
 
   useEffect(() => {
     getData();
