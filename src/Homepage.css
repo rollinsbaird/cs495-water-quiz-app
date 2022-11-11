@@ -1,14 +1,6 @@
-.Homepage {
+.homepage {
   background-color: #282c34;
   text-align: center;
-}
-
-.Homepage-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.Homepage-header {
   background-color: #282c34;
   min-height: 100vh;
   height: 100%;
@@ -19,6 +11,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.homepage-droplet {
+  height: 50vmin;
+  width: 50vmin;
 }
 
 .open-button {
