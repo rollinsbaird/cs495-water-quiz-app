@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import {RiveAnimation} from "rive-js";
-import logo from "./logo.svg";
+import Rive from "@rive-app/react-canvas";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./Components/Modal";
 import "./Homepage.css";
@@ -13,57 +12,51 @@ function Homepage() {
   const close = () => setModalOpen(false);
   // const open = () => setModalOpen(true);
 
-  animation = new RiveAnimation({
-    src: '/droplet.riv',
-    canvas: canvas.current,
-    autoplay: true,
-  });
-
   const displayHomepage = () => {
-    return (<div className="Homepage">
-          <header className="Homepage-header">
-            <img src={logo} className="Homepage-logo" alt="logo" />
-            <h1>HydroGenius</h1>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="open-button"
-              onClick={() => setChooseQuiz(true)}>
-              Select a Quiz
-            </motion.button>
-            <AnimatePresence
-              // Disable any initial animations on children that
-              // are present when the component is first rendered
-              initial={false}
-              // Only render one component at a time.
-              // The exiting component will finish its exit
-              // animation before entering component is rendered
-              exitBeforeEnter={true}
-              // Fires when all exiting nodes have completed animating out
-              onExitComplete={() => null}>
-              {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
-            </AnimatePresence>
-            <p>
-              Created by
-              <br />
-              Rollins Baird, Thomas Hampton, and Sam Hertzler
-              <br />
-              in conjuction with
-              <br />
-              Dr. Burian, Dr. Halgren, and the National Water Institute.
-              <br />
-            </p>
-          </header>
-        </div>);
-  }
+    return (
+      <div className="homepage">
+        <div className="homepage-droplet">
+          <Rive src="/droplet.riv" />
+        </div>
+        <h1>HydroGenius</h1>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="open-button"
+          onClick={() => setChooseQuiz(true)}>
+          Select a Quiz
+        </motion.button>
+        <AnimatePresence
+          // Disable any initial animations on children that
+          // are present when the component is first rendered
+          initial={false}
+          // Only render one component at a time.
+          // The exiting component will finish its exit
+          // animation before entering component is rendered
+          exitBeforeEnter={true}
+          // Fires when all exiting nodes have completed animating out
+          onExitComplete={() => null}>
+          {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+        </AnimatePresence>
+        <p>
+          Created by
+          <br />
+          Rollins Baird, Thomas Hampton, and Sam Hertzler
+          <br />
+          in conjuction with
+          <br />
+          Dr. Burian, Dr. Halgren, and the National Water Institute.
+          <br />
+        </p>
+      </div>
+    );
+  };
 
   const displayOptions = () => {
-    return (chooseQuiz) ? <SelectQuiz/> : displayHomepage();
-  }
+    return chooseQuiz ? <SelectQuiz /> : displayHomepage();
+  };
 
-  return (
-    <>{displayOptions()}</>
-  );
+  return <>{displayOptions()}</>;
 }
 
 export default Homepage;
