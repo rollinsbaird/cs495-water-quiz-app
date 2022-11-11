@@ -103,10 +103,9 @@ function Quiz(props) {
     return (
       // TODO: fix manual print of score for buttons
       <>
-        <button onClick={() => saveScore("Water Boy", score)}>
+        {/* <button onClick={() => saveScore("Water Boy", score)}>
           {"Save Score"}
-        </button>
-        <button onClick={() => restartQuiz()}>{"Restart Quiz"}</button>
+        </button> */}
         <p>
           <FacebookShareButton
             quote={
@@ -159,6 +158,7 @@ function Quiz(props) {
             <EmailIcon size={40} round={true} />
           </EmailShareButton>
         </p>
+        <button onClick={() => restartQuiz()}>{"Restart Quiz"}</button>
       </>
     );
   };
@@ -357,7 +357,7 @@ function Quiz(props) {
     return showScore ? (
       <div className="display-score">
         You scored {score} out of {quizData.questions.length}
-        <NameForm />
+        {/* <NameForm /> */}
         {/* <StyledInput {...inputProps} placeholder="Type a username" /> */}
         {QuizEndScreen({ score }, quizData.questions.length)}
       </div>
@@ -374,36 +374,36 @@ function Quiz(props) {
     );
   };
 
-  class NameForm extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { value: "" };
+  // class NameForm extends React.Component {
+  //   constructor(props) {
+  //     super(props);
+  //     this.state = { value: "" };
 
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
+  //     this.handleChange = this.handleChange.bind(this);
+  //     this.handleSubmit = this.handleSubmit.bind(this);
+  //   }
 
-    handleChange(event) {
-      this.setState({ value: event.target.value });
-    }
+  //   handleChange(event) {
+  //     this.setState({ value: event.target.value });
+  //   }
 
-    handleSubmit(event) {
-      alert("A name was submitted: " + this.state.value);
-      event.preventDefault();
-    }
+  //   handleSubmit(event) {
+  //     alert("A name was submitted: " + this.state.value);
+  //     event.preventDefault();
+  //   }
 
-    render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange}
-          />
-        </form>
-      );
-    }
-  }
+  //   render() {
+  //     return (
+  //       <form onSubmit={this.handleSubmit}>
+  //         <input
+  //           type="text"
+  //           value={this.state.value}
+  //           onChange={this.handleChange}
+  //         />
+  //       </form>
+  //     );
+  //   }
+  // }
 
   return (
     <div className="Quiz">{loading ? loadingScreen() : DisplayQuiz()}</div>
