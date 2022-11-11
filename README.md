@@ -1,7 +1,7 @@
 ### Website Link
 https://rollinsbaird.github.io/cs495-water-quiz-app/
 
-https://master--peaceful-kulfi-c5ff44.netlify.app
+https://hydrogenius.netlify.app/
 
 # Getting Started with Create React App
 
