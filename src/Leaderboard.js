@@ -12,11 +12,30 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
+var faunadb = require("faunadb");
+var q = faunadb.query;
+var client = new faunadb.Client({
+  secret: process.env.REACT_APP_DB_KEY,
+  endpoint: "https://db.fauna.com/",
+});
+
+// const getData = async () => {
+//   try {
+//     // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
+//     client.query(q.Get(q.Ref(props.quizId))).then((res) => {
+//       setQuizData(res.data);
+//       setLoading(false);
+//     });
+//   } catch (e) {
+//     console.error(e);
+//   }
+// };
+
 class Player {
   constructor(name, score, timestamp) {
     this.name = name;
     this.score = score;
-    this.ts = timestamp;
+    this.timestamp = timestamp;
   }
 }
 
@@ -53,7 +72,7 @@ function Leaderboard() {
           <br></br>
           
           <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 100}} aria-label="customized table">
+          <Table sx={{ minWidth: 650}} aria-label="customized table">
             <TableHead>
               <TableRow className="leaderboard-table-row">
                 <TableCell className="leaderboard-table-cell-head" align="center">Name</TableCell>
@@ -90,7 +109,7 @@ function Leaderboard() {
     previous.setTime(previous.getTime() - (between + 1));
 
     let filter = data.filter(val=>{
-      let userTime = new Date(val.ts);
+      let userTime = new Date(val.timestamp);
       if (between == 0) return val;
       return previous <= userTime && currTime >= userTime;
     })
