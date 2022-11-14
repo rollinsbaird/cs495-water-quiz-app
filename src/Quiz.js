@@ -75,8 +75,8 @@ function Quiz(props) {
     setViewedPreview(false);
   };
 
-  const shareUrl = "https://master--peaceful-kulfi-c5ff44.netlify.app";
-  const shareSubject = "Hey friend! I have a wonderful new web-app for you!";
+  const shareUrl = "https://hydrogenius.netlify.app/";
+  const shareSubject = "Hey! I think you would really like this cool new game called Hydrogenius!";
   const shareBody =
     "This is HydroGenius, it is great! You should play this game.";
   const shareTitle = "This is HydroGenius, an interactive water quiz game!";
