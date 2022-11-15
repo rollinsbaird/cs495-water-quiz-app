@@ -1,0 +1,21 @@
+.home-button{
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1vmin 2vmin;
+    border: 0.4vmin solid #61dafb;
+    border-radius: 5vmin;
+    background-color: #282c34;
+    vertical-align: middle;
+    color: #61dafb;
+}
+
+.home-button:hover {
+    background-color: #61dafb;
+    color: #0e0f14;
+    font-style: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .home-button:focus {
+    outline: none;
+  }

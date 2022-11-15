@@ -2,7 +2,8 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { Grid, Box } from "@mui/material";
 import NameCard from "./NameCard";
-import SelectLeaderboard from "./SelectLeaderboard";
+import SelectQuiz from "./SelectQuiz";
+import "./SelectLeaderboard.css";
 
 const faunadb = require("faunadb");
 const client = new faunadb.Client({
@@ -33,16 +34,16 @@ const GridStyles = {
   marginRight: "auto",
 };
 
-const SelectQuiz = () => {
-  const [quizzes, setQuizzes] = useState([]);
-  const [chooseBoards, setChooseBoards] = useState(false);
+const SelectLeaderboard = () => {
+  const [boards, setBoards] = useState([]);
+  const [chooseQuiz, setChooseQuiz] = useState(false);
 
   const getData = async () => {
     try {
       // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
       await client.query(q.Paginate(q.Match(q.Index("all_quizzes2")))).then(
         function (response) {
-          setQuizzes(response.data);
+            setBoards(response.data);
         },
         function () {
           console.log("Query failed!");
@@ -56,53 +57,50 @@ const SelectQuiz = () => {
   useEffect(() => {
     getData();
   }, []);
-  const displaySelectQuiz = () => {
-    return (
+  const displaySelectLeaderboard = () => {
+    return(
       <Box
         sx={{
-          width: "100%",
-          overflow: "auto",
+        width: "100%",
+        overflow: "auto",
         }}>
-          <Box sx={{ alignItems:"center",
-        }}
-          >
-            <br></br>
-            <button onClick={() => setChooseBoards(true)} className="home-button">Leaderboards</button>
-            </Box>     
         <Grid
-          container
-          columns={{ xs: 2, md: 3, xl: 4 }}
-          spacing={10}
-          sx={GridStyles}>
-          {quizzes == null ? (
+        container
+        columns={{ xs: 2, md: 3, xl: 4 }}
+        spacing={10}
+        sx={GridStyles}>
+        {boards == null ? (
             <Grid item key={0} xs={2} sm={1}>
-              <NameCard
+            <NameCard
                 title={""}
-                description={"No Quizzes"}
+                description={"No Leaderboards"}
                 difficulty={""}
                 tags={""}
-              />
+            />
             </Grid>
-          ) : (
-            Array.from(quizzes).map((quiz, index) => (
-              <Grid item key={index} xs={2} sm={1}>
+        ) : (
+            Array.from(boards).map((board, index) => (
+            <Grid item key={index} xs={2} sm={1}>
                 <NameCard
-                  title={quiz[0]}
-                  description={quiz[1]}
-                  difficulty={quiz[2]}
-                  // tags={quiz[3]}
-                  quizId={quiz[3]}
+                title={board[0]}
+                description={board[1]}
+                difficulty={board[2]}
+                // tags={board[3]}
+                boardId={board[3]}
                 />
-              </Grid>
+            </Grid>
             ))
-          )}
+        )}
         </Grid>
-      </Box>
+        <br></br>     
+        <button onClick={() => setChooseQuiz(true)} className="home-button">Home</button>
+        <br></br>    
+    </Box>
     );
-  }
+}
 
   const displayOptions = () => {
-    return (chooseBoards) ? <SelectLeaderboard/> : displaySelectQuiz();
+    return (chooseQuiz) ? <SelectQuiz/> : displaySelectLeaderboard();
   }
 
   return (
@@ -110,4 +108,4 @@ const SelectQuiz = () => {
   );
 };
 
-export default SelectQuiz;
+export default SelectLeaderboard;

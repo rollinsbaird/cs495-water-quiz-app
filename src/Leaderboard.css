@@ -70,6 +70,17 @@
     color: #61dafb;
 }
 
+.home-button:hover {
+    background-color: #61dafb;
+    color: #0e0f14;
+    font-style: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .home-button:focus {
+    outline: none;
+  }
+
 .leaderboard-button:hover {
     background-color: #61dafb;
     color: #0e0f14;

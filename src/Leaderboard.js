@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Leaderboard.css";
-import SelectQuiz from "./SelectQuiz";
+import SelectLeaderboard from "./SelectLeaderboard";
 
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -41,7 +41,7 @@ class Player {
 
 function Leaderboard() {
   const [period, setPeriod] = useState(0);
-  const [chooseQuiz, setChooseQuiz] = useState(false);
+  const [chooseBoard, setChooseBoard] = useState(false);
 
   const player1 = new Player("Thom", .6, 1668111318145);
   const player2 = new Player("Rollins", .8, 1667504479);
@@ -95,11 +95,11 @@ function Leaderboard() {
           </Table>
         </TableContainer>
         <br></br>     
-      <button onClick={() => setChooseQuiz(true)} className="home-button">Home</button>
+      <button onClick={() => setChooseBoard(true)} className="home-button">Leaderboards</button>
       <br></br>
       </header>
     </div>
-        );
+    );
   }
 
   function between(data, between){
@@ -117,7 +117,7 @@ function Leaderboard() {
   }
 
   const displayOptions = () => {
-    return (chooseQuiz) ? <SelectQuiz/> : displayLeaderboard();
+    return (chooseBoard) ? <SelectLeaderboard/> : displayLeaderboard();
   }
 
   return (
