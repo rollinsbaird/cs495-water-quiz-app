@@ -44,22 +44,25 @@ function Quiz(props) {
     }
   };
 
-  // const saveScore = async (username, score) => {
-  //   try {
-  //     // https://docs.fauna.com/fauna/current/learn/cookbook/fql/basics/documents/create?lang=javascript
-  //     client
-  //       .query(
-  //         q.Create(q.Collection("Highscores"), {
-  //           data: { username: username, score: score },
-  //         })
-  //       )
-  //       .then((res) => {
-  //         console.log(res);
-  //       });
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
+  const saveScore = async (quizId, username, score) => {
+    const re = new RegExp('(?<=")[^"]*\\d(?=")');
+    const id = re.exec(quizId)[0];
+    console.log(score);
+    try {
+      // https://docs.fauna.com/fauna/current/learn/cookbook/fql/basics/documents/create?lang=javascript
+      client
+        .query(
+          q.Create(q.Collection("Highscores"), {
+            data: { quizId: id, username: username, score: score },
+          })
+        )
+        .then((res) => {
+          console.log(res);
+        });
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   useEffect(() => {
     getData();
@@ -103,9 +106,9 @@ function Quiz(props) {
     return (
       // TODO: fix manual print of score for buttons
       <>
-        {/* <button onClick={() => saveScore("Water Boy", score)}>
+        <button onClick={() => saveScore(props.quizId,"Shark Boy", score["score"])}>
           {"Save Score"}
-        </button> */}
+        </button>
         <p>
           <FacebookShareButton
             quote={
