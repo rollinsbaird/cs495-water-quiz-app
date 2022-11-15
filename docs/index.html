@@ -8,18 +8,18 @@
 </head>
 <body>
     <center>
-    <h1>Water Quiz Project</h1>
+    <h1>HydroGenius</h1>
     <p>This web application is designed to provide quizzes on the subject of water for both education and entertainment purposes.</p>
     </center>
     <p><b>Client:</b> Dr. Steven Burian, Dr. James Halgren, and the National Water Institute.</p>
     <p><b>Team Members:</b> Rollins Baird, Sam Hertzler, Thomas Hampton</p>
-    <h3>Sprint 1 Goals:</h3>
+    <h3>Goals:</h3>
     <ol>
-        <li>Find a Javascript framework to use.</li>
         <li>Implement backend system to use for our PWA and quiz data.</li>
-        <li>Create a basic draft for homepage & quiz UI.</li>
-        <li> Configure GitHub, Jira, & additional tools.</li>
-        <li>Make sure everyone has the same tools and on the same page with goals.</li>
+        <li>Create a homepage, quiz UI, quiz selection, and leaderboard page for quizzes.</li>
+        <li>Create robust sample content.</li>
+        <li>Add a logo and share buttons.</li>
+        <li>Documentation for handoff.</li>
     </ol>
     <h3>Approach:</h3>
 
@@ -33,20 +33,40 @@
                 <li>CSS</li>
                 <li>Node 16.13.2</li>
                 <li>Npm 8.1.2</li>
+                <li>Rive</li>
                 </li>
             </ul></li>
         </ul>
     <u>How it Works:</u>
     <ul>
         <li>A user will navigate to the web app on either a mobile device or laptop</li>
-        <li>The homescreen consists of a credits page with a dropdown menu of quizzes available with tags to search through and a link to add a quiz
-            <ul><li>The link to add a quiz will take the user through an interactive process of addidng and viewing a new quiz</li></ul>
+        <li>The homescreen consists of a credits page with a button that links to the quiz selection pages</li>
+        <li>The quiz selection page contains a list of quizzes displayed as cards
+            <ul><li>Each quiz has a title and a difficulty tag as well as a short description under the title</li></ul>
         </li>
-        <li>The user can click on a a quiz based on certain tags such as difficulty or location
-        <ul><li>Each quiz will range in question count and type</li>
-        <li>With the competion of each quiz a score will be displayed as well as a chance to retake the quiz</li>
-        <li>The user will also see a leaderboad for last 30 minutes, as well as all time
-            <ul><li>Each leaderboard can also be found from a dropdown menu on the home screen</li></ul>
+        <li>There are two options for each quiz card, the user can click the card or the user can click the a trophy emoji in the corner
+            <ul>
+                <li>Clicking the card takes the user to a specific quiz</li>
+                <li>Clicking the trophy emoji takes the user to a specific leaderboad page</li>
+            </ul>
+        </li>
+        <li>Each quiz consists of multiple choice questions that have optional informartion screen before the question and an optional feedback screen after the question has been answered
+            <ul>
+                <li>At the conclusion of each quiz the user will see a closiong card 
+                    <ul>
+                        <li>A personalized score</li>
+                        <li>An option to input the user's name to be saved to the leaderboard</li>
+                        <li>A share button to share the score and a short snippet of about the application to social media</li>
+                        <li>A button to return to the quiz selection page and a button to restart the quiz</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>The leaderboard page consists of two buttons
+            <ul>
+                <li>One button dislays all time scores, the other displays scores from the last hour</li>
+                <li>The scores are sorted by percentage</li>
+            </ul>
         </li></ul>
     </li>
     </ul>
