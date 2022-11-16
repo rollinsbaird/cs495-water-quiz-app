@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Leaderboard.css";
 import SelectQuiz from "./SelectQuiz";
 
@@ -12,6 +12,13 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
+const faunadb = require("faunadb");
+const client = new faunadb.Client({
+  secret: process.env.REACT_APP_DB_KEY,
+  endpoint: "https://db.fauna.com/",
+});
+var q = faunadb.query;
+
 class Player {
   constructor(name, score, timestamp) {
     this.name = name;
@@ -20,28 +27,59 @@ class Player {
   }
 }
 
-function Leaderboard() {
+function Leaderboard(props) {
   const [period, setPeriod] = useState(0);
   const [chooseQuiz, setChooseQuiz] = useState(false);
+  const [highscores, setHighscores] = useState([]);
+  const [players, setPlayers] = useState([]);
 
-  const player1 = new Player("Thom", 0.6, 1668111318145);
-  const player2 = new Player("Rollins", 0.8, 1667504479);
-  const player3 = new Player("Sam", 0.7, 1668504479);
+  const getHighscores = async (quizId) => {
+    try {
+      // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
+      await client
+        .query(q.Paginate(q.Match(q.Index("all_Hs_by_Id"), quizId)))
+        .then(
+          function (response) {
+            setHighscores(response.data);
+            console.log(highscores);
+            sortPlayers();
+          },
+          function () {
+            console.log("Query failed!");
+          }
+        );
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
-  const sortedPlayers = [player1, player2, player3].sort(
-    (a, b) => b["score"] - a["score"]
-  );
-  for (let i = 0; i < sortedPlayers.length; i++) {
-    let scorePercent =
-      Math.trunc(sortedPlayers[i]["score"] * 100).toString() + "%";
-    sortedPlayers[i]["scorePercent"] = scorePercent;
-  }
+  var sortedPlayers = [];
+  // var players;
+
+  const sortPlayers = () => {
+    highscores.forEach((playerData) => {
+      sortedPlayers.push(
+        new Player(playerData[0], playerData[1], playerData[2])
+      );
+    });
+    sortedPlayers = sortedPlayers.sort((a, b) => b["score"] - a["score"]);
+    for (let i = 0; i < sortedPlayers.length; i++) {
+      let scorePercent =
+        Math.trunc(sortedPlayers[i]["score"] * 100).toString() + "%";
+      sortedPlayers[i]["scorePercent"] = scorePercent;
+    }
+    setPlayers(between(sortedPlayers, period));
+    console.log(players);
+  };
+
+  useEffect(() => {
+    getHighscores(props.quizId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleClick = (e) => {
     setPeriod(e.target.dataset.id);
   };
-
-  const players = between(sortedPlayers, period);
 
   const displayLeaderboard = () => {
     return (
@@ -82,22 +120,38 @@ function Leaderboard() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {players.map((player) => (
+                {players === [] ? (
                   <TableRow
-                    key={player.name}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                     <TableCell
                       className="leaderboard-table-cell"
                       align="center">
-                      {player.name}
+                      loading
                     </TableCell>
                     <TableCell
                       className="leaderboard-table-cell"
-                      align="center">
-                      {player.scorePercent}
-                    </TableCell>
+                      align="center"></TableCell>
                   </TableRow>
-                ))}
+                ) : (
+                  players.map((player) => (
+                    <TableRow
+                      key={player.name}
+                      sx={{
+                        "&:last-child td, &:last-child th": { border: 0 },
+                      }}>
+                      <TableCell
+                        className="leaderboard-table-cell"
+                        align="center">
+                        {player.name}
+                      </TableCell>
+                      <TableCell
+                        className="leaderboard-table-cell"
+                        align="center">
+                        {player.scorePercent}
+                      </TableCell>
+                    </TableRow>
+                  ))
+                )}
               </TableBody>
             </Table>
           </TableContainer>
@@ -119,6 +173,7 @@ function Leaderboard() {
 
     let filter = data.filter((val) => {
       let userTime = new Date(val.ts);
+      // eslint-disable-next-line eqeqeq
       if (between == 0) return val;
       return previous <= userTime && currTime >= userTime;
     });

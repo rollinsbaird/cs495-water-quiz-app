@@ -41,6 +41,7 @@ const SelectQuiz = () => {
       await client.query(q.Paginate(q.Match(q.Index("all_quizzes2")))).then(
         function (response) {
           setQuizzes(response.data);
+          console.log(response.data)
         },
         function () {
           console.log("Query failed!");
