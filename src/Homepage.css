@@ -12,13 +12,13 @@
 }
 
 .homepage-droplet {
-  margin-top: -10rem;
+  margin-top: -9rem;
   height: 65vmin;
   width: 65vmin;
 }
 
 .page-title {
-  margin-top: -1rem;
+  margin-top: -3rem;
   animation: background-pan 3s linear infinite;
   background: linear-gradient(to right, #3d82d1, #c867a4, #3d82d1);
   background-size: 200%;
@@ -119,8 +119,17 @@ button.close-button:hover {
 }
 
 /* SVG background image via https://haikei.app/ */
-.spacer {
-  aspect-ratio: 900/450;
+.spacerS {
+  aspect-ratio: 900/200;
+  width: 100%;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.spacerL {
+  aspect-ratio: 900/200;
   width: 100%;
   top: 0;
   background-repeat: no-repeat;

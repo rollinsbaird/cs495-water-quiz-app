@@ -16,7 +16,7 @@ function Homepage() {
   const displayHomepage = () => {
     return (
       <div className="homepage">
-        <div className="spacer layer1"></div>
+        <div className="spacerS layer1"></div>
         <div className="homepage-droplet">
           <Rive src="/droplet.riv" />
         </div>
@@ -40,7 +40,7 @@ function Homepage() {
           onExitComplete={() => null}>
           {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
         </AnimatePresence>
-        <div className="spacer layer2"></div>
+        <div className="spacerL layer2"></div>
         <div className="about-section">
             <div className="about-text">
               <h2>
@@ -59,7 +59,7 @@ function Homepage() {
             alt="AWI Logo"
             src="/awi_magnetlogo.png"></img>
         </div>
-        <div className="spacer layer3"></div>
+        <div className="spacerL layer3"></div>
       </div>
     );
   };
