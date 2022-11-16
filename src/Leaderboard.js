@@ -33,25 +33,16 @@ function Leaderboard(props) {
   const [highscores, setHighscores] = useState([]);
 
   const getHighscores = async (quizId) => {
-    const re = new RegExp('(?<=")[^"]*\\d(?=")');
-    const id = re.exec(quizId)[0];
     try {
       // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
-      await client.query(
-          q.Map(
-            q.Paginate(q.Match(q.Index("getHighscore"), id)),
-            q.Lambda("highscoreRef", q.Get(q.Var("highscoreRef")))
-          )
-        )
-        .then(
-          function (response) {
-            setHighscores(response.data);
-            console.log(highscores);
-          },
-          function () {
-            console.log("Query failed!");
-          }
-        );
+      await client.query(q.Paginate(q.Match(q.Index("all_Hs_by_Id"), quizId))).then(
+        function (response) {
+          setHighscores(response.data);
+        },
+        function () {
+          console.log("Query failed!");
+        }
+      );
     } catch (e) {
       console.error(e);
     }
@@ -60,7 +51,7 @@ function Leaderboard(props) {
   useEffect(() => {
     getHighscores(props.quizId);
     console.log(highscores);
-  }, []);
+  });
 
   const player1 = new Player("Thom", 0.6, 1668111318145);
   const player2 = new Player("Rollins", 0.8, 1667504479);
