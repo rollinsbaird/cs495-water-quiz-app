@@ -106,7 +106,7 @@ function Quiz(props) {
     return (
       // TODO: fix manual print of score for buttons
       <>
-        <button onClick={() => saveScore(props.quizId,"Shark Boy", score["score"])}>
+        <button onClick={() => saveScore(props.quizId,"Shark Boy", score["score"]/numQuestions)}>
           {"Save Score"}
         </button>
         <p>
