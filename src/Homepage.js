@@ -57,16 +57,11 @@ function Homepage() {
     return chooseQuiz ? <SelectQuiz /> : displayHomepage();
   };
 
-  const quizId = 'Ref(Collection("Quizes"), "348045511873266258"';
-  const re = new RegExp('(?<=")[^"]*\\d(?=")');
-  const id = re.exec(quizId)[0];
+  // const quizId = 'Ref(Collection("Quizes"), "348045511873266258"';
+  // const re = new RegExp('(?<=")[^"]*\\d(?=")');
+  // const id = re.exec(quizId)[0];
 
-  return (
-    <>
-      <Leaderboard quizId={id} />
-    </>
-  );
-  // return <>{displayOptions()}</>;
+  return <>{displayOptions()}</>;
 }
 
 export default Homepage;
