@@ -42,24 +42,18 @@ function Homepage() {
         </AnimatePresence>
         <div className="spacer layer2"></div>
         <div className="about-section">
-          <div className="about-content">
             <div className="about-text">
               <h2>
                 What is <span className="fancy">HydroGenius</span>?
               </h2>
               <p>
-                Created by
-                <br />
-                Rollins Baird, Thomas Hampton, and Sam Hertzler
-                <br />
-                in conjuction with
-                <br />
-                Dr. Burian, Dr. Halgren, and the National Water Institute.
-                <br />
+                HydroGenius is an interactive quiz where you can test your water
+                knowledge and see how you stack up against others. It was built
+                by Rollins Baird, Thomas Hamption, & Sam Hertzler in conjunction
+                Dr. Brian & Dr. Halgren from the Alabama Water Institute. We
+                hope you have fun improving your water knowledge! Created by
               </p>
             </div>
-            
-          </div>
           <img
             className="logo-AWI"
             alt="AWI Logo"

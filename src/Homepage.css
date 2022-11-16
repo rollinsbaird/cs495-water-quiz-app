@@ -70,11 +70,23 @@
 }
 
 .about-section {
-  width: 100vw;
+  width: 100%;
   background-color: #3d82d1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.about-text {
+  padding: 0 3rem 0 3rem;
+  margin-bottom: -6rem;
+}
+
+.fancy {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(to right, #252d4a, #c867a4, #252d4a);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 
 .logo-AWI {
