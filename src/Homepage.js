@@ -16,10 +16,11 @@ function Homepage() {
   const displayHomepage = () => {
     return (
       <div className="homepage">
+        <div className="spacer layer1"></div>
         <div className="homepage-droplet">
           <Rive src="/droplet.riv" />
         </div>
-        <h1>HydroGenius</h1>
+        <h1 className="page-title">HydroGenius</h1>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -39,16 +40,26 @@ function Homepage() {
           onExitComplete={() => null}>
           {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
         </AnimatePresence>
-        <p>
-          Created by
-          <br />
-          Rollins Baird, Thomas Hampton, and Sam Hertzler
-          <br />
-          in conjuction with
-          <br />
-          Dr. Burian, Dr. Halgren, and the National Water Institute.
-          <br />
-        </p>
+        <div className="spacer layer2"></div>
+        <div className="about-section">
+            <div className="about-text">
+              <h2>
+                What is <span className="fancy">HydroGenius</span>?
+              </h2>
+              <p>
+                HydroGenius is an interactive quiz where you can test your water
+                knowledge and see how you stack up against others. It was built
+                by Rollins Baird, Thomas Hamption, & Sam Hertzler in conjunction
+                Dr. Brian & Dr. Halgren from the Alabama Water Institute. We
+                hope you have fun improving your water knowledge! Created by
+              </p>
+            </div>
+          <img
+            className="logo-AWI"
+            alt="AWI Logo"
+            src="/awi_magnetlogo.png"></img>
+        </div>
+        <div className="spacer layer3"></div>
       </div>
     );
   };
