@@ -30,7 +30,6 @@ class Player {
 function Leaderboard(props) {
   const [period, setPeriod] = useState(0);
   const [chooseQuiz, setChooseQuiz] = useState(false);
-  // const [loading, setLoading] = useState(true);
   const [highscores, setHighscores] = useState([]);
   const [players, setPlayers] = useState([]);
 
@@ -77,47 +76,6 @@ function Leaderboard(props) {
     getHighscores(props.quizId);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // const player1 = new Player("Thom", 0.6, 1668111318145);
-  // const player2 = new Player("Rollins", 0.8, 1667504479);
-  // const player3 = new Player("Sam", 0.7, 1668504479);
-
-  // const sortedPlayers = [player1, player2, player3].sort(
-  //   (a, b) => b["score"] - a["score"]
-  // );
-  // for (let i = 0; i < sortedPlayers.length; i++) {
-  //   let scorePercent =
-  //     Math.trunc(sortedPlayers[i]["score"] * 100).toString() + "%";
-  //   sortedPlayers[i]["scorePercent"] = scorePercent;
-  // }
-
-  // const tableData = () => {
-  //   {players == null ? (
-  //     <TableRow
-  //       // key={player.name}
-  //       sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-  //       <TableCell className="leaderboard-table-cell" align="center">
-  //         loading
-  //       </TableCell>
-  //       <TableCell className="leaderboard-table-cell" align="center">
-  //         {/* <Skeleton /> */}
-  //       </TableCell>
-  //     </TableRow>
-  //   ) : (
-  //     players.map((player) => (
-  //       <TableRow
-  //         key={player.name}
-  //         sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-  //         <TableCell className="leaderboard-table-cell" align="center">
-  //           {player.name}
-  //         </TableCell>
-  //         <TableCell className="leaderboard-table-cell" align="center">
-  //           {player.scorePercent}
-  //         </TableCell>
-  //       </TableRow>
-  //     ))}
-  //   );
-  // };
 
   const handleClick = (e) => {
     setPeriod(e.target.dataset.id);
