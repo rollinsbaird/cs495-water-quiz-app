@@ -10,15 +10,9 @@ const client = new faunadb.Client({
 });
 var q = faunadb.query;
 
-// xs, extra-small: 0px
-// sm, small: 600px
-// md, medium: 900px
-// lg, large: 1200px
-// xl, extra-large: 1536px
-
 const GridStyles = {
   width: "100%",
-  backgroundColor: "#61dafb",
+  backgroundColor: "252d4a",
   paddingRight: {
     xs: 10,
     sm: 10,
