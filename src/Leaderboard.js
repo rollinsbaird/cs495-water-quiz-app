@@ -30,47 +30,98 @@ class Player {
 function Leaderboard(props) {
   const [period, setPeriod] = useState(0);
   const [chooseQuiz, setChooseQuiz] = useState(false);
+  // const [loading, setLoading] = useState(true);
   const [highscores, setHighscores] = useState([]);
+  const [players, setPlayers] = useState([]);
 
   const getHighscores = async (quizId) => {
     try {
       // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
-      await client.query(q.Paginate(q.Match(q.Index("all_Hs_by_Id"), quizId))).then(
-        function (response) {
-          setHighscores(response.data);
-        },
-        function () {
-          console.log("Query failed!");
-        }
-      );
+      await client
+        .query(q.Paginate(q.Match(q.Index("all_Hs_by_Id"), quizId)))
+        .then(
+          function (response) {
+            setHighscores(response.data);
+            console.log(highscores);
+            sortPlayers();
+          },
+          function () {
+            console.log("Query failed!");
+          }
+        );
     } catch (e) {
       console.error(e);
     }
   };
 
+  var sortedPlayers = [];
+  // var players;
+
+  const sortPlayers = () => {
+    highscores.forEach((playerData) => {
+      sortedPlayers.push(
+        new Player(playerData[0], playerData[1], playerData[2])
+      );
+    });
+    sortedPlayers = sortedPlayers.sort((a, b) => b["score"] - a["score"]);
+    for (let i = 0; i < sortedPlayers.length; i++) {
+      let scorePercent =
+        Math.trunc(sortedPlayers[i]["score"] * 100).toString() + "%";
+      sortedPlayers[i]["scorePercent"] = scorePercent;
+    }
+    setPlayers(between(sortedPlayers, period));
+    console.log(players);
+  };
+
   useEffect(() => {
     getHighscores(props.quizId);
-    console.log(highscores);
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const player1 = new Player("Thom", 0.6, 1668111318145);
-  const player2 = new Player("Rollins", 0.8, 1667504479);
-  const player3 = new Player("Sam", 0.7, 1668504479);
+  // const player1 = new Player("Thom", 0.6, 1668111318145);
+  // const player2 = new Player("Rollins", 0.8, 1667504479);
+  // const player3 = new Player("Sam", 0.7, 1668504479);
 
-  const sortedPlayers = [player1, player2, player3].sort(
-    (a, b) => b["score"] - a["score"]
-  );
-  for (let i = 0; i < sortedPlayers.length; i++) {
-    let scorePercent =
-      Math.trunc(sortedPlayers[i]["score"] * 100).toString() + "%";
-    sortedPlayers[i]["scorePercent"] = scorePercent;
-  }
+  // const sortedPlayers = [player1, player2, player3].sort(
+  //   (a, b) => b["score"] - a["score"]
+  // );
+  // for (let i = 0; i < sortedPlayers.length; i++) {
+  //   let scorePercent =
+  //     Math.trunc(sortedPlayers[i]["score"] * 100).toString() + "%";
+  //   sortedPlayers[i]["scorePercent"] = scorePercent;
+  // }
+
+  // const tableData = () => {
+  //   {players == null ? (
+  //     <TableRow
+  //       // key={player.name}
+  //       sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+  //       <TableCell className="leaderboard-table-cell" align="center">
+  //         loading
+  //       </TableCell>
+  //       <TableCell className="leaderboard-table-cell" align="center">
+  //         {/* <Skeleton /> */}
+  //       </TableCell>
+  //     </TableRow>
+  //   ) : (
+  //     players.map((player) => (
+  //       <TableRow
+  //         key={player.name}
+  //         sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+  //         <TableCell className="leaderboard-table-cell" align="center">
+  //           {player.name}
+  //         </TableCell>
+  //         <TableCell className="leaderboard-table-cell" align="center">
+  //           {player.scorePercent}
+  //         </TableCell>
+  //       </TableRow>
+  //     ))}
+  //   );
+  // };
 
   const handleClick = (e) => {
     setPeriod(e.target.dataset.id);
   };
-
-  const players = between(sortedPlayers, period);
 
   const displayLeaderboard = () => {
     return (
@@ -111,22 +162,38 @@ function Leaderboard(props) {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {players.map((player) => (
+                {players === [] ? (
                   <TableRow
-                    key={player.name}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                     <TableCell
                       className="leaderboard-table-cell"
                       align="center">
-                      {player.name}
+                      loading
                     </TableCell>
                     <TableCell
                       className="leaderboard-table-cell"
-                      align="center">
-                      {player.scorePercent}
-                    </TableCell>
+                      align="center"></TableCell>
                   </TableRow>
-                ))}
+                ) : (
+                  players.map((player) => (
+                    <TableRow
+                      key={player.name}
+                      sx={{
+                        "&:last-child td, &:last-child th": { border: 0 },
+                      }}>
+                      <TableCell
+                        className="leaderboard-table-cell"
+                        align="center">
+                        {player.name}
+                      </TableCell>
+                      <TableCell
+                        className="leaderboard-table-cell"
+                        align="center">
+                        {player.scorePercent}
+                      </TableCell>
+                    </TableRow>
+                  ))
+                )}
               </TableBody>
             </Table>
           </TableContainer>
