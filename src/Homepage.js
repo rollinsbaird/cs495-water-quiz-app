@@ -50,7 +50,7 @@ function Homepage() {
                 HydroGenius is an interactive quiz where you can test your water
                 knowledge and see how you stack up against others. It was built
                 by Rollins Baird, Thomas Hamption, & Sam Hertzler in conjunction
-                Dr. Brian & Dr. Halgren from the Alabama Water Institute. We
+                Dr. Burian & Dr. Halgren from the Alabama Water Institute. We
                 hope you have fun improving your water knowledge! Created by
               </p>
             </div>
