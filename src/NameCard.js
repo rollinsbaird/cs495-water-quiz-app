@@ -38,6 +38,10 @@ function NameCard(props) {
     textAlign: "center",
     color: theme.palette.text.secondary,
     height: "100%",
+    "&:hover": {
+      scale: "1.1",
+      width: "100%",
+    }
     // flexGrow: 1,
     // flexDirection: "column",
   }));
@@ -71,8 +75,6 @@ function NameCard(props) {
               </motion.button>
             </Box>
             <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
               className="quiz-tile-button"
               onClick={() => (modalOpen ? close() : open())}>
               <Typography sx={{ fontSize: 10 }} color="text.secondary">
