@@ -57,7 +57,7 @@ function Homepage() {
           <img
             className="logo-AWI"
             alt="AWI Logo"
-            src="/awi_magnetlogo.png"></img>
+            src="/AWI Magnet.png"></img>
         </div>
         <div className="spacer layer3"></div>
       </div>
