@@ -38,7 +38,7 @@ const saveScore = async (quizId, username, score) => {
     console.error(e);
   }
 };
-
+// https://reactjs.org/docs/forms.html
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
@@ -136,21 +136,6 @@ function Quiz(props) {
   const shareHashtags = ["HydroGenius", "WaterQuiz"];
   const shareQuote =
     "This is HydroGenius, it is great! You should play this game.";
-
-  // const StyledInput = styled.input`
-  //   display: block;
-  //   margin: 20px 0px;
-  //   border: 1px solid lightblue;
-  // `;
-  // function useInput() {
-  //   function onChange(e) {
-  //     setUsername(e.target.value);
-  //   }
-  //   return {
-  //     username,
-  //     onChange,
-  //   };
-  // }
 
   const QuizEndScreen = (score, numQuestions) => {
     return (
