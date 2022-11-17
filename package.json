@@ -6,7 +6,7 @@
     "@emotion/babel-plugin": "^11.10.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@mui/icons-material": "^5.10.9",
+    "@mui/icons-material": "^5.10.14",
     "@mui/material": "^5.10.10",
     "@pronestor/react-zoom-pan-pinch": "^2.3.0",
     "@rive-app/react-canvas": "^3.0.33",

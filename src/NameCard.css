@@ -1,0 +1,13 @@
+.trophy{
+    color: gold;
+    fill: gold !important;
+    font-size: x-large !important;
+    margin-right: 0;
+}
+
+.trophy-button{
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    background-color: #ffffff;
+}
