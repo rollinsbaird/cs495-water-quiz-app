@@ -3,7 +3,7 @@ import Rive from "@rive-app/react-canvas";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./Components/Modal";
 import "./Homepage.css";
-import SelectQuiz from "./SelectQuiz";
+// import SelectQuiz from "./SelectQuiz";
 // import Leaderboard from "./Leaderboard";
 
 function Homepage(props) {
