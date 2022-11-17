@@ -38,7 +38,7 @@ const SelectQuiz = (props) => {
       await client.query(q.Paginate(q.Match(q.Index("all_quizzes2")))).then(
         function (response) {
           setQuizzes(response.data);
-          console.log(response.data)
+          console.log(response.data);
         },
         function () {
           console.log("Query failed!");
@@ -54,53 +54,66 @@ const SelectQuiz = (props) => {
   }, []);
 
   return (
-    <Box
-      sx={{
-        minWidth: "400px",
-        width: "100%",
-        overflow: "auto",
-        display: "flow",
-        flexDirection: "column",
-      }}>
-      <Box sx={{ width: "100%", display: "flex", flexDirection: "row", justifyContent: "flex-start", backgroundColor: "252d4a",}}>
-        <motion.button
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          className="home-button"
-          onClick={props.toHomepage}>
-          <HomeIcon className="home" sx={{fontSize: "20px"}} />
-        </motion.button>
-      </Box>
-      <Grid
-        container
-        columns={{ xs: 2, md: 3, xl: 4 }}
-        spacing={10}
-        sx={GridStyles}>
-        {quizzes == null ? (
-          <Grid item key={0} xs={2} sm={1}>
-            <NameCard
-              title={""}
-              description={"No Quizzes"}
-              difficulty={""}
-              tags={""}
-            />
+    <>
+      <div className="spacerTop layer1"></div>
+      <div className="select-body">
+        <Box
+          sx={{
+            minWidth: "400px",
+            width: "100%",
+            overflow: "auto",
+            display: "flow",
+            flexDirection: "column",
+          }}>
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              backgroundColor: "252d4a",
+            }}>
+            <motion.button
+            style={{background: "transparent"}}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="home-button"
+              onClick={props.toHomepage}>
+              <HomeIcon className="home" sx={{ fontSize: "20px" }} />
+            </motion.button>
+          </Box>
+          <Grid
+            container
+            columns={{ xs: 2, md: 3, xl: 4 }}
+            spacing={10}
+            sx={GridStyles}>
+            {quizzes == null ? (
+              <Grid item key={0} xs={2} sm={1}>
+                <NameCard
+                  title={""}
+                  description={"No Quizzes"}
+                  difficulty={""}
+                  tags={""}
+                />
+              </Grid>
+            ) : (
+              Array.from(quizzes).map((quiz, index) => (
+                <Grid item key={index} xs={2} sm={1}>
+                  <NameCard
+                    title={quiz[0]}
+                    description={quiz[1]}
+                    difficulty={quiz[2]}
+                    // tags={quiz[3]}
+                    quizId={quiz[3]}
+                    toLeaderboard={props.toLeaderboard}
+                  />
+                </Grid>
+              ))
+            )}
           </Grid>
-        ) : (
-          Array.from(quizzes).map((quiz, index) => (
-            <Grid item key={index} xs={2} sm={1}>
-              <NameCard
-                title={quiz[0]}
-                description={quiz[1]}
-                difficulty={quiz[2]}
-                // tags={quiz[3]}
-                quizId={quiz[3]}
-                toLeaderboard={props.toLeaderboard}
-              />
-            </Grid>
-          ))
-        )}
-      </Grid>
-    </Box>
+        </Box>
+      </div>
+    </>
   );
 };
 
