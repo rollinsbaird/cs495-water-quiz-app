@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Leaderboard.css";
-import SelectQuiz from "./SelectQuiz";
+// import SelectQuiz from "./SelectQuiz";
 
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -29,7 +29,7 @@ class Player {
 
 function Leaderboard(props) {
   const [period, setPeriod] = useState(0);
-  const [chooseQuiz, setChooseQuiz] = useState(false);
+  // const [chooseQuiz, setChooseQuiz] = useState(false);
   const [highscores, setHighscores] = useState([]);
   const [players, setPlayers] = useState([]);
 

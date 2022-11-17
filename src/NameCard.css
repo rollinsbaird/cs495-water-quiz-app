@@ -26,3 +26,22 @@
     border: none;
     background-color: #252D4A;
 }
+
+/* for select quiz */
+.select-body {
+    margin-top: -50px;
+}
+
+/* SVG background image via https://haikei.app/ */
+.spacerTop {
+  aspect-ratio: 900/100;
+  width: 100%;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url("/public/top-layered-waves-haikei.svg");
+}
