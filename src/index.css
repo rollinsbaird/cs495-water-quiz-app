@@ -13,10 +13,31 @@ code {
 }
 
 html {
-  background-color: #61dafb;
+  background-color: #252D4A;
 }
 
 * {
   font-family: "Veranda", cursive, sans-serif;
   color: #ffffff;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #252d4a #3d82d1;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #252d4a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3d82d1;
+  border-radius: 20px;
+  border: 3px solid #252d4a;
 }

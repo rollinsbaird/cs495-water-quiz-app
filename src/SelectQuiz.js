@@ -10,15 +10,9 @@ const client = new faunadb.Client({
 });
 var q = faunadb.query;
 
-// xs, extra-small: 0px
-// sm, small: 600px
-// md, medium: 900px
-// lg, large: 1200px
-// xl, extra-large: 1536px
-
 const GridStyles = {
   width: "100%",
-  backgroundColor: "#61dafb",
+  backgroundColor: "252d4a",
   paddingRight: {
     xs: 10,
     sm: 10,
@@ -41,6 +35,7 @@ const SelectQuiz = () => {
       await client.query(q.Paginate(q.Match(q.Index("all_quizzes2")))).then(
         function (response) {
           setQuizzes(response.data);
+          console.log(response.data)
         },
         function () {
           console.log("Query failed!");

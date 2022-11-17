@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Skeleton } from "@mui/material";
+import Skeleton from "@mui/material/Skeleton";
 // import styled from "styled-components";
 import "./Quiz.css";
 import {
@@ -17,6 +17,75 @@ var client = new faunadb.Client({
   secret: process.env.REACT_APP_DB_KEY,
   endpoint: "https://db.fauna.com/",
 });
+
+var isScoreSet;
+
+const saveScore = async (quizId, username, score) => {
+  const re = new RegExp('(?<=")[^"]*\\d(?=")');
+  const id = re.exec(quizId)[0];
+  try {
+    // https://docs.fauna.com/fauna/current/learn/cookbook/fql/basics/documents/create?lang=javascript
+    client
+      .query(
+        q.Create(q.Collection("Highscores"), {
+          data: { quizId: id, username: username, score: score },
+        })
+      )
+      .then((res) => {
+        console.log(res);
+      });
+  } catch (e) {
+    console.error(e);
+  }
+};
+// https://reactjs.org/docs/forms.html
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.quizId = props.quizId;
+    this.score = props.score;
+    this.questions = props.questions;
+    this.state = { value: "" };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  handleSubmit(event) {
+    alert(
+      "A name was submitted: " +
+        this.state.value +
+        this.quizId +
+        this.score +
+        this.questions
+    );
+    saveScore(this.quizId, this.state.value, this.score / this.questions);
+    isScoreSet = true;
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form className="username-form" onSubmit={this.handleSubmit}>
+        <label>
+          {"Username "}
+          <input
+            className="text-box"
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
+        </label>
+        <br></br>
+        <input className="submit" type="submit" value="Save Score" />
+      </form>
+    );
+  }
+}
 
 function Quiz(props) {
   const [quizData, setQuizData] = useState(null);
@@ -44,23 +113,6 @@ function Quiz(props) {
     }
   };
 
-  // const saveScore = async (username, score) => {
-  //   try {
-  //     // https://docs.fauna.com/fauna/current/learn/cookbook/fql/basics/documents/create?lang=javascript
-  //     client
-  //       .query(
-  //         q.Create(q.Collection("Highscores"), {
-  //           data: { username: username, score: score },
-  //         })
-  //       )
-  //       .then((res) => {
-  //         console.log(res);
-  //       });
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
-
   useEffect(() => {
     getData();
   });
@@ -76,7 +128,8 @@ function Quiz(props) {
   };
 
   const shareUrl = "https://hydrogenius.netlify.app/";
-  const shareSubject = "Hey! I think you would really like this cool new game called Hydrogenius!";
+  const shareSubject =
+    "Hey! I think you would really like this cool new game called Hydrogenius!";
   const shareBody =
     "This is HydroGenius, it is great! You should play this game.";
   const shareTitle = "This is HydroGenius, an interactive water quiz game!";
@@ -84,28 +137,10 @@ function Quiz(props) {
   const shareQuote =
     "This is HydroGenius, it is great! You should play this game.";
 
-  // const StyledInput = styled.input`
-  //   display: block;
-  //   margin: 20px 0px;
-  //   border: 1px solid lightblue;
-  // `;
-  // function useInput() {
-  //   function onChange(e) {
-  //     setUsername(e.target.value);
-  //   }
-  //   return {
-  //     username,
-  //     onChange,
-  //   };
-  // }
-
   const QuizEndScreen = (score, numQuestions) => {
     return (
       // TODO: fix manual print of score for buttons
       <>
-        {/* <button onClick={() => saveScore("Water Boy", score)}>
-          {"Save Score"}
-        </button> */}
         <p>
           <FacebookShareButton
             quote={
@@ -356,9 +391,21 @@ function Quiz(props) {
   const DisplayQuiz = () => {
     return showScore ? (
       <div className="display-score">
-        You scored {score} out of {quizData.questions.length}
-        {/* <NameForm /> */}
-        {/* <StyledInput {...inputProps} placeholder="Type a username" /> */}
+        <p>
+          You scored {score} out of {quizData.questions.length}
+        </p>
+        <br></br>
+        {isScoreSet ? (
+          <></>
+        ) : (
+          <div className="enter-username">
+            <NameForm
+              quizId={props.quizId}
+              score={score}
+              questions={currentQuestion}
+            />
+          </div>
+        )}
         {QuizEndScreen({ score }, quizData.questions.length)}
       </div>
     ) : (
@@ -373,37 +420,6 @@ function Quiz(props) {
       </>
     );
   };
-
-  // class NameForm extends React.Component {
-  //   constructor(props) {
-  //     super(props);
-  //     this.state = { value: "" };
-
-  //     this.handleChange = this.handleChange.bind(this);
-  //     this.handleSubmit = this.handleSubmit.bind(this);
-  //   }
-
-  //   handleChange(event) {
-  //     this.setState({ value: event.target.value });
-  //   }
-
-  //   handleSubmit(event) {
-  //     alert("A name was submitted: " + this.state.value);
-  //     event.preventDefault();
-  //   }
-
-  //   render() {
-  //     return (
-  //       <form onSubmit={this.handleSubmit}>
-  //         <input
-  //           type="text"
-  //           value={this.state.value}
-  //           onChange={this.handleChange}
-  //         />
-  //       </form>
-  //     );
-  //   }
-  // }
 
   return (
     <div className="Quiz">{loading ? loadingScreen() : DisplayQuiz()}</div>

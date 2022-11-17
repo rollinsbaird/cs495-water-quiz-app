@@ -73,10 +73,17 @@ code {
   justify-content: space-between;
 }
 
+.enter-username {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 button.close-preview,
 .answer-section button,
 .answer-feedback button,
-.display-score button {
+.display-score button,
+input.submit {
   font-size: 16px;
   color: #ffffff;
   background-color: #252d4a;
@@ -84,14 +91,14 @@ button.close-preview,
   display: flex;
   padding: 5px;
   margin: 2.5px;
-
   border: 5px solid #234668;
   cursor: pointer;
 }
 
-button.close-preview {
+button.close-preview, input.submit {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 4vh;
 }
 
 .answer-choices button {
@@ -105,13 +112,23 @@ button.after-feedback {
   margin-right: auto;
 }
 
-.answer-feedback p {
+.answer-feedback p,
+.display-score p {
   text-align: center;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-size: calc(10px + 2vmin);
+}
+
+.username-form label {
+  font-size: calc(10px + 2vmin);
+}
+
+.username-form input.text-box {
+  font-size: calc(10px + 2vmin);
+  color: #252d4a;
 }
 
 .question-br {
@@ -134,7 +151,8 @@ button.after-feedback {
   background-color: #ff3333;
 }
 
-.Quiz button:hover {
+.Quiz button:hover,
+input.submit:hover {
   background-color: #555e7d;
 }
 
