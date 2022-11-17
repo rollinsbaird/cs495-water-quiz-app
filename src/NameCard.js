@@ -24,7 +24,8 @@ function NameCard(props) {
   };
   const open = () => {
     setModalOpen(true);
-    const scrollY = document.documentElement.style.getPropertyValue("--scroll-y");
+    const scrollY =
+      document.documentElement.style.getPropertyValue("--scroll-y");
     const body = document.body;
     body.style.position = "fixed";
     body.style.top = "0%";
@@ -38,10 +39,6 @@ function NameCard(props) {
     textAlign: "center",
     color: theme.palette.text.secondary,
     height: "100%",
-    "&:hover": {
-      scale: "1.1",
-      width: "100%",
-    }
     // flexGrow: 1,
     // flexDirection: "column",
   }));
@@ -64,34 +61,49 @@ function NameCard(props) {
   return (
     <Item>
       <CardContent>
-          <Box>
-            <Box sx={{ width: "100%", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "end" }}>
-              <motion.button
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                className="trophy-button"
-                onClick={props.toLeaderboard}>
-                <EmojiEventsIcon className="trophy" sx={{ fontSize: "100" }} />
-              </motion.button>
-            </Box>
+        <Box>
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "end",
+            }}>
             <motion.button
-              className="quiz-tile-button"
-              onClick={() => (modalOpen ? close() : open())}>
-              <Typography sx={{ fontSize: 10 }} color="text.secondary">
-                {showDifficulty(props.difficulty)}
-              </Typography>
-              <Box sx={{ minHeight: 72, display: "flex", flexDirection: "column", alignItems: "stretch" }}>
-                <Typography
-                  sx={{ fontSize: 24, fontWeight: "bold" }}
-                  color="text.primary">
-                  {props.title}
-                </Typography>
-              </Box>
-              <Typography sx={{ fontSize: 10 }} color="text.secondary">
-                {props.description}
-              </Typography>
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="trophy-button"
+              onClick={props.toLeaderboard}>
+              <EmojiEventsIcon className="trophy" sx={{ fontSize: "100" }} />
             </motion.button>
           </Box>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="quiz-tile-button"
+            onClick={() => (modalOpen ? close() : open())}>
+            <Typography sx={{ fontSize: 10 }} color="text.secondary">
+              {showDifficulty(props.difficulty)}
+            </Typography>
+            <Box
+              sx={{
+                minHeight: 72,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "stretch",
+              }}>
+              <Typography
+                sx={{ fontSize: 24, fontWeight: "bold" }}
+                color="text.primary">
+                {props.title}
+              </Typography>
+            </Box>
+            <Typography sx={{ fontSize: 10 }} color="text.secondary">
+              {props.description}
+            </Typography>
+          </motion.button>
+        </Box>
         <AnimatePresence
           // Disable any initial animations on children that
           // are present when the component is first rendered
