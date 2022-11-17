@@ -70,12 +70,14 @@
 }
 
 .about-section {
+  margin-top: -0.5vh;
+  margin-bottom: -1vh;
   width: 100%;
   background-color: #3d82d1;
 }
 
 .about-text {
-  padding: 0 3rem 0 3rem;
+  padding: 0 4rem 0 4rem;
   margin-bottom: -6rem;
 }
 
