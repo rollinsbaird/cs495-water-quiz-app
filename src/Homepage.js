@@ -16,7 +16,7 @@ function Homepage() {
   const displayHomepage = () => {
     return (
       <div className="homepage">
-        <div className="spacerS layer1"></div>
+        <div className="spacerTop layer1"></div>
         <div className="homepage-droplet">
           <Rive src="/droplet.riv" />
         </div>
@@ -40,7 +40,7 @@ function Homepage() {
           onExitComplete={() => null}>
           {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
         </AnimatePresence>
-        <div className="spacerL layer2"></div>
+        <div className="spacer layer2"></div>
         <div className="about-section">
             <div className="about-text">
               <h2>
@@ -50,7 +50,7 @@ function Homepage() {
                 HydroGenius is an interactive quiz where you can test your water
                 knowledge and see how you stack up against others. It was built
                 by Rollins Baird, Thomas Hamption, & Sam Hertzler in conjunction
-                Dr. Brian & Dr. Halgren from the Alabama Water Institute. We
+                Dr. Burian & Dr. Halgren from the Alabama Water Institute. We
                 hope you have fun improving your water knowledge! Created by
               </p>
             </div>
@@ -59,7 +59,7 @@ function Homepage() {
             alt="AWI Logo"
             src="/awi_magnetlogo.png"></img>
         </div>
-        <div className="spacerL layer3"></div>
+        <div className="spacer layer3"></div>
       </div>
     );
   };
