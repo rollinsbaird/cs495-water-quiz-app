@@ -81,89 +81,87 @@ function Leaderboard(props) {
     setPeriod(e.target.dataset.id);
   };
 
-  const displayLeaderboard = () => {
-    return (
-      <div className="leaderboard">
-        <header className="leaderboard-header">
-          <EmojiEventsIcon className="trophy"></EmojiEventsIcon>
-          <h1>Leaderboard</h1>
-          <Box>
-            <button
-              onClick={handleClick}
-              data-id="3600000"
-              className="leaderboard-button">
-              1 Hour
-            </button>
-            <button
-              onClick={handleClick}
-              data-id="0"
-              className="leaderboard-button">
-              All Time
-            </button>
-          </Box>
-          <br></br>
+  return (
+    <div className="leaderboard">
+      <header className="leaderboard-header">
+        <EmojiEventsIcon className="leaderboard-trophy"></EmojiEventsIcon>
+        <h1>Leaderboard</h1>
+        <Box>
+          <button
+            onClick={handleClick}
+            data-id="3600000"
+            className="leaderboard-button">
+            1 Hour
+          </button>
+          <button
+            onClick={handleClick}
+            data-id="0"
+            className="leaderboard-button">
+            All Time
+          </button>
+        </Box>
+        <br></br>
 
-          <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 100 }} aria-label="customized table">
-              <TableHead>
-                <TableRow className="leaderboard-table-row">
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 100 }} aria-label="customized table">
+            <TableHead>
+              <TableRow className="leaderboard-table-row">
+                <TableCell
+                  className="leaderboard-table-cell-head"
+                  align="center">
+                  Name
+                </TableCell>
+                <TableCell
+                  className="leaderboard-table-cell-head"
+                  align="center">
+                  Score
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {players === [] ? (
+                <TableRow
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                   <TableCell
-                    className="leaderboard-table-cell-head"
+                    className="leaderboard-table-cell"
                     align="center">
-                    Name
+                    loading
                   </TableCell>
                   <TableCell
-                    className="leaderboard-table-cell-head"
-                    align="center">
-                    Score
-                  </TableCell>
+                    className="leaderboard-table-cell"
+                    align="center"></TableCell>
                 </TableRow>
-              </TableHead>
-              <TableBody>
-                {players === [] ? (
+              ) : (
+                players.map((player) => (
                   <TableRow
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                    key={player.name}
+                    sx={{
+                      "&:last-child td, &:last-child th": { border: 0 },
+                    }}>
                     <TableCell
                       className="leaderboard-table-cell"
                       align="center">
-                      loading
+                      {player.name}
                     </TableCell>
                     <TableCell
                       className="leaderboard-table-cell"
-                      align="center"></TableCell>
+                      align="center">
+                      {player.scorePercent}
+                    </TableCell>
                   </TableRow>
-                ) : (
-                  players.map((player) => (
-                    <TableRow
-                      key={player.name}
-                      sx={{
-                        "&:last-child td, &:last-child th": { border: 0 },
-                      }}>
-                      <TableCell
-                        className="leaderboard-table-cell"
-                        align="center">
-                        {player.name}
-                      </TableCell>
-                      <TableCell
-                        className="leaderboard-table-cell"
-                        align="center">
-                        {player.scorePercent}
-                      </TableCell>
-                    </TableRow>
-                  ))
-                )}
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <br></br>
-          <button onClick={() => setChooseQuiz(true)} className="home-button">
-            Home
-          </button>
-          <br></br>
-        </header>
-      </div>
-    );
-  };
+                ))
+              )}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <br></br>
+        <button onClick={props.toSelectQuiz} className="select-quiz-button">
+          Quiz Selection
+        </button>
+        <br></br>
+      </header>
+    </div>
+  );
 
   function between(data, between) {
     const currTime = new Date();
@@ -179,11 +177,5 @@ function Leaderboard(props) {
     });
     return filter;
   }
-
-  const displayOptions = () => {
-    return chooseQuiz ? <SelectQuiz /> : displayLeaderboard();
-  };
-
-  return <>{displayOptions()}</>;
 }
 export default Leaderboard;

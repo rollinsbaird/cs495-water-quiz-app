@@ -59,7 +59,7 @@
   color: #61dafb;
 }
 
-.home-button {
+.select-quiz-button {
   width: -moz-fit-content;
   width: fit-content;
   padding: 1vmin 2vmin;
@@ -70,7 +70,7 @@
   color: #61dafb;
 }
 
-.leaderboard-button:hover, .home-button:hover {
+.leaderboard-button:hover, .select-quiz-button:hover {
   background-color: #61dafb;
   color: #0e0f14;
   font-style: bold;
@@ -81,7 +81,7 @@
   outline: none;
 }
 
-.trophy {
+.leaderboard-trophy {
   color: gold;
   fill: gold !important;
   font-size: 6.5rem !important;

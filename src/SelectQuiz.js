@@ -2,6 +2,9 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { Grid, Box } from "@mui/material";
 import NameCard from "./NameCard";
+import HomeIcon from "@mui/icons-material/Home";
+import "./NameCard.css";
+import { motion } from "framer-motion";
 
 const faunadb = require("faunadb");
 const client = new faunadb.Client({
@@ -21,12 +24,12 @@ const GridStyles = {
     xl: 10,
   },
   paddingBottom: 10,
-  marginTop: 2,
+  marginTop: 0,
   marginLeft: "auto",
   marginRight: "auto",
 };
 
-const SelectQuiz = () => {
+const SelectQuiz = (props) => {
   const [quizzes, setQuizzes] = useState([]);
 
   const getData = async () => {
@@ -56,7 +59,18 @@ const SelectQuiz = () => {
         minWidth: "400px",
         width: "100%",
         overflow: "auto",
+        display: "flow",
+        flexDirection: "column",
       }}>
+      <Box sx={{ width: "100%", display: "flex", flexDirection: "row", justifyContent: "flex-start", backgroundColor: "252d4a",}}>
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          className="home-button"
+          onClick={props.toHomepage}>
+          <HomeIcon className="home" sx={{fontSize: "20px"}} />
+        </motion.button>
+      </Box>
       <Grid
         container
         columns={{ xs: 2, md: 3, xl: 4 }}
@@ -80,6 +94,7 @@ const SelectQuiz = () => {
                 difficulty={quiz[2]}
                 // tags={quiz[3]}
                 quizId={quiz[3]}
+                toLeaderboard={props.toLeaderboard}
               />
             </Grid>
           ))

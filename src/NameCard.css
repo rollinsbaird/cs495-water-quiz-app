@@ -11,3 +11,18 @@
     border: none;
     background-color: #ffffff;
 }
+
+.home{
+    color: gold;
+    fill: gold !important;
+    font-size: x-large !important;
+    margin-right: 0;
+}
+
+.home-button{
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 10px;
+    border: none;
+    background-color: #252D4A;
+}
