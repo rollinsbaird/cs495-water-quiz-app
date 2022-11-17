@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "@mui/material/Skeleton";
-// import styled from "styled-components";
 import "./Quiz.css";
 import {
   EmailShareButton,
