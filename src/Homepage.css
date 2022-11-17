@@ -12,13 +12,13 @@
 }
 
 .homepage-droplet {
-  margin-top: -12vh;
+  margin-top: -3vh;
   height: 65vmin;
   width: 65vmin;
 }
 
 .page-title {
-  margin-top: -4vh;
+  margin-top: -3vh;
   animation: background-pan 3s linear infinite;
   background: linear-gradient(to right, #3d82d1, #c867a4, #3d82d1);
   background-size: 200%;
@@ -39,7 +39,7 @@
 }
 
 .open-button {
-  /* margin-top: -8m; */
+  margin-top: -3vh;
   animation: background-pan 3s linear infinite;
   background: linear-gradient(to right, #3d82d1, #c867a4, #3d82d1);
   background-size: 200%;
@@ -119,8 +119,8 @@ button.close-button:hover {
 }
 
 /* SVG background image via https://haikei.app/ */
-.spacerS {
-  aspect-ratio: 900/200;
+.spacerTop {
+  aspect-ratio: 900/100;
   width: 100%;
   top: 0;
   background-repeat: no-repeat;
@@ -128,7 +128,7 @@ button.close-button:hover {
   background-size: cover;
 }
 
-.spacerL {
+.spacer {
   aspect-ratio: 900/350;
   width: 100%;
   top: 0;
