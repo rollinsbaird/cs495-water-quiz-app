@@ -51,7 +51,7 @@ function Homepage() {
                 knowledge & see how you stack up against others. It was built
                 by Rollins Baird, Thomas Hamption, & Sam Hertzler in conjunction
                 Dr. Burian & Dr. Halgren from the Alabama Water Institute. We
-                hope you have fun improving your water knowledge! Created by
+                hope you have fun improving your water knowledge!
               </p>
             </div>
           <img
