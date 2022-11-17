@@ -93,8 +93,10 @@
 
 .logo-AWI {
   margin-top: 10rem;
-  margin-bottom: -1rem;
-  z-index: 190;
+  padding-bottom: 2rem;
+  margin-bottom: -1vh;
+  max-width: 30vw;
+  height: 20 vh;
 }
 
 button.close-button:hover {
