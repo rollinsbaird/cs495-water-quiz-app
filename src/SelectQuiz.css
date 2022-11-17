@@ -1,0 +1,17 @@
+.select-body {
+    margin-top: -100px;
+}
+
+/* SVG background image via https://haikei.app/ */
+.spacerTop {
+  aspect-ratio: 900/100;
+  width: 100%;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url("/public/top-layered-waves-haikei.svg");
+}
