@@ -39,22 +39,19 @@ function Homepage(props) {
       </AnimatePresence>
       <div className="spacer layer2"></div>
       <div className="about-section">
-          <div className="about-text">
-            <h2>
-              What is <span className="fancy">HydroGenius</span>?
-            </h2>
-            <p>
-              HydroGenius is an interactive quiz where you can test your water
-              knowledge & see how you stack up against others. It was built
-              by Rollins Baird, Thomas Hamption, & Sam Hertzler in conjunction
-              Dr. Burian & Dr. Halgren from the Alabama Water Institute. We
-              hope you have fun improving your water knowledge!
-            </p>
-          </div>
-        <img
-          className="logo-AWI"
-          alt="AWI Logo"
-          src="/AWI Magnet.png"></img>
+        <div className="about-text">
+          <h2>
+            What is <span className="fancy">HydroGenius</span>?
+          </h2>
+          <p>
+            HydroGenius is an interactive quiz where you can test your water
+            knowledge & see how you stack up against others. It was built by
+            Rollins Baird, Thomas Hamption, & Sam Hertzler in conjunction Dr.
+            Burian & Dr. Halgren from the Alabama Water Institute. We hope you
+            have fun improving your water knowledge!
+          </p>
+        </div>
+        <img className="logo-AWI" alt="AWI Logo" src="/AWI Magnet.png"></img>
       </div>
       <div className="spacer layer3"></div>
     </div>

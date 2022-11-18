@@ -31,18 +31,20 @@ function Leaderboard(props) {
   const [period, setPeriod] = useState(0);
   // const [chooseQuiz, setChooseQuiz] = useState(false);
   const [highscores, setHighscores] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [players, setPlayers] = useState([]);
 
   const getHighscores = async (quizId) => {
     try {
       // https://docs.fauna.com/fauna/current/drivers/javascript?lang=javascript
       await client
-        .query(q.Paginate(q.Match(q.Index("all_Hs_by_Id"), quizId)))
+        .query(q.Paginate(q.Match(q.Index("all_Hs_by_Id"), "348045511873266258")))
         .then(
           function (response) {
             setHighscores(response.data);
             console.log(highscores);
             sortPlayers();
+            setLoading(false);
           },
           function () {
             console.log("Query failed!");
@@ -75,7 +77,7 @@ function Leaderboard(props) {
   useEffect(() => {
     getHighscores(props.quizId);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [loading]);
 
   const handleClick = (e) => {
     setPeriod(e.target.dataset.id);

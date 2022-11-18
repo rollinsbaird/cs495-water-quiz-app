@@ -1,10 +1,10 @@
 .leaderboard {
-  background-color: #282c34;
+  background-color: #252d4a;
   text-align: center;
 }
 
 .leaderboard-header {
-  background-color: #282c34;
+  background-color: #252d4a;
   min-height: 100vh;
   height: 100%;
   width: 100%;
@@ -17,7 +17,7 @@
 }
 
 .leaderboard-table {
-  background-color: hsl(191, 45%, 40%);
+  background-color: #3d82d1;
   border: 1px solid black;
   height: 100%;
   width: 100%;
@@ -70,7 +70,8 @@
   color: #61dafb;
 }
 
-.leaderboard-button:hover, .select-quiz-button:hover {
+.leaderboard-button:hover,
+.select-quiz-button:hover {
   background-color: #61dafb;
   color: #0e0f14;
   font-style: bold;
